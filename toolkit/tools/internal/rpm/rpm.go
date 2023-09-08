@@ -280,6 +280,8 @@ func BuildRPMFromSRPM(srpmFile, outArch string, defines map[string]string) (err 
 	args := []string{"--nocheck", "--rebuild"}
 	args = append(args, commonBuildArgs...)
 
+	// george temporary hack to do quick builds...
+	// return shell.ExecuteLive(squashErrors, "echo", args...)
 	return shell.ExecuteLive(squashErrors, rpmBuildProgram, args...)
 }
 

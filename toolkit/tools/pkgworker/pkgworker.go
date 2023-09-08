@@ -13,6 +13,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/ccachemanager"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/exe"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/file"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/logger"
@@ -43,7 +44,9 @@ var (
 	srpmsDirPath         = app.Flag("srpm-dir", "The output directory for source RPM packages").Required().String()
 	toolchainDirPath     = app.Flag("toolchain-rpms-dir", "Directory that contains already built toolchain RPMs. Should contain a top level directory for each architecture.").Required().ExistingDir()
 	cacheDir             = app.Flag("cache-dir", "The cache directory containing downloaded dependency RPMS from CBL-Mariner Base").Required().ExistingDir()
-	ccacheDir            = app.Flag("ccache-dir", "The directory used to store ccache outputs").Required().ExistingDir()
+	ccacheRootDir        = app.Flag("ccache-root-dir", "The directory used to store ccache outputs").Required().String()
+	ccachRemoteConfig    = app.Flag("ccache-remote-config", "The configuration file for ccache remote store.").Required().String()
+	basePackageName      = app.Flag("base-package-name", "<ToDo>").Required().String()
 	noCleanup            = app.Flag("no-cleanup", "Whether or not to delete the chroot folder after the build is done").Bool()
 	distTag              = app.Flag("dist-tag", "The distribution tag the SPEC will be built with.").Required().String()
 	distroReleaseVersion = app.Flag("distro-release-version", "The distro release version that the SRPM will be built with").Required().String()
@@ -154,13 +157,31 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 		quit <- true
 	}()
 
+	logger.Log.Infof("** Running ccache POC.**")
+	logger.Log.Infof("  ccache root folder         : (%s)", *ccacheRootDir)
+	logger.Log.Infof("  ccache remote configuration: (%s)", *ccachRemoteConfig)
+
+	ccacheGroupName, ccacheGroupSize := ccachemanager.FindCCacheGroup(*ccachRemoteConfig, *basePackageName)
+	ccacheDir := ccachemanager.GetCCacheFolder(*ccacheRootDir, outArch, ccacheGroupName)
+	ccacheDirTarsIn := *ccacheRootDir + "-tars-in"
+
+	logger.Log.Infof("  ccache working folder      : (%s)", ccacheDir)
+	logger.Log.Infof("  ccache tars folder         : (%s)", ccacheDirTarsIn)
+
+	if useCcache {
+		err = ccachemanager.InstallCCache(*ccachRemoteConfig, ccacheDir, ccacheDirTarsIn, ccacheGroupName, outArch)
+		if err != nil {
+			logger.Log.Infof("  ccache will not be able to use previously generated artifacts.")
+		}
+	}
+	
 	// Create the chroot used to build the SRPM
 	chroot := safechroot.NewChroot(chrootDir, existingChrootDir)
 
 	outRpmsOverlayMount, outRpmsOverlayExtraDirs := safechroot.NewOverlayMountPoint(chroot.RootDir(), overlaySource, chrootLocalRpmsDir, rpmDirPath, chrootLocalRpmsDir, overlayWorkDirRpms)
 	toolchainRpmsOverlayMount, toolchainRpmsOverlayExtraDirs := safechroot.NewOverlayMountPoint(chroot.RootDir(), overlaySource, chrootLocalToolchainDir, toolchainDirPath, chrootLocalToolchainDir, overlayWorkDirToolchain)
 	rpmCacheMount := safechroot.NewMountPoint(*cacheDir, chrootLocalRpmsCacheDir, "", safechroot.BindMountPointFlags, "")
-	ccacheMount := safechroot.NewMountPoint(*ccacheDir, chrootCcacheDir, "", safechroot.BindMountPointFlags, "")
+	ccacheMount := safechroot.NewMountPoint(ccacheDir, chrootCcacheDir, "", safechroot.BindMountPointFlags, "")
 	mountPoints := []*safechroot.MountPoint{outRpmsOverlayMount, toolchainRpmsOverlayMount, rpmCacheMount, ccacheMount}
 	extraDirs := append(outRpmsOverlayExtraDirs, chrootLocalRpmsCacheDir, chrootCcacheDir)
 	extraDirs = append(extraDirs, toolchainRpmsOverlayExtraDirs...)
@@ -186,6 +207,21 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 
 	if !runCheck {
 		builtRPMs, err = moveBuiltRPMs(chroot.RootDir(), rpmDirPath)
+	}
+
+	// Only if the groupSize is 1 we can archive since no other packages will
+	// re-update this cache.
+	if useCcache && ccacheGroupSize == 1 {
+		ccacheDirTarsOut := *ccacheRootDir + "-tars-out"
+		err = ccachemanager.ArchiveCCache(*ccachRemoteConfig, ccacheDir, ccacheDirTarsOut, ccacheGroupName, outArch)
+		if err != nil {
+			logger.Log.Infof("  unable to upload ccache archive. Error: %v", err)
+		}
+
+		// err := os.RemoveAll(ccacheDir)
+		// if err != nil {
+		// 	logger.Log.Infof("  unable to remove ccache folder (%s). Error: %v", ccacheDir, err)
+		// }
 	}
 
 	return

@@ -1,0 +1,25 @@
+{
+  "remoteStore": {
+    "type": "azure-blob-storage",
+    "tenantId": "",
+    "userName": "",
+    "password": "",
+    "storageAccount": "marinerccache",
+    "containerName": "20-stable",
+    "versionsFolder": "versions",
+    "downloadEnabled": true,
+    "downloadFolder": "latest",
+    "uploadEnabled": false,
+    "uploadFolder": "",
+    "updateLatest": false
+  },
+  "groups": [
+    {
+      "name": "kernel",
+      "packageNames": [
+        "kernel",
+        "kernel-hci"
+      ]
+    }
+  ]
+}
