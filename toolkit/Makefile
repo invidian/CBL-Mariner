@@ -212,6 +212,10 @@ include $(SCRIPTS_DIR)/pkggen.mk
 #   image, iso, clean-imggen
 include $(SCRIPTS_DIR)/imggen.mk
 
+# sodiff stuff:
+#  sodiff-check, build-summary, build-package-summary, fake-built-packages-list
+include $(SCRIPTS_DIR)/analysis.mk
+
 # Each component provides specific clean implementations which clean depends on.
 # They are guaranteed to run first and will verify there are no existing mount points
 # left after a chroot.
