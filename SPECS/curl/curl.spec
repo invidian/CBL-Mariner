@@ -1,7 +1,7 @@
 Summary:        An URL retrieval utility and library
 Name:           curl
 Version:        8.2.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        curl
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -85,6 +85,9 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %{_libdir}/libcurl.so.*
 
 %changelog
+* Fri Sep 22 2023 Sam Meluch <sammeluch@microsoft.com> - 8.2.1-1
+- Dash Roll for testing
+
 * Tue Aug 08 2023 Muhammad Falak <mwani@microsoft.com> - 8.2.1-1
 - Bump curl to 8.2.1 to address CVE-2023-32001
 - Drop un-needed patch

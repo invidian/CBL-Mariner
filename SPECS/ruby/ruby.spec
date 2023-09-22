@@ -83,7 +83,7 @@ Name:           ruby
 # provides should be versioned according to the ruby version.
 # More info: https://stdgems.org/
 Version:        3.1.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        (Ruby OR BSD) AND Public Domain AND MIT AND CC0 AND zlib AND UCD
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -266,7 +266,7 @@ Provides:       rubygem(zlib) = %{zlib_version}-%{release}
 The Ruby package contains the Ruby development environment.
 This is useful for object-oriented scripting.
 
-%package -n rubygems
+%package -n rubygemsfake-build
 Summary:        The Ruby standard for packaging ruby libraries
 Version:        %{rubygems_version}
 License:        Ruby OR MIT
@@ -401,6 +401,9 @@ sudo -u test make test TESTS="-v"
 %{_rpmconfigdir}/rubygems.con
 
 %changelog
+* Fri Sep 22 2023 Sam Meluch <sammeluch@microsoft.com> - 3.1.4-3
+- Dash roll for testing
+
 * Mon Aug 14 2023 Saul Paredes <saulparedes@microsoft.com> - 3.1.4-2
 - Patch CVE-2023-36617
 
