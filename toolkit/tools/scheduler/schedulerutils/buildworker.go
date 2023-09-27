@@ -17,6 +17,7 @@ import (
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/pkggraph"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/pkgjson"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/retry"
+	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/rpm"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/internal/sliceutils"
 	"github.com/microsoft/CBL-Mariner/toolkit/tools/scheduler/buildagents"
 	"gonum.org/v1/gonum/graph"
@@ -147,7 +148,7 @@ func buildNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagent
 	node := request.Node
 	baseSrpmName := node.SRPMFileName()
 
-	basePackageName, err := BasePackageNameFromSpecFile(node.SpecPath)
+	basePackageName, err := rpm.BasePackageNameFromSpecFile(node.SpecPath)
 	if err != nil {
 		// This can only happen if the spec file does not have a name (only an extension).
 		logger.Log.Warnf("An error occured while getting the base package name from (%s). This may result in further errors.", node.SpecPath)
@@ -177,7 +178,12 @@ func buildNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagent
 func testNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagents.BuildAgent, checkAttempts int, ignoredTests []*pkgjson.PackageVer) (ignored bool, logFile string, err error) {
 	node := request.Node
 	baseSrpmName := node.SRPMFileName()
-	basePackageName := findBasePackageName(node.SpecPath)
+
+	basePackageName, err := rpm.BasePackageNameFromSpecFile(node.SpecPath)
+	if err != nil {
+		// This can only happen if the spec file does not have a name (only an extension).
+		logger.Log.Warnf("An error occured while getting the base package name from (%s). This may result in further errors.", node.SpecPath)
+	}
 
 	ignored = sliceutils.Contains(ignoredTests, node.VersionedPkg, sliceutils.PackageVerMatch)
 
