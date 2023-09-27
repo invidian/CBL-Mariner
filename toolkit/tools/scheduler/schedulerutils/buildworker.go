@@ -142,20 +142,16 @@ func BuildNodeWorker(channels *BuildChannels, agent buildagents.BuildAgent, grap
 	logger.Log.Debug("Worker done")
 }
 
-func findBasePackageName(specPath string) (basePackageName string) {
-	baseName := filepath.Base(specPath)
-	fileExtension := filepath.Ext(baseName)
-	basePackageName = baseName[:len(baseName)-len(fileExtension)]
-	logger.Log.Infof("spec full path : %s", specPath)
-	logger.Log.Infof("basePackageName: %s", basePackageName)
-	return basePackageName
-}
-
 // buildNode builds a TypeLocalBuild node, either used a cached copy if possible or building the corresponding SRPM.
 func buildNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagents.BuildAgent, buildAttempts int, ignoredPackages []*pkgjson.PackageVer) (ignored bool, builtFiles []string, logFile string, err error) {
 	node := request.Node
 	baseSrpmName := node.SRPMFileName()
-	basePackageName := findBasePackageName(node.SpecPath)
+
+	basePackageName, err := BasePackageNameFromSpecFile(node.SpecPath)
+	if err != nil {
+		// This can only happen if the spec file does not have a name (only an extension).
+		logger.Log.Warnf("An error occured while getting the base package name from (%s). This may result in further errors.", node.SpecPath)
+	}
 
 	ignored = sliceutils.Contains(ignoredPackages, node.VersionedPkg, sliceutils.PackageVerMatch)
 

@@ -4,6 +4,7 @@
 package rpm
 
 import (
+	"errors"
 	"fmt"
 	"path/filepath"
 	"regexp"
@@ -280,8 +281,6 @@ func BuildRPMFromSRPM(srpmFile, outArch string, defines map[string]string) (err 
 	args := []string{"--nocheck", "--rebuild"}
 	args = append(args, commonBuildArgs...)
 
-	// george temporary hack to do quick builds...
-	// return shell.ExecuteLive(squashErrors, "echo", args...)
 	return shell.ExecuteLive(squashErrors, rpmBuildProgram, args...)
 }
 
@@ -545,6 +544,22 @@ func updateSourceDirDefines(defines map[string]string, sourceDir string) (update
 	if sourceDir != "" {
 		updatedDefines[SourceDirDefine] = sourceDir
 	}
+
+	return
+}
+
+func BasePackageNameFromSpecFile(specPath string) (basePackageName string, err error) {
+	baseName := filepath.Base(specPath)
+	if baseName == "" {
+		return "", errors.New(fmt.Sprintf("Cannot extract file name from specPath (%s).", specPath))
+	}
+
+	fileExtension := filepath.Ext(baseName)
+	if fileExtension == "" {
+		return "", errors.New(fmt.Sprintf("Cannot extract file extension from file name (%s).", baseName))
+	}
+
+	basePackageName = baseName[:len(baseName)-len(fileExtension)]
 
 	return
 }
