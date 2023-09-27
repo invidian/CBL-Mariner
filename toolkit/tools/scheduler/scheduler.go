@@ -195,9 +195,16 @@ func main() {
 
 	if *useCcache {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
-		err = ccachemanager.ArchiveCCacheAll(*ccacheRemoteConfig, *ccacheDir)
+		var ccacheManager ccachemanagerpkg.CCacheManager
+
+		err = ccacheManager.Initialize(*ccacheRemoteConfig, *ccacheDir)
 		if err != nil {
-			logger.Log.Warnf("Failed to archive CCache artifacts.\nError: %s.", err)
+			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
+		} else {	
+			err = ccacheManager.UploadAllPkgGroupCCaches()
+			if err != nil {
+				logger.Log.Warnf("Failed to archive CCache artifacts.\nError: %s.", err)
+			}
 		}
 	}
 }
