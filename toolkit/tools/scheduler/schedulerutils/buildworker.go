@@ -148,7 +148,7 @@ func buildNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagent
 	node := request.Node
 	baseSrpmName := node.SRPMFileName()
 
-	basePackageName, err := rpm.BasePackageNameFromSpecFile(node.SpecPath)
+	basePackageName, err := rpm.GetBasePackageNameFromSpecFile(node.SpecPath)
 	if err != nil {
 		// This can only happen if the spec file does not have a name (only an extension).
 		logger.Log.Warnf("An error occured while getting the base package name from (%s). This may result in further errors.", node.SpecPath)
@@ -179,7 +179,7 @@ func testNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagents
 	node := request.Node
 	baseSrpmName := node.SRPMFileName()
 
-	basePackageName, err := rpm.BasePackageNameFromSpecFile(node.SpecPath)
+	basePackageName, err := rpm.GetBasePackageNameFromSpecFile(node.SpecPath)
 	if err != nil {
 		// This can only happen if the spec file does not have a name (only an extension).
 		logger.Log.Warnf("An error occured while getting the base package name from (%s). This may result in further errors.", node.SpecPath)

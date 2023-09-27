@@ -130,7 +130,7 @@ func ensureDirExists(dirName string) (err error) {
 	}
 
 	if os.IsNotExist(err) {
-		err = os.Mkdir(dirName, 0755)
+		err = os.MkdirAll(dirName, 0755)
 		if err != nil {
 			logger.Log.Warnf("Unable to create folder (%s). Error: %v", dirName, err)
 			return err
@@ -160,7 +160,7 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 	if err != nil {
 		return errors.New(fmt.Sprintf("Failed to construct the ccache directory name. Error (%v)", err))
 	}
-	logger.Log.Infof("  ccache working folder      : (%s)", m.PkgCCacheDir)
+	logger.Log.Infof("  ccache pkg folder   : (%s)", m.PkgCCacheDir)
 
 	CCacheTarSuffix := "-ccache.tar.gz"
 	m.PkgTarFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheTarSuffix
@@ -168,11 +168,21 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 	m.PkgTarFile.LocalTargetPath = m.UploadsDir + "/" + m.PkgGroupName + CCacheTarSuffix
 	m.PkgTarFile.RemoteTargetPath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.UploadFolder + "/" + m.PkgGroupName + CCacheTarSuffix
 
+	logger.Log.Infof("  tar local source    : (%s)", m.PkgTarFile.LocalSourcePath)
+	logger.Log.Infof("  tar remote source   : (%s)", m.PkgTarFile.RemoteSourcePath)
+	logger.Log.Infof("  tar local target    : (%s)", m.PkgTarFile.LocalTargetPath)
+	logger.Log.Infof("  tar remote target   : (%s)", m.PkgTarFile.RemoteTargetPath)
+
 	CCacheVersionSuffix := "-latest-build.txt"
 	m.PkgLabelFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheVersionSuffix
 	m.PkgLabelFile.RemoteSourcePath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.VersionsFolder + "/" + m.PkgGroupName + CCacheVersionSuffix
 	m.PkgLabelFile.LocalTargetPath = m.UploadsDir + "/" + m.PkgGroupName + CCacheVersionSuffix
 	m.PkgLabelFile.RemoteTargetPath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.VersionsFolder + "/" + m.PkgGroupName + CCacheVersionSuffix
+
+	logger.Log.Infof("  label local source  : (%s)", m.PkgLabelFile.LocalSourcePath)
+	logger.Log.Infof("  label remote source : (%s)", m.PkgLabelFile.RemoteSourcePath)
+	logger.Log.Infof("  label local target  : (%s)", m.PkgLabelFile.LocalTargetPath)
+	logger.Log.Infof("  label remote target : (%s)", m.PkgLabelFile.RemoteTargetPath)
 
 	return nil
 }
@@ -313,7 +323,7 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 	}
 
 	logger.Log.Infof("  creating container client...")
-	theClient, err := azureblobstorage.CreateClient(remoteStoreConfig.TenantId, remoteStoreConfig.UserName, remoteStoreConfig.Password, remoteStoreConfig.StorageAccount, azureblobstorage.AnonymousAccess)
+	azureblobstorage, err := azureblobstoragepkg.Create(remoteStoreConfig.TenantId, remoteStoreConfig.UserName, remoteStoreConfig.Password, remoteStoreConfig.StorageAccount, azureblobstoragepkg.AnonymousAccess)
 	if err != nil {
 		logger.Log.Warnf("Unable to init azure blob storage client. Error: %v", err)
 		return err
@@ -325,7 +335,7 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 		// Download the versions file...
 		logger.Log.Infof("  downloading (%s) to (%s)...", m.PkgLabelFile.RemoteSourcePath, m.PkgLabelFile.LocalSourcePath)
-		err = azureblobstorage.Download(theClient, context.Background(), remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteSourcePath, m.PkgLabelFile.LocalSourcePath)
+		err = azureblobstorage.Download(context.Background(), remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteSourcePath, m.PkgLabelFile.LocalSourcePath)
 		if err != nil {
 			logger.Log.Warnf("  unable to download ccache archive. Error: %v", err)
 			return err
@@ -345,7 +355,7 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 	// Download the actual cache...
 	logger.Log.Infof("  downloading (%s) to (%s)...", m.PkgTarFile.RemoteSourcePath, m.PkgTarFile.LocalSourcePath)
-	err = azureblobstorage.Download(theClient, context.Background(), remoteStoreConfig.ContainerName, m.PkgTarFile.RemoteSourcePath, m.PkgTarFile.LocalSourcePath)
+	err = azureblobstorage.Download(context.Background(), remoteStoreConfig.ContainerName, m.PkgTarFile.RemoteSourcePath, m.PkgTarFile.LocalSourcePath)
 	if err != nil {
 		logger.Log.Warnf("Unable to download ccache archive. Error: %v", err)
 		return err
@@ -388,7 +398,7 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 	}
 
 	logger.Log.Infof("  connecting to azure storage blob...")
-	theClient, err := azureblobstorage.CreateClient(remoteStoreConfig.TenantId, remoteStoreConfig.UserName, remoteStoreConfig.Password, remoteStoreConfig.StorageAccount, azureblobstorage.AuthenticatedAccess)
+	azureblobstorage, err := azureblobstoragepkg.Create(remoteStoreConfig.TenantId, remoteStoreConfig.UserName, remoteStoreConfig.Password, remoteStoreConfig.StorageAccount, azureblobstoragepkg.AuthenticatedAccess)
 	if err != nil {
 		logger.Log.Warnf("Unable create azure blob storage client. Error: %v", err)
 		return err
@@ -396,7 +406,7 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 
 	// Upload the ccache archive
 	logger.Log.Infof("  uploading ccache archive (%s) to (%s)...", m.PkgTarFile.LocalTargetPath, m.PkgTarFile.RemoteTargetPath)
-	err = azureblobstorage.Upload(theClient, context.Background(), m.PkgTarFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgTarFile.RemoteTargetPath)
+	err = azureblobstorage.Upload(context.Background(), m.PkgTarFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgTarFile.RemoteTargetPath)
 	if err != nil {
 		logger.Log.Warnf("Unable to upload ccache archive. Error: %v", err)
 		return err
@@ -419,7 +429,7 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 
 		// Upload the latest label file...
 		logger.Log.Infof("  uploading label version (%s) to (%s)...", m.PkgLabelFile.LocalTargetPath, m.PkgLabelFile.RemoteTargetPath)
-		err = azureblobstorage.Upload(theClient, context.Background(), m.PkgLabelFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteTargetPath)
+		err = azureblobstorage.Upload(context.Background(), m.PkgLabelFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteTargetPath)
 		if err != nil {
 			logger.Log.Warnf("Unable to upload ccache archive. Error: %v", err)
 			return err

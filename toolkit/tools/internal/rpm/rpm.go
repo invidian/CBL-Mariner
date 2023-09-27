@@ -100,6 +100,23 @@ func GetRpmArch(goArch string) (rpmArch string, err error) {
 	return
 }
 
+func GetBasePackageNameFromSpecFile(specPath string) (basePackageName string, err error) {
+
+	baseName := filepath.Base(specPath)
+	if baseName == "" {
+		return "", errors.New(fmt.Sprintf("Cannot extract file name from specPath (%s).", specPath))
+	}
+
+	fileExtension := filepath.Ext(baseName)
+	if fileExtension == "" {
+		return "", errors.New(fmt.Sprintf("Cannot extract file extension from file name (%s).", baseName))
+	}
+
+	basePackageName = baseName[:len(baseName)-len(fileExtension)]
+
+	return
+}
+
 // SetMacroDir adds RPM_CONFIGDIR=$(newMacroDir) into the shell's environment for the duration of a program.
 // To restore the environment the caller can use shell.SetEnvironment() with the returned origenv.
 // On an empty string argument return success immediately and do not modify the environment.
@@ -544,22 +561,6 @@ func updateSourceDirDefines(defines map[string]string, sourceDir string) (update
 	if sourceDir != "" {
 		updatedDefines[SourceDirDefine] = sourceDir
 	}
-
-	return
-}
-
-func BasePackageNameFromSpecFile(specPath string) (basePackageName string, err error) {
-	baseName := filepath.Base(specPath)
-	if baseName == "" {
-		return "", errors.New(fmt.Sprintf("Cannot extract file name from specPath (%s).", specPath))
-	}
-
-	fileExtension := filepath.Ext(baseName)
-	if fileExtension == "" {
-		return "", errors.New(fmt.Sprintf("Cannot extract file extension from file name (%s).", baseName))
-	}
-
-	basePackageName = baseName[:len(baseName)-len(fileExtension)]
 
 	return
 }
