@@ -159,7 +159,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 
 	var ccacheManager ccachemanagerpkg.CCacheManager
 	if useCcache {
-		ccacheManager.Initialize(*ccachConfig, *ccacheRootDir)
+		ccacheManager.Initialize(*ccacheRootDir, *ccachConfig)
 		if err != nil {
 			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		}

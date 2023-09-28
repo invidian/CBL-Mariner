@@ -26,16 +26,15 @@ type AzureBlobStorage struct {
 	theClient *azblob.Client
 }
 
-// https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/storage/azblob#section-readme
 func (abs *AzureBlobStorage) Upload(
 	ctx context.Context,
-	fullFileName string,
+	localFileName string,
 	containerName string,
 	blobName string) (err error) {
 
 	uploadStartTime := time.Now()
 
-	localFile, err := os.OpenFile(fullFileName, os.O_RDONLY, 0)
+	localFile, err := os.OpenFile(localFileName, os.O_RDONLY, 0)
 	if err != nil {
 		logger.Log.Infof("  failed to open local file for upload. Error: %v", err)
 		return err
@@ -58,11 +57,11 @@ func (abs *AzureBlobStorage) Download(
 	ctx context.Context,
 	containerName string,
 	blobName string,
-	fullFileName string) (err error) {
+	localFileName string) (err error) {
 
 	downloadStartTime := time.Now()
 
-	localFile, err := os.Create(fullFileName)
+	localFile, err := os.Create(localFileName)
 	if err != nil {
 		logger.Log.Infof("  failed to create local file for download. Error: %v", err)
 		return err
@@ -115,6 +114,5 @@ func Create(tenantId string, userName string, password string, storageAccount st
 
 	}
 
-	logger.Log.Warnf("Unknown authentication type.")
 	return nil, errors.New("Unknown authentication type.")
 }

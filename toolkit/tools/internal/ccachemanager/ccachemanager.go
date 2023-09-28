@@ -21,7 +21,12 @@ import (
 )
 
 const (
+	// Any package that is not defined to belong to a group will be added to
+	// this group.
 	CommonGroupName = "common"
+	// This is the value that the download source folder can be set to in the
+	// config to indicate the desire to download the latest.
+	LatestTagMarker = "latest"
 )
 
 type CCacheGroup struct {
@@ -78,48 +83,22 @@ func loadConfiguration(configFileName string) (configuration CCacheConfiguration
 	err = jsonutils.ReadJSONFile(configFileName, &configuration)
 	if err != nil {
 		logger.Log.Infof("Failed to load file. %v", err)
-	} else {
-		logger.Log.Infof("  Type           : %s", configuration.RemoteStoreConfig.Type)
-		logger.Log.Infof("  TenantId       : %s", configuration.RemoteStoreConfig.TenantId)
-		logger.Log.Infof("  UserName       : %s", configuration.RemoteStoreConfig.UserName)
-		// logger.Log.Infof("  Password      : %s", configuration.RemoteStoreConfig.Password)
-		logger.Log.Infof("  StorageAccount : %s", configuration.RemoteStoreConfig.StorageAccount)
-		logger.Log.Infof("  ContainerName  : %s", configuration.RemoteStoreConfig.ContainerName)
-		logger.Log.Infof("  Tagsfolder     : %s", configuration.RemoteStoreConfig.TagsFolder)
-		logger.Log.Infof("  DownloadEnabled: %v", configuration.RemoteStoreConfig.DownloadEnabled)
-		logger.Log.Infof("  DownloadFolder : %s", configuration.RemoteStoreConfig.DownloadFolder)
-		logger.Log.Infof("  UploadEnabled  : %v", configuration.RemoteStoreConfig.UploadEnabled)
-		logger.Log.Infof("  UploadFolder   : %s", configuration.RemoteStoreConfig.UploadFolder)
-		logger.Log.Infof("  UpdateLatest   : %v", configuration.RemoteStoreConfig.UpdateLatest)
+		return nil, err
 	}
+
+	logger.Log.Infof("    Type           : %s", configuration.RemoteStoreConfig.Type)
+	logger.Log.Infof("    TenantId       : %s", configuration.RemoteStoreConfig.TenantId)
+	logger.Log.Infof("    UserName       : %s", configuration.RemoteStoreConfig.UserName)
+	logger.Log.Infof("    StorageAccount : %s", configuration.RemoteStoreConfig.StorageAccount)
+	logger.Log.Infof("    ContainerName  : %s", configuration.RemoteStoreConfig.ContainerName)
+	logger.Log.Infof("    Tagsfolder     : %s", configuration.RemoteStoreConfig.TagsFolder)
+	logger.Log.Infof("    DownloadEnabled: %v", configuration.RemoteStoreConfig.DownloadEnabled)
+	logger.Log.Infof("    DownloadFolder : %s", configuration.RemoteStoreConfig.DownloadFolder)
+	logger.Log.Infof("    UploadEnabled  : %v", configuration.RemoteStoreConfig.UploadEnabled)
+	logger.Log.Infof("    UploadFolder   : %s", configuration.RemoteStoreConfig.UploadFolder)
+	logger.Log.Infof("    UpdateLatest   : %v", configuration.RemoteStoreConfig.UpdateLatest)
 
 	return configuration, err	
-}
-
-// Initialize() is called once per CCacheManager instance.
-func (m *CCacheManager) Initialize(configFileName string, rootDir string) (err error) {
-
-	logger.Log.Infof("Initialize(%s, %s)", configFileName, rootDir)
-
-	logger.Log.Infof("  initializing ccache manager.")
-	logger.Log.Infof("  ccache root folder         : (%s)", rootDir)
-	logger.Log.Infof("  ccache remote configuration: (%s)", configFileName)
-
-	m.Configuration, err = loadConfiguration(configFileName)
-	if err != nil {
-		logger.Log.Infof("Failed to load remote store configuration. %v", err)
-		return err
-	}
-
-	if rootDir == "" {
-		return errors.New("CCache root directory cannot be empty.")
-	}
-
-	m.RootCCacheDir = rootDir
-	m.DownloadsDir = m.RootCCacheDir + "-downloads"
-	m.UploadsDir = m.RootCCacheDir + "-uploads"
-
-	return nil
 }
 
 func ensureDirExists(dirName string) (err error) {
@@ -142,6 +121,116 @@ func ensureDirExists(dirName string) (err error) {
 	return nil
 }
 
+
+func compressDir(sourceDir string, archiveName string) (err error) {
+
+	// Ensure the output file does not exist...
+	_, err = os.Stat(archiveName)
+	if err == nil {
+		err = os.Remove(archiveName)
+		if err != nil {
+			logger.Log.Warnf("  unable to delete ccache out tar. Error: %v", err)
+			return err
+		}
+	}
+
+	// Create the archive...
+	logger.Log.Infof("  compressing (%s) into (%s).", sourceDir, archiveName)
+	compressStartTime := time.Now()
+	tarArgs := []string{
+		"cf",
+		archiveName,
+		"-C",
+		sourceDir,
+		"."}
+
+	_, stderr, err := shell.Execute("tar", tarArgs...)
+	if err != nil {
+		logger.Log.Warnf("Unable compress ccache files itno archive. Error: %v", stderr)
+		return err
+	}
+	compressEndTime := time.Now()
+	logger.Log.Infof("  compress time: %s", compressEndTime.Sub(compressStartTime))	
+	return nil
+}
+
+func uncompressFile(archiveName string, targetDir string) (err error) {
+	logger.Log.Infof("  uncompressing (%s) into (%s).", archiveName, targetDir)
+	uncompressStartTime := time.Now()
+	tarArgs := []string{
+		"xf",
+		archiveName,
+		"-C",
+		targetDir,
+		"."}
+
+	_, stderr, err := shell.Execute("tar", tarArgs...)
+	if err != nil {
+		logger.Log.Warnf("Unable extract ccache files from archive. Error: %v", stderr)
+		return err
+	}
+	uncompressEndTime := time.Now()
+	logger.Log.Infof("  uncompress time: %v", uncompressEndTime.Sub(uncompressStartTime))
+	return nil
+}
+
+func getChildFolders(parentFolder string) ([]string, error) {
+	childFolders := []string{}
+
+	dir, err := os.Open(parentFolder)
+	if err != nil {
+		logger.Log.Infof("  error opening parent folder. Error: (%v)", err)
+		return nil, err
+	}
+	defer dir.Close()
+
+	children, err := dir.Readdirnames(-1)
+	if err != nil {
+		logger.Log.Infof("  error enumerating children. Error: (%v)", err)
+		return nil, err
+	}
+
+	for _, child := range children {
+		childPath := filepath.Join(parentFolder, child)
+
+		info, err := os.Stat(childPath)
+		if err != nil {
+			logger.Log.Infof("  error retrieving child attributes. Error: (%v)", err)
+			continue
+		}
+
+		if info.IsDir() {
+			childFolders = append(childFolders, child)
+		}
+	}
+
+	return childFolders, nil
+}
+
+// Initialize() is called once per CCacheManager instance.
+func (m *CCacheManager) Initialize(rootDir string, configFileName string) (err error) {
+
+	logger.Log.Infof("** initializing ccache manager **")
+	logger.Log.Infof("  ccache root folder         : (%s)", rootDir)
+	logger.Log.Infof("  ccache remote configuration: (%s)", configFileName)
+
+	if rootDir == "" {
+		return errors.New("CCache root directory cannot be empty.")
+	}
+
+	m.Configuration, err = loadConfiguration(configFileName)
+	if err != nil {
+		logger.Log.Infof("Failed to load remote store configuration. %v", err)
+		return err
+	}
+
+	m.RootCCacheDir = rootDir
+	m.DownloadsDir = m.RootCCacheDir + "-downloads"
+	m.UploadsDir = m.RootCCacheDir + "-uploads"
+
+	return nil
+}
+
 // SetPackage() is called once per package.
 func (m *CCacheManager) SetPackage(basePackageName string, arch string) (err error) {
 	groupName, groupSize := m.findGroup(basePackageName)
@@ -155,7 +244,7 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 	m.PkgGroupSize = groupSize
 	m.PkgArch = arch
 
-	m.PkgCCacheDir, err = m.GetCCacheDir(m.PkgGroupName, m.PkgArch)
+	m.PkgCCacheDir, err = m.getPkgCCacheDir(m.PkgGroupName, m.PkgArch)
 	if err != nil {
 		return errors.New(fmt.Sprintf("Failed to construct the ccache directory name. Error (%v)", err))
 	}
@@ -235,68 +324,14 @@ func (m *CCacheManager) findCCacheGroupSize(groupName string) (groupSize int) {
 	return groupSize
 }
 
-func (m *CCacheManager) GetCCacheDir(ccacheGroupName string, architecture string) (string, error) {
-	if architecture == "" {
-		return "", errors.New("CCache package architecture cannot be empty.")
+func (m *CCacheManager) getPkgCCacheDir(pkgCCacheGroupName string, pkgArchitecture string) (string, error) {
+	if pkgArchitecture == "" {
+		return "", errors.New("CCache package pkgArchitecture cannot be empty.")
 	}
-	if ccacheGroupName == "" {
+	if pkgCCacheGroupName == "" {
 		return "", errors.New("CCache package group name cannot be empty.")
 	}
-	return m.RootCCacheDir + "/" + architecture + "/" + ccacheGroupName, nil
-}
-
-func compressDir(sourceDir string, archiveName string) (err error) {
-
-	// Ensure the output file does not exist...
-	logger.Log.Infof("  removing older ccache tar output file (%s) if it exists...", archiveName)
-	_, err = os.Stat(archiveName)
-	if err == nil {
-		logger.Log.Infof("  found ccache tar output file (%s). Removing...", archiveName)
-		err = os.Remove(archiveName)
-		if err != nil {
-			logger.Log.Warnf("  unable to delete ccache out tar. Error: %v", err)
-			return err
-		}
-	}
-
-	// Create the archive...
-	logger.Log.Infof("  compressing (%s) into (%s).", sourceDir, archiveName)
-	compressStartTime := time.Now()
-	tarArgs := []string{
-		"cf",
-		archiveName,
-		"-C",
-		sourceDir,
-		"."}
-
-	_, stderr, err := shell.Execute("tar", tarArgs...)
-	if err != nil {
-		logger.Log.Warnf("Unable compress ccache files itno archive. Error: %v", stderr)
-		return err
-	}
-	compressEndTime := time.Now()
-	logger.Log.Infof("  compress time: %s", compressEndTime.Sub(compressStartTime))	
-	return nil
-}
-
-func uncompressFile(archiveName string, targetDir string) (err error) {
-	logger.Log.Infof("  uncompressing (%s) into (%s).", archiveName, targetDir)
-	uncompressStartTime := time.Now()
-	tarArgs := []string{
-		"xf",
-		archiveName,
-		"-C",
-		targetDir,
-		"."}
-
-	_, stderr, err := shell.Execute("tar", tarArgs...)
-	if err != nil {
-		logger.Log.Warnf("Unable extract ccache files from archive. Error: %v", stderr)
-		return err
-	}
-	uncompressEndTime := time.Now()
-	logger.Log.Infof("  uncompress time: %v", uncompressEndTime.Sub(uncompressStartTime))
-	return nil
+	return m.RootCCacheDir + "/" + pkgArchitecture + "/" + pkgCCacheGroupName, nil
 }
 
 func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
@@ -328,7 +363,7 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 		return err
 	}
 
-	if remoteStoreConfig.DownloadFolder == "latest" {
+	if remoteStoreConfig.DownloadFolder == LatestTagMarker {
 
 		logger.Log.Infof("  ccache is configured to use the latest...")
 
@@ -378,11 +413,13 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 		return nil
 	}
 
+	// Check if ccache has actually generated any content.
+	// If it has, it would have created a specific folder structure - so,
+	// checking for folders is reasonable enough.
 	pkgCCacheDirContents, err := getChildFolders(m.PkgCCacheDir)
 	if err != nil {
 		logger.Log.Warnf("Failed to enumerate the contents of (%s). Error: %v", m.PkgCCacheDir, err)
 	}
-
 	if len(pkgCCacheDirContents) == 0 {
 		logger.Log.Infof("  %s is empty. Nothing to archive and upload. Skipping...", m.PkgCCacheDir)
 		return nil
@@ -443,46 +480,26 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 	return nil
 }
 
-func getChildFolders(parentFolder string) ([]string, error) {
-	childFolders := []string{}
-
-	dir, err := os.Open(parentFolder)
-	if err != nil {
-		logger.Log.Infof("  error opening parent folder. Error: (%v)", err)
-		return nil, err
-	}
-	defer dir.Close()
-
-	children, err := dir.Readdirnames(-1)
-	if err != nil {
-		logger.Log.Infof("  error enumerating children. Error: (%v)", err)
-		return nil, err
-	}
-
-	for _, child := range children {
-		childPath := filepath.Join(parentFolder, child)
-
-		info, err := os.Stat(childPath)
-		if err != nil {
-			logger.Log.Infof("  error retrieving child attributes. Error: (%v)", err)
-			continue
-		}
-
-		if info.IsDir() {
-			childFolders = append(childFolders, child)
-		}
-	}
-
-	return childFolders, nil
-}
-
-// m.RootCCacheDir
-//   <arch-1>
+//
+// After building a package or more, the ccache folder is expected to look as
+// follows:
+//
+// <m.RootCCacheDir>
+//   x86_64
 //     <groupName-1>
 //     <groupName-2>
-//   <arch-2>
-//     <groupName-1>
-//     <groupName-2>
+//   noarch
+//     <groupName-3>
+//     <groupName-4>
+//
+// This function is typically called at the end of the build - after all
+// packages have completed building.
+//
+// At that point, there is not per package information about the group name
+// or the architecture.
+//
+// We use this directory structure to encode the per package group information
+// at build time, so we can use them now.
 //
 func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
 
@@ -512,7 +529,7 @@ func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
 					continue
 				}
 
-				groupCCacheDir, err := m.GetCCacheDir(groupName, architecture)
+				groupCCacheDir, err := m.getPkgCCacheDir(groupName, architecture)
 				if err != nil {
 					logger.Log.Warnf("Failed to get ccache dir for architecture (%s) and group name (%s)...", architecture, groupName)
 					errorsOccured = true
