@@ -45,7 +45,7 @@ var (
 	toolchainDirPath     = app.Flag("toolchain-rpms-dir", "Directory that contains already built toolchain RPMs. Should contain a top level directory for each architecture.").Required().ExistingDir()
 	cacheDir             = app.Flag("cache-dir", "The cache directory containing downloaded dependency RPMS from CBL-Mariner Base").Required().ExistingDir()
 	ccacheRootDir        = app.Flag("ccache-root-dir", "The directory used to store ccache outputs").Required().String()
-	ccachRemoteConfig    = app.Flag("ccache-remote-config", "The configuration file for ccache remote store.").Required().String()
+	ccachConfig          = app.Flag("ccache-config", "The configuration file for ccache.").Required().String()
 	basePackageName      = app.Flag("base-package-name", "The name of the spec file used to build this package without the extension.").Required().String()
 	noCleanup            = app.Flag("no-cleanup", "Whether or not to delete the chroot folder after the build is done").Bool()
 	distTag              = app.Flag("dist-tag", "The distribution tag the SPEC will be built with.").Required().String()
@@ -159,7 +159,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 
 	var ccacheManager ccachemanagerpkg.CCacheManager
 	if useCcache {
-		ccacheManager.Initialize(*ccachRemoteConfig, *ccacheRootDir)
+		ccacheManager.Initialize(*ccachConfig, *ccacheRootDir)
 		if err != nil {
 			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		}
@@ -168,7 +168,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 		if err != nil {
 			logger.Log.Warnf("Failed to set package ccache configuration. Error (%v)", err)
 		}
-		// err = ccacheManager.InstallCCache(ccacheDir, ccacheGroupName, outArch)
+
 		err = ccacheManager.DownloadPkgGroupCCache()
 		if err != nil {
 			logger.Log.Infof("  ccache will not be able to use previously generated artifacts.")
@@ -219,11 +219,6 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 		if err != nil {
 			logger.Log.Infof("  unable to upload ccache archive. Error: %v", err)
 		}
-
-		// err := os.RemoveAll(ccacheDir)
-		// if err != nil {
-		// 	logger.Log.Infof("  unable to remove ccache folder (%s). Error: %v", ccacheDir, err)
-		// }
 	}
 
 	return

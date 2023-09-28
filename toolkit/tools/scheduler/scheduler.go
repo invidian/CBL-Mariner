@@ -53,17 +53,17 @@ var (
 	inputGraphFile  = exe.InputFlag(app, "Path to the DOT graph file to build.")
 	outputGraphFile = exe.OutputFlag(app, "Path to save the built DOT graph file.")
 
-	outputCSVFile      = app.Flag("output-build-state-csv-file", "Path to save the CSV file.").Required().String()
-	workDir            = app.Flag("work-dir", "The directory to create the build folder").Required().String()
-	workerTar          = app.Flag("worker-tar", "Full path to worker_chroot.tar.gz").Required().ExistingFile()
-	repoFile           = app.Flag("repo-file", "Full path to local.repo").Required().ExistingFile()
-	rpmDir             = app.Flag("rpm-dir", "The directory to use as the local repo and to submit RPM packages to").Required().ExistingDir()
-	toolchainDirPath   = app.Flag("toolchain-rpms-dir", "Directory that contains already built toolchain RPMs. Should contain top level directories for architecture.").Required().ExistingDir()
-	srpmDir            = app.Flag("srpm-dir", "The output directory for source RPM packages").Required().String()
-	cacheDir           = app.Flag("cache-dir", "The cache directory containing downloaded dependency RPMS from Mariner Base").Required().ExistingDir()
-	ccacheDir          = app.Flag("ccache-dir", "The directory used to store ccache outputs").Required().ExistingDir()
-	ccacheRemoteConfig = app.Flag("ccache-remote-config", "The ccache configuration for remote store.").Required().String()
-	buildLogsDir       = app.Flag("build-logs-dir", "Directory to store package build logs").Required().ExistingDir()
+	outputCSVFile    = app.Flag("output-build-state-csv-file", "Path to save the CSV file.").Required().String()
+	workDir          = app.Flag("work-dir", "The directory to create the build folder").Required().String()
+	workerTar        = app.Flag("worker-tar", "Full path to worker_chroot.tar.gz").Required().ExistingFile()
+	repoFile         = app.Flag("repo-file", "Full path to local.repo").Required().ExistingFile()
+	rpmDir           = app.Flag("rpm-dir", "The directory to use as the local repo and to submit RPM packages to").Required().ExistingDir()
+	toolchainDirPath = app.Flag("toolchain-rpms-dir", "Directory that contains already built toolchain RPMs. Should contain top level directories for architecture.").Required().ExistingDir()
+	srpmDir          = app.Flag("srpm-dir", "The output directory for source RPM packages").Required().String()
+	cacheDir         = app.Flag("cache-dir", "The cache directory containing downloaded dependency RPMS from Mariner Base").Required().ExistingDir()
+	ccacheDir        = app.Flag("ccache-dir", "The directory used to store ccache outputs").Required().ExistingDir()
+	ccacheConfig     = app.Flag("ccache-remote-config", "The ccache configuration for remote store.").Required().String()
+	buildLogsDir     = app.Flag("build-logs-dir", "Directory to store package build logs").Required().ExistingDir()
 
 	imageConfig = app.Flag("image-config-file", "Optional image config file to extract a package list from.").String()
 	baseDirPath = app.Flag("base-dir", "Base directory for relative file paths from the config. Defaults to config's directory.").ExistingDir()
@@ -146,16 +146,16 @@ func main() {
 
 	// Setup a build agent to handle build requests from the scheduler.
 	buildAgentConfig := &buildagents.BuildAgentConfig{
-		Program:           *buildAgentProgram,
-		CacheDir:          *cacheDir,
-		CCacheDir:         *ccacheDir,
-		CCacheRemoteConfig:*ccacheRemoteConfig,
-		RepoFile:          *repoFile,
-		RpmDir:            *rpmDir,
-		ToolchainDir:      *toolchainDirPath,
-		SrpmDir:           *srpmDir,
-		WorkDir:           *workDir,
-		WorkerTar:         *workerTar,
+		Program:      *buildAgentProgram,
+		CacheDir:     *cacheDir,
+		CCacheDir:    *ccacheDir,
+		CCacheConfig: *ccacheConfig,
+		RepoFile:     *repoFile,
+		RpmDir:       *rpmDir,
+		ToolchainDir: *toolchainDirPath,
+		SrpmDir:      *srpmDir,
+		WorkDir:      *workDir,
+		WorkerTar:    *workerTar,
 
 		DistTag:              *distTag,
 		DistroReleaseVersion: *distroReleaseVersion,
@@ -197,7 +197,7 @@ func main() {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
 		var ccacheManager ccachemanagerpkg.CCacheManager
 
-		err = ccacheManager.Initialize(*ccacheRemoteConfig, *ccacheDir)
+		err = ccacheManager.Initialize(*ccacheConfig, *ccacheDir)
 		if err != nil {
 			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		} else {	

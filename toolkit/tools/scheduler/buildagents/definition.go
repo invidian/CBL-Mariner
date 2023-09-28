@@ -9,27 +9,27 @@ import "fmt"
 type BuildAgentConfig struct {
 	Program string
 
-	WorkDir              string
-	WorkerTar            string
-	RepoFile             string
-	RpmDir               string
-	ToolchainDir         string
-	SrpmDir              string
-	CacheDir             string
-	CCacheDir            string
-	CCacheRemoteConfig   string
+	WorkDir      string
+	WorkerTar    string
+	RepoFile     string
+	RpmDir       string
+	ToolchainDir string
+	SrpmDir      string
+	CacheDir     string
+	CCacheDir    string
+	CCacheConfig string
 
 	DistTag              string
 	DistroReleaseVersion string
 	DistroBuildNumber    string
 	RpmmacrosFile        string
 
-	NoCleanup            bool
-	UseCcache            bool
-	MaxCpu               string
+	NoCleanup bool
+	UseCcache bool
+	MaxCpu    string
 
-	LogDir              string
-	LogLevel            string
+	LogDir   string
+	LogLevel string
 }
 
 // BuildAgent provides an interface for a build agent that takes in an input package and builds it.
@@ -38,7 +38,7 @@ type BuildAgent interface {
 	Initialize(config *BuildAgentConfig) error
 
 	// BuildPackage builds a given file and returns the output files or error.
-	// - basePackageName is the base package name (i.e. 'kernel').
+	// - basePackageName is the base package name derived from the spec file (i.e. 'kernel').
 	// - inputFile is the SRPM to build.
 	// - logName is the file name to save the package build log to.
 	// - outArch is the target architecture to build for.
