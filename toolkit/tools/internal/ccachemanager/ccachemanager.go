@@ -1,8 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-// tools to to parse ccache configuration file
-
 package ccachemanagerpkg
 
 import (
