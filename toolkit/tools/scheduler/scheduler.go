@@ -62,7 +62,7 @@ var (
 	srpmDir          = app.Flag("srpm-dir", "The output directory for source RPM packages").Required().String()
 	cacheDir         = app.Flag("cache-dir", "The cache directory containing downloaded dependency RPMS from Mariner Base").Required().ExistingDir()
 	ccacheDir        = app.Flag("ccache-dir", "The directory used to store ccache outputs").Required().ExistingDir()
-	ccacheConfig     = app.Flag("ccache-remote-config", "The ccache configuration for remote store.").Required().String()
+	ccacheConfig     = app.Flag("ccache-config", "The ccache configuration file path.").Required().String()
 	buildLogsDir     = app.Flag("build-logs-dir", "Directory to store package build logs").Required().ExistingDir()
 
 	imageConfig = app.Flag("image-config-file", "Optional image config file to extract a package list from.").String()
@@ -198,13 +198,13 @@ func main() {
 		var ccacheManager ccachemanagerpkg.CCacheManager
 
 		err = ccacheManager.Initialize(*ccacheConfig, *ccacheDir)
-		if err != nil {
-			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
-		} else {	
+		if err == nil {
 			err = ccacheManager.UploadAllPkgGroupCCaches()
 			if err != nil {
-				logger.Log.Warnf("Failed to archive CCache artifacts.\nError: %s.", err)
+				logger.Log.Warnf("Failed to archive CCache artifacts. Error: %s.", err)
 			}
+		} else {
+			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		}
 	}
 }

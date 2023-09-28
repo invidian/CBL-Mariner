@@ -160,6 +160,11 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 		return errors.New(fmt.Sprintf("Failed to construct the ccache directory name. Error (%v)", err))
 	}
 	logger.Log.Infof("  ccache pkg folder   : (%s)", m.PkgCCacheDir)
+	err = ensureDirExists(m.PkgCCacheDir)
+	if err != nil {
+		logger.Log.Warnf("Cannot create ccache download folder. Error: %v", err)
+		return err
+	}
 
 	CCacheTarSuffix := "-ccache.tar.gz"
 	m.PkgTarFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheTarSuffix
@@ -296,12 +301,7 @@ func uncompressFile(archiveName string, targetDir string) (err error) {
 
 func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
-	logger.Log.Infof("  ccache is enabled --------------------")
-	err = ensureDirExists(m.PkgCCacheDir)
-	if err != nil {
-		logger.Log.Warnf("Cannot create ccache download folder. Error: %v", err)
-		return err
-	}
+	logger.Log.Infof("  processing download of ccache artifacts...")
 
 	if m.PkgGroupName == CommonGroupName {
 		logger.Log.Infof("  %s group - skipping download...", CommonGroupName)
@@ -371,7 +371,8 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 
-	logger.Log.Infof("  ccache is enabled --------------------")
+	logger.Log.Infof("  processing upload of ccache artifacts...")
+
 	if m.PkgGroupName == CommonGroupName {
 		logger.Log.Infof("  %s group - skipping upload...", CommonGroupName)
 		return nil
