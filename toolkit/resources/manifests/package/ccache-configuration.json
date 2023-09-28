@@ -15,11 +15,5660 @@
   },
   "groups": [
     {
+      "name": "abseil-cpp",
+      "packageNames": [ "abseil-cpp" ]
+    },
+    {
+      "name": "acl",
+      "packageNames": [ "acl" ]
+    },
+    {
+      "name": "acpica-tools",
+      "packageNames": [ "acpica-tools" ]
+    },
+    {
+      "name": "adwaita-icon-theme",
+      "packageNames": [ "adwaita-icon-theme" ]
+    },
+    {
+      "name": "afflib",
+      "packageNames": [ "afflib" ]
+    },
+    {
+      "name": "aide",
+      "packageNames": [ "aide" ]
+    },
+    {
+      "name": "alsa-lib",
+      "packageNames": [ "alsa-lib" ]
+    },
+    {
+      "name": "alsa-utils",
+      "packageNames": [ "alsa-utils" ]
+    },
+    {
+      "name": "ansible",
+      "packageNames": [ "ansible" ]
+    },
+    {
+      "name": "ant",
+      "packageNames": [ "ant" ]
+    },
+    {
+      "name": "ant-junit",
+      "packageNames": [ "ant-junit" ]
+    },
+    {
+      "name": "antlr",
+      "packageNames": [ "antlr" ]
+    },
+    {
+      "name": "apache-commons-cli",
+      "packageNames": [ "apache-commons-cli" ]
+    },
+    {
+      "name": "apache-commons-lang3",
+      "packageNames": [ "apache-commons-lang3" ]
+    },
+    {
+      "name": "apache-commons-logging",
+      "packageNames": [ "apache-commons-logging" ]
+    },
+    {
+      "name": "apparmor",
+      "packageNames": [ "apparmor" ]
+    },
+    {
+      "name": "application-gateway-kubernetes-ingress",
+      "packageNames": [ "application-gateway-kubernetes-ingress" ]
+    },
+    {
+      "name": "apr",
+      "packageNames": [ "apr" ]
+    },
+    {
+      "name": "apr-util",
+      "packageNames": [ "apr-util" ]
+    },
+    {
+      "name": "archivemount",
+      "packageNames": [ "archivemount" ]
+    },
+    {
+      "name": "asc",
+      "packageNames": [ "asc" ]
+    },
+    {
+      "name": "asciidoc",
+      "packageNames": [ "asciidoc" ]
+    },
+    {
+      "name": "aspell",
+      "packageNames": [ "aspell" ]
+    },
+    {
+      "name": "at",
+      "packageNames": [ "at" ]
+    },
+    {
+      "name": "atf",
+      "packageNames": [ "atf" ]
+    },
+    {
+      "name": "atftp",
+      "packageNames": [ "atftp" ]
+    },
+    {
+      "name": "atinject",
+      "packageNames": [ "atinject" ]
+    },
+    {
+      "name": "atk",
+      "packageNames": [ "atk" ]
+    },
+    {
+      "name": "atop",
+      "packageNames": [ "atop" ]
+    },
+    {
+      "name": "at-spi2-atk",
+      "packageNames": [ "at-spi2-atk" ]
+    },
+    {
+      "name": "at-spi2-core",
+      "packageNames": [ "at-spi2-core" ]
+    },
+    {
+      "name": "attr",
+      "packageNames": [ "attr" ]
+    },
+    {
+      "name": "audit",
+      "packageNames": [ "audit" ]
+    },
+    {
+      "name": "augeas",
+      "packageNames": [ "augeas" ]
+    },
+    {
+      "name": "authbind",
+      "packageNames": [ "authbind" ]
+    },
+    {
+      "name": "authd",
+      "packageNames": [ "authd" ]
+    },
+    {
+      "name": "autoconf",
+      "packageNames": [ "autoconf" ]
+    },
+    {
+      "name": "autoconf213",
+      "packageNames": [ "autoconf213" ]
+    },
+    {
+      "name": "autoconf-archive",
+      "packageNames": [ "autoconf-archive" ]
+    },
+    {
+      "name": "autofs",
+      "packageNames": [ "autofs" ]
+    },
+    {
+      "name": "autogen",
+      "packageNames": [ "autogen" ]
+    },
+    {
+      "name": "automake",
+      "packageNames": [ "automake" ]
+    },
+    {
+      "name": "avahi",
+      "packageNames": [ "avahi" ]
+    },
+    {
+      "name": "azcopy",
+      "packageNames": [ "azcopy" ]
+    },
+    {
+      "name": "azure-iot-sdk-c",
+      "packageNames": [ "azure-iot-sdk-c" ]
+    },
+    {
+      "name": "azure-storage-cpp",
+      "packageNames": [ "azure-storage-cpp" ]
+    },
+    {
+      "name": "babel",
+      "packageNames": [ "babel" ]
+    },
+    {
+      "name": "babeltrace2",
+      "packageNames": [ "babeltrace2" ]
+    },
+    {
+      "name": "bash",
+      "packageNames": [ "bash" ]
+    },
+    {
+      "name": "bash-completion",
+      "packageNames": [ "bash-completion" ]
+    },
+    {
+      "name": "bazel",
+      "packageNames": [ "bazel" ]
+    },
+    {
+      "name": "bazel-workspaces",
+      "packageNames": [ "bazel-workspaces" ]
+    },
+    {
+      "name": "bc",
+      "packageNames": [ "bc" ]
+    },
+    {
+      "name": "bcc",
+      "packageNames": [ "bcc" ]
+    },
+    {
+      "name": "bind",
+      "packageNames": [ "bind" ]
+    },
+    {
+      "name": "binutils",
+      "packageNames": [ "binutils" ]
+    },
+    {
+      "name": "bison",
+      "packageNames": [ "bison" ]
+    },
+    {
+      "name": "blktrace",
+      "packageNames": [ "blktrace" ]
+    },
+    {
+      "name": "blobfuse",
+      "packageNames": [ "blobfuse" ]
+    },
+    {
+      "name": "blobfuse2",
+      "packageNames": [ "blobfuse2" ]
+    },
+    {
+      "name": "bluez",
+      "packageNames": [ "bluez" ]
+    },
+    {
+      "name": "bmake",
+      "packageNames": [ "bmake" ]
+    },
+    {
+      "name": "bmon",
+      "packageNames": [ "bmon" ]
+    },
+    {
+      "name": "boost",
+      "packageNames": [ "boost" ]
+    },
+    {
+      "name": "bpftrace",
+      "packageNames": [ "bpftrace" ]
+    },
+    {
+      "name": "bridge-utils",
+      "packageNames": [ "bridge-utils" ]
+    },
+    {
+      "name": "brotli",
+      "packageNames": [ "brotli" ]
+    },
+    {
+      "name": "btrfs-progs",
+      "packageNames": [ "btrfs-progs" ]
+    },
+    {
+      "name": "bubblewrap",
+      "packageNames": [ "bubblewrap" ]
+    },
+    {
+      "name": "build-essential",
+      "packageNames": [ "build-essential" ]
+    },
+    {
+      "name": "busybox",
+      "packageNames": [ "busybox" ]
+    },
+    {
+      "name": "byacc",
+      "packageNames": [ "byacc" ]
+    },
+    {
+      "name": "byaccj",
+      "packageNames": [ "byaccj" ]
+    },
+    {
+      "name": "bzip2",
+      "packageNames": [ "bzip2" ]
+    },
+    {
+      "name": "ca-certificates",
+      "packageNames": [ "ca-certificates" ]
+    },
+    {
+      "name": "cairo",
+      "packageNames": [ "cairo" ]
+    },
+    {
+      "name": "cal10n",
+      "packageNames": [ "cal10n" ]
+    },
+    {
+      "name": "calamares",
+      "packageNames": [ "calamares" ]
+    },
+    {
+      "name": "c-ares",
+      "packageNames": [ "c-ares" ]
+    },
+    {
+      "name": "catch",
+      "packageNames": [ "catch" ]
+    },
+    {
+      "name": "ccache",
+      "packageNames": [ "ccache" ]
+    },
+    {
+      "name": "cdrkit",
+      "packageNames": [ "cdrkit" ]
+    },
+    {
+      "name": "ceph",
+      "packageNames": [ "ceph" ]
+    },
+    {
+      "name": "cereal",
+      "packageNames": [ "cereal" ]
+    },
+    {
+      "name": "cert-manager",
+      "packageNames": [ "cert-manager" ]
+    },
+    {
+      "name": "cf-cli",
+      "packageNames": [ "cf-cli" ]
+    },
+    {
+      "name": "check",
+      "packageNames": [ "check" ]
+    },
+    {
+      "name": "checkpolicy",
+      "packageNames": [ "checkpolicy" ]
+    },
+    {
+      "name": "check-restart",
+      "packageNames": [ "check-restart" ]
+    },
+    {
+      "name": "checksec",
+      "packageNames": [ "checksec" ]
+    },
+    {
+      "name": "chkconfig",
+      "packageNames": [ "chkconfig" ]
+    },
+    {
+      "name": "chrony",
+      "packageNames": [ "chrony" ]
+    },
+    {
+      "name": "chrpath",
+      "packageNames": [ "chrpath" ]
+    },
+    {
+      "name": "cifs-utils",
+      "packageNames": [ "cifs-utils" ]
+    },
+    {
+      "name": "clamav",
+      "packageNames": [ "clamav" ]
+    },
+    {
+      "name": "clang",
+      "packageNames": [ "clang" ]
+    },
+    {
+      "name": "clang16",
+      "packageNames": [ "clang16" ]
+    },
+    {
+      "name": "cloud-hypervisor",
+      "packageNames": [ "cloud-hypervisor" ]
+    },
+    {
+      "name": "cloud-init",
+      "packageNames": [ "cloud-init" ]
+    },
+    {
+      "name": "cloud-utils-growpart",
+      "packageNames": [ "cloud-utils-growpart" ]
+    },
+    {
+      "name": "cmake",
+      "packageNames": [ "cmake" ]
+    },
+    {
+      "name": "cmocka",
+      "packageNames": [ "cmocka" ]
+    },
+    {
+      "name": "cni",
+      "packageNames": [ "cni" ]
+    },
+    {
+      "name": "cni-plugins",
+      "packageNames": [ "cni-plugins" ]
+    },
+    {
+      "name": "collectd",
+      "packageNames": [ "collectd" ]
+    },
+    {
+      "name": "colm",
+      "packageNames": [ "colm" ]
+    },
+    {
+      "name": "colord",
+      "packageNames": [ "colord" ]
+    },
+    {
+      "name": "color-filesystem",
+      "packageNames": [ "color-filesystem" ]
+    },
+    {
+      "name": "compiler-rt",
+      "packageNames": [ "compiler-rt" ]
+    },
+    {
+      "name": "conda",
+      "packageNames": [ "conda" ]
+    },
+    {
+      "name": "conmon",
+      "packageNames": [ "conmon" ]
+    },
+    {
+      "name": "conntrack-tools",
+      "packageNames": [ "conntrack-tools" ]
+    },
+    {
+      "name": "containerized-data-importer",
+      "packageNames": [ "containerized-data-importer" ]
+    },
+    {
+      "name": "coredns-1.9.3",
+      "packageNames": [ "coredns-1.9.3" ]
+    },
+    {
+      "name": "coredns-1.8.4",
+      "packageNames": [ "coredns-1.8.4" ]
+    },
+    {
+      "name": "coredns-1.8.6",
+      "packageNames": [ "coredns-1.8.6" ]
+    },
+    {
+      "name": "coredns-1.8.0",
+      "packageNames": [ "coredns-1.8.0" ]
+    },
+    {
+      "name": "core-packages",
+      "packageNames": [ "core-packages" ]
+    },
+    {
+      "name": "coreutils",
+      "packageNames": [ "coreutils" ]
+    },
+    {
+      "name": "cpio",
+      "packageNames": [ "cpio" ]
+    },
+    {
+      "name": "cpprest",
+      "packageNames": [ "cpprest" ]
+    },
+    {
+      "name": "cppunit",
+      "packageNames": [ "cppunit" ]
+    },
+    {
+      "name": "cpulimit",
+      "packageNames": [ "cpulimit" ]
+    },
+    {
+      "name": "cracklib",
+      "packageNames": [ "cracklib" ]
+    },
+    {
+      "name": "crash",
+      "packageNames": [ "crash" ]
+    },
+    {
+      "name": "crash-gcore-command",
+      "packageNames": [ "crash-gcore-command" ]
+    },
+    {
+      "name": "createrepo_c",
+      "packageNames": [ "createrepo_c" ]
+    },
+    {
+      "name": "cri-o",
+      "packageNames": [ "cri-o" ]
+    },
+    {
+      "name": "cri-tools",
+      "packageNames": [ "cri-tools" ]
+    },
+    {
+      "name": "cronie",
+      "packageNames": [ "cronie" ]
+    },
+    {
+      "name": "cryptsetup",
+      "packageNames": [ "cryptsetup" ]
+    },
+    {
+      "name": "csi-driver-lvm",
+      "packageNames": [ "csi-driver-lvm" ]
+    },
+    {
+      "name": "ctags",
+      "packageNames": [ "ctags" ]
+    },
+    {
+      "name": "CUnit",
+      "packageNames": [ "CUnit" ]
+    },
+    {
+      "name": "cups",
+      "packageNames": [ "cups" ]
+    },
+    {
+      "name": "curl",
+      "packageNames": [ "curl" ]
+    },
+    {
+      "name": "cyrus-sasl",
+      "packageNames": [ "cyrus-sasl" ]
+    },
+    {
+      "name": "cyrus-sasl-bootstrap",
+      "packageNames": [ "cyrus-sasl-bootstrap" ]
+    },
+    {
+      "name": "Cython",
+      "packageNames": [ "Cython" ]
+    },
+    {
+      "name": "dbus",
+      "packageNames": [ "dbus" ]
+    },
+    {
+      "name": "dbus-glib",
+      "packageNames": [ "dbus-glib" ]
+    },
+    {
+      "name": "dbus-python",
+      "packageNames": [ "dbus-python" ]
+    },
+    {
+      "name": "dconf",
+      "packageNames": [ "dconf" ]
+    },
+    {
+      "name": "dcos-cli",
+      "packageNames": [ "dcos-cli" ]
+    },
+    {
+      "name": "debootstrap",
+      "packageNames": [ "debootstrap" ]
+    },
+    {
+      "name": "debugedit",
+      "packageNames": [ "debugedit" ]
+    },
+    {
+      "name": "dejagnu",
+      "packageNames": [ "dejagnu" ]
+    },
+    {
+      "name": "dejavu-fonts",
+      "packageNames": [ "dejavu-fonts" ]
+    },
+    {
+      "name": "desktop-file-utils",
+      "packageNames": [ "desktop-file-utils" ]
+    },
+    {
+      "name": "device-mapper-multipath",
+      "packageNames": [ "device-mapper-multipath" ]
+    },
+    {
+      "name": "dhcp",
+      "packageNames": [ "dhcp" ]
+    },
+    {
+      "name": "dialog",
+      "packageNames": [ "dialog" ]
+    },
+    {
+      "name": "dietlibc",
+      "packageNames": [ "dietlibc" ]
+    },
+    {
+      "name": "diffutils",
+      "packageNames": [ "diffutils" ]
+    },
+    {
+      "name": "ding-libs",
+      "packageNames": [ "ding-libs" ]
+    },
+    {
+      "name": "distroless-packages",
+      "packageNames": [ "distroless-packages" ]
+    },
+    {
+      "name": "dkms",
+      "packageNames": [ "dkms" ]
+    },
+    {
+      "name": "dmidecode",
+      "packageNames": [ "dmidecode" ]
+    },
+    {
+      "name": "dnf",
+      "packageNames": [ "dnf" ]
+    },
+    {
+      "name": "dnf5",
+      "packageNames": [ "dnf5" ]
+    },
+    {
+      "name": "dnf-plugins-core",
+      "packageNames": [ "dnf-plugins-core" ]
+    },
+    {
+      "name": "dnsmasq",
+      "packageNames": [ "dnsmasq" ]
+    },
+    {
+      "name": "docbook5-schemas",
+      "packageNames": [ "docbook5-schemas" ]
+    },
+    {
+      "name": "docbook-dtds",
+      "packageNames": [ "docbook-dtds" ]
+    },
+    {
+      "name": "docbook-dtd-xml",
+      "packageNames": [ "docbook-dtd-xml" ]
+    },
+    {
+      "name": "docbook-style-dsssl",
+      "packageNames": [ "docbook-style-dsssl" ]
+    },
+    {
+      "name": "docbook-style-xsl",
+      "packageNames": [ "docbook-style-xsl" ]
+    },
+    {
+      "name": "dos2unix",
+      "packageNames": [ "dos2unix" ]
+    },
+    {
+      "name": "dosfstools",
+      "packageNames": [ "dosfstools" ]
+    },
+    {
+      "name": "doxygen",
+      "packageNames": [ "doxygen" ]
+    },
+    {
+      "name": "dpdk",
+      "packageNames": [ "dpdk" ]
+    },
+    {
+      "name": "dracut",
+      "packageNames": [ "dracut" ]
+    },
+    {
+      "name": "dstat",
+      "packageNames": [ "dstat" ]
+    },
+    {
+      "name": "dtc",
+      "packageNames": [ "dtc" ]
+    },
+    {
+      "name": "dwarves",
+      "packageNames": [ "dwarves" ]
+    },
+    {
+      "name": "dwz",
+      "packageNames": [ "dwz" ]
+    },
+    {
+      "name": "e2fsprogs",
+      "packageNames": [ "e2fsprogs" ]
+    },
+    {
+      "name": "ebtables",
+      "packageNames": [ "ebtables" ]
+    },
+    {
+      "name": "ed",
+      "packageNames": [ "ed" ]
+    },
+    {
+      "name": "edk2",
+      "packageNames": [ "edk2" ]
+    },
+    {
+      "name": "efibootmgr",
+      "packageNames": [ "efibootmgr" ]
+    },
+    {
+      "name": "efivar",
+      "packageNames": [ "efivar" ]
+    },
+    {
+      "name": "elfutils",
+      "packageNames": [ "elfutils" ]
+    },
+    {
+      "name": "elixir",
+      "packageNames": [ "elixir" ]
+    },
+    {
+      "name": "emacs",
+      "packageNames": [ "emacs" ]
+    },
+    {
+      "name": "enchant2",
+      "packageNames": [ "enchant2" ]
+    },
+    {
+      "name": "environment-modules",
+      "packageNames": [ "environment-modules" ]
+    },
+    {
+      "name": "erlang",
+      "packageNames": [ "erlang" ]
+    },
+    {
+      "name": "espeak-ng",
+      "packageNames": [ "espeak-ng" ]
+    },
+    {
+      "name": "espeakup",
+      "packageNames": [ "espeakup" ]
+    },
+    {
+      "name": "etcd-3.5.0",
+      "packageNames": [ "etcd-3.5.0" ]
+    },
+    {
+      "name": "etcd-3.5.1",
+      "packageNames": [ "etcd-3.5.1" ]
+    },
+    {
+      "name": "etcd-3.5.3",
+      "packageNames": [ "etcd-3.5.3" ]
+    },
+    {
+      "name": "etcd-3.5.4",
+      "packageNames": [ "etcd-3.5.4" ]
+    },
+    {
+      "name": "etcd-3.5.5",
+      "packageNames": [ "etcd-3.5.5" ]
+    },
+    {
+      "name": "etcd-3.5.6",
+      "packageNames": [ "etcd-3.5.6" ]
+    },
+    {
+      "name": "ethtool",
+      "packageNames": [ "ethtool" ]
+    },
+    {
+      "name": "execstack",
+      "packageNames": [ "execstack" ]
+    },
+    {
+      "name": "expat",
+      "packageNames": [ "expat" ]
+    },
+    {
+      "name": "expect",
+      "packageNames": [ "expect" ]
+    },
+    {
+      "name": "extra-cmake-modules",
+      "packageNames": [ "extra-cmake-modules" ]
+    },
+    {
+      "name": "fakeroot",
+      "packageNames": [ "fakeroot" ]
+    },
+    {
+      "name": "fcgi",
+      "packageNames": [ "fcgi" ]
+    },
+    {
+      "name": "fdupes",
+      "packageNames": [ "fdupes" ]
+    },
+    {
+      "name": "file",
+      "packageNames": [ "file" ]
+    },
+    {
+      "name": "filesystem",
+      "packageNames": [ "filesystem" ]
+    },
+    {
+      "name": "fillup",
+      "packageNames": [ "fillup" ]
+    },
+    {
+      "name": "findutils",
+      "packageNames": [ "findutils" ]
+    },
+    {
+      "name": "finger",
+      "packageNames": [ "finger" ]
+    },
+    {
+      "name": "fio",
+      "packageNames": [ "fio" ]
+    },
+    {
+      "name": "firewalld",
+      "packageNames": [ "firewalld" ]
+    },
+    {
+      "name": "fish",
+      "packageNames": [ "fish" ]
+    },
+    {
+      "name": "flannel",
+      "packageNames": [ "flannel" ]
+    },
+    {
+      "name": "flatbuffers",
+      "packageNames": [ "flatbuffers" ]
+    },
+    {
+      "name": "flex",
+      "packageNames": [ "flex" ]
+    },
+    {
+      "name": "fluent-bit",
+      "packageNames": [ "fluent-bit" ]
+    },
+    {
+      "name": "flux",
+      "packageNames": [ "flux" ]
+    },
+    {
+      "name": "fmt",
+      "packageNames": [ "fmt" ]
+    },
+    {
+      "name": "fontawesome-fonts",
+      "packageNames": [ "fontawesome-fonts" ]
+    },
+    {
+      "name": "fontconfig",
+      "packageNames": [ "fontconfig" ]
+    },
+    {
+      "name": "fontpackages",
+      "packageNames": [ "fontpackages" ]
+    },
+    {
+      "name": "fping",
+      "packageNames": [ "fping" ]
+    },
+    {
+      "name": "freefont",
+      "packageNames": [ "freefont" ]
+    },
+    {
+      "name": "freeipmi",
+      "packageNames": [ "freeipmi" ]
+    },
+    {
+      "name": "freetds",
+      "packageNames": [ "freetds" ]
+    },
+    {
+      "name": "freetype",
+      "packageNames": [ "freetype" ]
+    },
+    {
+      "name": "fribidi",
+      "packageNames": [ "fribidi" ]
+    },
+    {
+      "name": "frr",
+      "packageNames": [ "frr" ]
+    },
+    {
+      "name": "fsverity-utils",
+      "packageNames": [ "fsverity-utils" ]
+    },
+    {
+      "name": "fuse",
+      "packageNames": [ "fuse" ]
+    },
+    {
+      "name": "fuse3",
+      "packageNames": [ "fuse3" ]
+    },
+    {
+      "name": "fuse-zip",
+      "packageNames": [ "fuse-zip" ]
+    },
+    {
+      "name": "future",
+      "packageNames": [ "future" ]
+    },
+    {
+      "name": "gawk",
+      "packageNames": [ "gawk" ]
+    },
+    {
+      "name": "gc",
+      "packageNames": [ "gc" ]
+    },
+    {
+      "name": "gcc",
+      "packageNames": [ "gcc" ]
+    },
+    {
+      "name": "gcovr",
+      "packageNames": [ "gcovr" ]
+    },
+    {
+      "name": "gd",
+      "packageNames": [ "gd" ]
+    },
+    {
+      "name": "gdb",
+      "packageNames": [ "gdb" ]
+    },
+    {
+      "name": "gdbm",
+      "packageNames": [ "gdbm" ]
+    },
+    {
+      "name": "gdk-pixbuf2",
+      "packageNames": [ "gdk-pixbuf2" ]
+    },
+    {
+      "name": "geos",
+      "packageNames": [ "geos" ]
+    },
+    {
+      "name": "gettext",
+      "packageNames": [ "gettext" ]
+    },
+    {
+      "name": "gflags",
+      "packageNames": [ "gflags" ]
+    },
+    {
+      "name": "gfs2-utils",
+      "packageNames": [ "gfs2-utils" ]
+    },
+    {
+      "name": "gh",
+      "packageNames": [ "gh" ]
+    },
+    {
+      "name": "giflib",
+      "packageNames": [ "giflib" ]
+    },
+    {
+      "name": "git",
+      "packageNames": [ "git" ]
+    },
+    {
+      "name": "git-lfs",
+      "packageNames": [ "git-lfs" ]
+    },
+    {
+      "name": "glassfish-servlet-api",
+      "packageNames": [ "glassfish-servlet-api" ]
+    },
+    {
+      "name": "glib",
+      "packageNames": [ "glib" ]
+    },
+    {
+      "name": "glibc",
+      "packageNames": [ "glibc" ]
+    },
+    {
+      "name": "glibmm",
+      "packageNames": [ "glibmm" ]
+    },
+    {
+      "name": "glib-networking",
+      "packageNames": [ "glib-networking" ]
+    },
+    {
+      "name": "glide",
+      "packageNames": [ "glide" ]
+    },
+    {
+      "name": "glusterfs",
+      "packageNames": [ "glusterfs" ]
+    },
+    {
+      "name": "gmp",
+      "packageNames": [ "gmp" ]
+    },
+    {
+      "name": "gnome-common",
+      "packageNames": [ "gnome-common" ]
+    },
+    {
+      "name": "gnu-efi",
+      "packageNames": [ "gnu-efi" ]
+    },
+    {
+      "name": "gnupg2",
+      "packageNames": [ "gnupg2" ]
+    },
+    {
+      "name": "gnuplot",
+      "packageNames": [ "gnuplot" ]
+    },
+    {
+      "name": "gnutls",
+      "packageNames": [ "gnutls" ]
+    },
+    {
+      "name": "gobject-introspection",
+      "packageNames": [ "gobject-introspection" ]
+    },
+    {
+      "name": "golang",
+      "packageNames": [ "golang" ]
+    },
+    {
+      "name": "golang-1.17",
+      "packageNames": [ "golang-1.17" ]
+    },
+    {
+      "name": "golang-1.18",
+      "packageNames": [ "golang-1.18" ]
+    },
+    {
+      "name": "golang-packaging",
+      "packageNames": [ "golang-packaging" ]
+    },
+    {
+      "name": "go-md2man",
+      "packageNames": [ "go-md2man" ]
+    },
+    {
+      "name": "google-guice",
+      "packageNames": [ "google-guice" ]
+    },
+    {
+      "name": "google-roboto-slab-fonts",
+      "packageNames": [ "google-roboto-slab-fonts" ]
+    },
+    {
+      "name": "gperf",
+      "packageNames": [ "gperf" ]
+    },
+    {
+      "name": "gperftools",
+      "packageNames": [ "gperftools" ]
+    },
+    {
+      "name": "gpgme",
+      "packageNames": [ "gpgme" ]
+    },
+    {
+      "name": "gptfdisk",
+      "packageNames": [ "gptfdisk" ]
+    },
+    {
+      "name": "graphviz",
+      "packageNames": [ "graphviz" ]
+    },
+    {
+      "name": "grep",
+      "packageNames": [ "grep" ]
+    },
+    {
+      "name": "groff",
+      "packageNames": [ "groff" ]
+    },
+    {
+      "name": "grpc",
+      "packageNames": [ "grpc" ]
+    },
+    {
+      "name": "grub2",
+      "packageNames": [ "grub2" ]
+    },
+    {
+      "name": "grubby",
+      "packageNames": [ "grubby" ]
+    },
+    {
+      "name": "gsettings-desktop-schemas",
+      "packageNames": [ "gsettings-desktop-schemas" ]
+    },
+    {
+      "name": "GSL",
+      "packageNames": [ "GSL" ]
+    },
+    {
+      "name": "gsm",
+      "packageNames": [ "gsm" ]
+    },
+    {
+      "name": "gtest",
+      "packageNames": [ "gtest" ]
+    },
+    {
+      "name": "gtk2",
+      "packageNames": [ "gtk2" ]
+    },
+    {
+      "name": "gtk3",
+      "packageNames": [ "gtk3" ]
+    },
+    {
+      "name": "gtk-doc",
+      "packageNames": [ "gtk-doc" ]
+    },
+    {
+      "name": "gtk-update-icon-cache",
+      "packageNames": [ "gtk-update-icon-cache" ]
+    },
+    {
+      "name": "guava",
+      "packageNames": [ "guava" ]
+    },
+    {
+      "name": "guile",
+      "packageNames": [ "guile" ]
+    },
+    {
+      "name": "gzip",
+      "packageNames": [ "gzip" ]
+    },
+    {
+      "name": "hamcrest",
+      "packageNames": [ "hamcrest" ]
+    },
+    {
+      "name": "haproxy",
+      "packageNames": [ "haproxy" ]
+    },
+    {
+      "name": "hardening-check",
+      "packageNames": [ "hardening-check" ]
+    },
+    {
+      "name": "harfbuzz",
+      "packageNames": [ "harfbuzz" ]
+    },
+    {
+      "name": "haveged",
+      "packageNames": [ "haveged" ]
+    },
+    {
+      "name": "hdf5",
+      "packageNames": [ "hdf5" ]
+    },
+    {
+      "name": "hdparm",
+      "packageNames": [ "hdparm" ]
+    },
+    {
+      "name": "heimdal",
+      "packageNames": [ "heimdal" ]
+    },
+    {
+      "name": "helm",
+      "packageNames": [ "helm" ]
+    },
+    {
+      "name": "help2man",
+      "packageNames": [ "help2man" ]
+    },
+    {
+      "name": "hexedit",
+      "packageNames": [ "hexedit" ]
+    },
+    {
+      "name": "hicolor-icon-theme",
+      "packageNames": [ "hicolor-icon-theme" ]
+    },
+    {
+      "name": "hivex",
+      "packageNames": [ "hivex" ]
+    },
+    {
+      "name": "hostname",
+      "packageNames": [ "hostname" ]
+    },
+    {
+      "name": "htop",
+      "packageNames": [ "htop" ]
+    },
+    {
+      "name": "httpd",
+      "packageNames": [ "httpd" ]
+    },
+    {
+      "name": "http-parser",
+      "packageNames": [ "http-parser" ]
+    },
+    {
+      "name": "hunspell",
+      "packageNames": [ "hunspell" ]
+    },
+    {
+      "name": "hunspell-en",
+      "packageNames": [ "hunspell-en" ]
+    },
+    {
+      "name": "hvloader",
+      "packageNames": [ "hvloader" ]
+    },
+    {
+      "name": "hwdata",
+      "packageNames": [ "hwdata" ]
+    },
+    {
+      "name": "hwloc",
+      "packageNames": [ "hwloc" ]
+    },
+    {
+      "name": "hyperscan",
+      "packageNames": [ "hyperscan" ]
+    },
+    {
+      "name": "hyperv-daemons",
+      "packageNames": [ "hyperv-daemons" ]
+    },
+    {
+      "name": "i2c-tools",
+      "packageNames": [ "i2c-tools" ]
+    },
+    {
+      "name": "iana-etc",
+      "packageNames": [ "iana-etc" ]
+    },
+    {
+      "name": "icoutils",
+      "packageNames": [ "icoutils" ]
+    },
+    {
+      "name": "icu",
+      "packageNames": [ "icu" ]
+    },
+    {
+      "name": "im-chooser",
+      "packageNames": [ "im-chooser" ]
+    },
+    {
+      "name": "imsettings",
+      "packageNames": [ "imsettings" ]
+    },
+    {
+      "name": "infinipath-psm",
+      "packageNames": [ "infinipath-psm" ]
+    },
+    {
+      "name": "influx-cli",
+      "packageNames": [ "influx-cli" ]
+    },
+    {
+      "name": "influxdb",
+      "packageNames": [ "influxdb" ]
+    },
+    {
+      "name": "inih",
+      "packageNames": [ "inih" ]
+    },
+    {
+      "name": "initramfs",
+      "packageNames": [ "initramfs" ]
+    },
+    {
+      "name": "initscripts",
+      "packageNames": [ "initscripts" ]
+    },
+    {
+      "name": "inotify-tools",
+      "packageNames": [ "inotify-tools" ]
+    },
+    {
+      "name": "installkernel",
+      "packageNames": [ "installkernel" ]
+    },
+    {
+      "name": "intel-ipsec-mb",
+      "packageNames": [ "intel-ipsec-mb" ]
+    },
+    {
+      "name": "intel-pf-bb-config",
+      "packageNames": [ "intel-pf-bb-config" ]
+    },
+    {
+      "name": "intltool",
+      "packageNames": [ "intltool" ]
+    },
+    {
+      "name": "iotop",
+      "packageNames": [ "iotop" ]
+    },
+    {
+      "name": "IP2Location",
+      "packageNames": [ "IP2Location" ]
+    },
+    {
+      "name": "iperf3",
+      "packageNames": [ "iperf3" ]
+    },
+    {
+      "name": "ipmitool",
+      "packageNames": [ "ipmitool" ]
+    },
+    {
+      "name": "iproute",
+      "packageNames": [ "iproute" ]
+    },
+    {
+      "name": "ipset",
+      "packageNames": [ "ipset" ]
+    },
+    {
+      "name": "iptables",
+      "packageNames": [ "iptables" ]
+    },
+    {
+      "name": "iptraf-ng",
+      "packageNames": [ "iptraf-ng" ]
+    },
+    {
+      "name": "iputils",
+      "packageNames": [ "iputils" ]
+    },
+    {
+      "name": "ipvsadm",
+      "packageNames": [ "ipvsadm" ]
+    },
+    {
+      "name": "ipxe",
+      "packageNames": [ "ipxe" ]
+    },
+    {
+      "name": "irqbalance",
+      "packageNames": [ "irqbalance" ]
+    },
+    {
+      "name": "iscsi-initiator-utils",
+      "packageNames": [ "iscsi-initiator-utils" ]
+    },
+    {
+      "name": "isns-utils",
+      "packageNames": [ "isns-utils" ]
+    },
+    {
+      "name": "itstool",
+      "packageNames": [ "itstool" ]
+    },
+    {
+      "name": "ivykis",
+      "packageNames": [ "ivykis" ]
+    },
+    {
+      "name": "iw",
+      "packageNames": [ "iw" ]
+    },
+    {
+      "name": "jansson",
+      "packageNames": [ "jansson" ]
+    },
+    {
+      "name": "jasper",
+      "packageNames": [ "jasper" ]
+    },
+    {
+      "name": "java-cup",
+      "packageNames": [ "java-cup", "java-cup-bootstrap" ]
+    },
+    {
+      "name": "javapackages-bootstrap",
+      "packageNames": [ "javapackages-bootstrap" ]
+    },
+    {
+      "name": "javapackages-tools",
+      "packageNames": [ "javapackages-tools" ]
+    },
+    {
+      "name": "javassist",
+      "packageNames": [ "javassist" ]
+    },
+    {
+      "name": "jemalloc",
+      "packageNames": [ "jemalloc" ]
+    },
+    {
+      "name": "jflex",
+      "packageNames": [ "jflex", "jflex-bootstrap" ]
+    },
+    {
+      "name": "jna",
+      "packageNames": [ "jna" ]
+    },
+    {
+      "name": "jq",
+      "packageNames": [ "jq" ]
+    },
+    {
+      "name": "jsonbuilder",
+      "packageNames": [ "jsonbuilder" ]
+    },
+    {
+      "name": "json-c",
+      "packageNames": [ "json-c" ]
+    },
+    {
+      "name": "json-glib",
+      "packageNames": [ "json-glib" ]
+    },
+    {
+      "name": "jsr-305",
+      "packageNames": [ "jsr-305" ]
+    },
+    {
+      "name": "junit",
+      "packageNames": [ "junit" ]
+    },
+    {
+      "name": "jx",
+      "packageNames": [ "jx" ]
+    },
+    {
+      "name": "kata-containers",
+      "packageNames": [ "kata-containers" ]
+    },
+    {
+      "name": "kata-containers-cc",
+      "packageNames": [ "kata-containers-cc" ]
+    },
+    {
+      "name": "kbd",
+      "packageNames": [ "kbd" ]
+    },
+    {
+      "name": "kde-settings",
+      "packageNames": [ "kde-settings" ]
+    },
+    {
+      "name": "keda",
+      "packageNames": [ "keda" ]
+    },
+    {
+      "name": "keepalived",
+      "packageNames": [ "keepalived" ]
+    },
+    {
+      "name": "keras",
+      "packageNames": [ "keras" ]
+    },
+    {
       "name": "kernel",
-      "packageNames": [
-        "kernel",
-        "kernel-hci"
-      ]
+      "packageNames": [ "kernel", "kernel-azure", "kernel-hci", "kernel-mshv", "kernel-uvm" ]
+    },
+    {
+      "name": "kernel-headers",
+      "packageNames": [ "kernel-headers" ]
+    },
+    {
+      "name": "kexec-tools",
+      "packageNames": [ "kexec-tools" ]
+    },
+    {
+      "name": "KeysInUse-OpenSSL",
+      "packageNames": [ "KeysInUse-OpenSSL" ]
+    },
+    {
+      "name": "keyutils",
+      "packageNames": [ "keyutils" ]
+    },
+    {
+      "name": "kf5",
+      "packageNames": [ "kf5" ]
+    },
+    {
+      "name": "kf5-kconfig",
+      "packageNames": [ "kf5-kconfig" ]
+    },
+    {
+      "name": "kf5-kcoreaddons",
+      "packageNames": [ "kf5-kcoreaddons" ]
+    },
+    {
+      "name": "kf5-ki18n",
+      "packageNames": [ "kf5-ki18n" ]
+    },
+    {
+      "name": "kf5-kwidgetsaddons",
+      "packageNames": [ "kf5-kwidgetsaddons" ]
+    },
+    {
+      "name": "kmod",
+      "packageNames": [ "kmod" ]
+    },
+    {
+      "name": "knem",
+      "packageNames": [ "knem" ]
+    },
+    {
+      "name": "kpatch",
+      "packageNames": [ "kpatch" ]
+    },
+    {
+      "name": "kpmcore",
+      "packageNames": [ "kpmcore" ]
+    },
+    {
+      "name": "krb5",
+      "packageNames": [ "krb5" ]
+    },
+    {
+      "name": "ksh",
+      "packageNames": [ "ksh" ]
+    },
+    {
+      "name": "kube-vip-cloud-provider",
+      "packageNames": [ "kube-vip-cloud-provider" ]
+    },
+    {
+      "name": "kubevirt",
+      "packageNames": [ "kubevirt" ]
+    },
+    {
+      "name": "kured",
+      "packageNames": [ "kured" ]
+    },
+    {
+      "name": "kyua",
+      "packageNames": [ "kyua" ]
+    },
+    {
+      "name": "lapack",
+      "packageNames": [ "lapack" ]
+    },
+    {
+      "name": "lato-fonts",
+      "packageNames": [ "lato-fonts" ]
+    },
+    {
+      "name": "lcms2",
+      "packageNames": [ "lcms2" ]
+    },
+    {
+      "name": "ldns",
+      "packageNames": [ "ldns" ]
+    },
+    {
+      "name": "less",
+      "packageNames": [ "less" ]
+    },
+    {
+      "name": "leveldb",
+      "packageNames": [ "leveldb" ]
+    },
+    {
+      "name": "libacvp",
+      "packageNames": [ "libacvp" ]
+    },
+    {
+      "name": "libaec",
+      "packageNames": [ "libaec" ]
+    },
+    {
+      "name": "libaio",
+      "packageNames": [ "libaio" ]
+    },
+    {
+      "name": "libarchive",
+      "packageNames": [ "libarchive" ]
+    },
+    {
+      "name": "libassuan",
+      "packageNames": [ "libassuan" ]
+    },
+    {
+      "name": "libatasmart",
+      "packageNames": [ "libatasmart" ]
+    },
+    {
+      "name": "libatomic_ops",
+      "packageNames": [ "libatomic_ops" ]
+    },
+    {
+      "name": "libbpf",
+      "packageNames": [ "libbpf" ]
+    },
+    {
+      "name": "libburn",
+      "packageNames": [ "libburn" ]
+    },
+    {
+      "name": "libcacard",
+      "packageNames": [ "libcacard" ]
+    },
+    {
+      "name": "libcap",
+      "packageNames": [ "libcap" ]
+    },
+    {
+      "name": "libcap-ng",
+      "packageNames": [ "libcap-ng" ]
+    },
+    {
+      "name": "libcgroup",
+      "packageNames": [ "libcgroup" ]
+    },
+    {
+      "name": "libcomps",
+      "packageNames": [ "libcomps" ]
+    },
+    {
+      "name": "libconfig",
+      "packageNames": [ "libconfig" ]
+    },
+    {
+      "name": "libconfini",
+      "packageNames": [ "libconfini" ]
+    },
+    {
+      "name": "libconfuse",
+      "packageNames": [ "libconfuse" ]
+    },
+    {
+      "name": "libcontainers-common",
+      "packageNames": [ "libcontainers-common" ]
+    },
+    {
+      "name": "libdaemon",
+      "packageNames": [ "libdaemon" ]
+    },
+    {
+      "name": "libdb",
+      "packageNames": [ "libdb" ]
+    },
+    {
+      "name": "libdnet",
+      "packageNames": [ "libdnet" ]
+    },
+    {
+      "name": "libdnf",
+      "packageNames": [ "libdnf" ]
+    },
+    {
+      "name": "libdrm",
+      "packageNames": [ "libdrm" ]
+    },
+    {
+      "name": "libedit",
+      "packageNames": [ "libedit" ]
+    },
+    {
+      "name": "libell",
+      "packageNames": [ "libell" ]
+    },
+    {
+      "name": "libepoxy",
+      "packageNames": [ "libepoxy" ]
+    },
+    {
+      "name": "libestr",
+      "packageNames": [ "libestr" ]
+    },
+    {
+      "name": "libev",
+      "packageNames": [ "libev" ]
+    },
+    {
+      "name": "libevdev",
+      "packageNames": [ "libevdev" ]
+    },
+    {
+      "name": "libevent",
+      "packageNames": [ "libevent" ]
+    },
+    {
+      "name": "libewf",
+      "packageNames": [ "libewf" ]
+    },
+    {
+      "name": "libexif",
+      "packageNames": [ "libexif" ]
+    },
+    {
+      "name": "libfabric",
+      "packageNames": [ "libfabric" ]
+    },
+    {
+      "name": "libfastjson",
+      "packageNames": [ "libfastjson" ]
+    },
+    {
+      "name": "libffi",
+      "packageNames": [ "libffi" ]
+    },
+    {
+      "name": "libfontenc",
+      "packageNames": [ "libfontenc" ]
+    },
+    {
+      "name": "libgcrypt",
+      "packageNames": [ "libgcrypt" ]
+    },
+    {
+      "name": "libgdiplus",
+      "packageNames": [ "libgdiplus" ]
+    },
+    {
+      "name": "libgit2",
+      "packageNames": [ "libgit2" ]
+    },
+    {
+      "name": "libglvnd",
+      "packageNames": [ "libglvnd" ]
+    },
+    {
+      "name": "libgpg-error",
+      "packageNames": [ "libgpg-error" ]
+    },
+    {
+      "name": "libgssglue",
+      "packageNames": [ "libgssglue" ]
+    },
+    {
+      "name": "libgsystem",
+      "packageNames": [ "libgsystem" ]
+    },
+    {
+      "name": "libgudev",
+      "packageNames": [ "libgudev" ]
+    },
+    {
+      "name": "libguestfs",
+      "packageNames": [ "libguestfs" ]
+    },
+    {
+      "name": "libgusb",
+      "packageNames": [ "libgusb" ]
+    },
+    {
+      "name": "libgxim",
+      "packageNames": [ "libgxim" ]
+    },
+    {
+      "name": "libhugetlbfs",
+      "packageNames": [ "libhugetlbfs" ]
+    },
+    {
+      "name": "libical",
+      "packageNames": [ "libical" ]
+    },
+    {
+      "name": "libICE",
+      "packageNames": [ "libICE" ]
+    },
+    {
+      "name": "libinput",
+      "packageNames": [ "libinput" ]
+    },
+    {
+      "name": "libiscsi",
+      "packageNames": [ "libiscsi" ]
+    },
+    {
+      "name": "libisoburn",
+      "packageNames": [ "libisoburn" ]
+    },
+    {
+      "name": "libisofs",
+      "packageNames": [ "libisofs" ]
+    },
+    {
+      "name": "libjpeg-turbo",
+      "packageNames": [ "libjpeg-turbo" ]
+    },
+    {
+      "name": "libkcapi",
+      "packageNames": [ "libkcapi" ]
+    },
+    {
+      "name": "libksba",
+      "packageNames": [ "libksba" ]
+    },
+    {
+      "name": "libldm",
+      "packageNames": [ "libldm" ]
+    },
+    {
+      "name": "liblogging",
+      "packageNames": [ "liblogging" ]
+    },
+    {
+      "name": "liblognorm",
+      "packageNames": [ "liblognorm" ]
+    },
+    {
+      "name": "liblzf",
+      "packageNames": [ "liblzf" ]
+    },
+    {
+      "name": "libmaxminddb",
+      "packageNames": [ "libmaxminddb" ]
+    },
+    {
+      "name": "libmbim",
+      "packageNames": [ "libmbim" ]
+    },
+    {
+      "name": "libmemcached-awesome",
+      "packageNames": [ "libmemcached-awesome" ]
+    },
+    {
+      "name": "libmetalink",
+      "packageNames": [ "libmetalink" ]
+    },
+    {
+      "name": "libmnl",
+      "packageNames": [ "libmnl" ]
+    },
+    {
+      "name": "libmodulemd",
+      "packageNames": [ "libmodulemd" ]
+    },
+    {
+      "name": "libmpc",
+      "packageNames": [ "libmpc" ]
+    },
+    {
+      "name": "libmspack",
+      "packageNames": [ "libmspack" ]
+    },
+    {
+      "name": "libnbd",
+      "packageNames": [ "libnbd" ]
+    },
+    {
+      "name": "libndp",
+      "packageNames": [ "libndp" ]
+    },
+    {
+      "name": "libnetfilter_conntrack",
+      "packageNames": [ "libnetfilter_conntrack" ]
+    },
+    {
+      "name": "libnetfilter_cthelper",
+      "packageNames": [ "libnetfilter_cthelper" ]
+    },
+    {
+      "name": "libnetfilter_cttimeout",
+      "packageNames": [ "libnetfilter_cttimeout" ]
+    },
+    {
+      "name": "libnetfilter_log",
+      "packageNames": [ "libnetfilter_log" ]
+    },
+    {
+      "name": "libnetfilter_queue",
+      "packageNames": [ "libnetfilter_queue" ]
+    },
+    {
+      "name": "libnfnetlink",
+      "packageNames": [ "libnfnetlink" ]
+    },
+    {
+      "name": "libnfs",
+      "packageNames": [ "libnfs" ]
+    },
+    {
+      "name": "libnftnl",
+      "packageNames": [ "libnftnl" ]
+    },
+    {
+      "name": "libnl3",
+      "packageNames": [ "libnl3" ]
+    },
+    {
+      "name": "libnotify",
+      "packageNames": [ "libnotify" ]
+    },
+    {
+      "name": "libnsl2",
+      "packageNames": [ "libnsl2" ]
+    },
+    {
+      "name": "libnvidia-container",
+      "packageNames": [ "libnvidia-container" ]
+    },
+    {
+      "name": "libpcap",
+      "packageNames": [ "libpcap" ]
+    },
+    {
+      "name": "libpciaccess",
+      "packageNames": [ "libpciaccess" ]
+    },
+    {
+      "name": "libpipeline",
+      "packageNames": [ "libpipeline" ]
+    },
+    {
+      "name": "libpng",
+      "packageNames": [ "libpng" ]
+    },
+    {
+      "name": "libpsl",
+      "packageNames": [ "libpsl" ]
+    },
+    {
+      "name": "libpsm2",
+      "packageNames": [ "libpsm2" ]
+    },
+    {
+      "name": "libpwquality",
+      "packageNames": [ "libpwquality" ]
+    },
+    {
+      "name": "libqmi",
+      "packageNames": [ "libqmi" ]
+    },
+    {
+      "name": "librdkafka",
+      "packageNames": [ "librdkafka" ]
+    },
+    {
+      "name": "librelp",
+      "packageNames": [ "librelp" ]
+    },
+    {
+      "name": "librepo",
+      "packageNames": [ "librepo" ]
+    },
+    {
+      "name": "libreswan",
+      "packageNames": [ "libreswan" ]
+    },
+    {
+      "name": "librsvg2",
+      "packageNames": [ "librsvg2" ]
+    },
+    {
+      "name": "librsync",
+      "packageNames": [ "librsync" ]
+    },
+    {
+      "name": "libsafec",
+      "packageNames": [ "libsafec" ]
+    },
+    {
+      "name": "libseccomp",
+      "packageNames": [ "libseccomp" ]
+    },
+    {
+      "name": "libselinux",
+      "packageNames": [ "libselinux" ]
+    },
+    {
+      "name": "libsemanage",
+      "packageNames": [ "libsemanage" ]
+    },
+    {
+      "name": "libsepol",
+      "packageNames": [ "libsepol" ]
+    },
+    {
+      "name": "libserf",
+      "packageNames": [ "libserf" ]
+    },
+    {
+      "name": "libsigc++30",
+      "packageNames": [ "libsigc++30" ]
+    },
+    {
+      "name": "libslirp",
+      "packageNames": [ "libslirp" ]
+    },
+    {
+      "name": "libSM",
+      "packageNames": [ "libSM" ]
+    },
+    {
+      "name": "libsmi",
+      "packageNames": [ "libsmi" ]
+    },
+    {
+      "name": "libsndfile",
+      "packageNames": [ "libsndfile" ]
+    },
+    {
+      "name": "libsodium",
+      "packageNames": [ "libsodium" ]
+    },
+    {
+      "name": "libsolv",
+      "packageNames": [ "libsolv" ]
+    },
+    {
+      "name": "libsoup",
+      "packageNames": [ "libsoup" ]
+    },
+    {
+      "name": "libssh",
+      "packageNames": [ "libssh" ]
+    },
+    {
+      "name": "libssh2",
+      "packageNames": [ "libssh2" ]
+    },
+    {
+      "name": "libstoragemgmt",
+      "packageNames": [ "libstoragemgmt" ]
+    },
+    {
+      "name": "libtalloc",
+      "packageNames": [ "libtalloc" ]
+    },
+    {
+      "name": "libtar",
+      "packageNames": [ "libtar" ]
+    },
+    {
+      "name": "libtasn1",
+      "packageNames": [ "libtasn1" ]
+    },
+    {
+      "name": "libtiff",
+      "packageNames": [ "libtiff" ]
+    },
+    {
+      "name": "libtirpc",
+      "packageNames": [ "libtirpc" ]
+    },
+    {
+      "name": "libtool",
+      "packageNames": [ "libtool" ]
+    },
+    {
+      "name": "libtraceevent",
+      "packageNames": [ "libtraceevent" ]
+    },
+    {
+      "name": "libunistring",
+      "packageNames": [ "libunistring" ]
+    },
+    {
+      "name": "libunwind",
+      "packageNames": [ "libunwind" ]
+    },
+    {
+      "name": "liburing",
+      "packageNames": [ "liburing" ]
+    },
+    {
+      "name": "libusb",
+      "packageNames": [ "libusb" ]
+    },
+    {
+      "name": "libuv",
+      "packageNames": [ "libuv" ]
+    },
+    {
+      "name": "libvirt",
+      "packageNames": [ "libvirt" ]
+    },
+    {
+      "name": "libvirt-dbus",
+      "packageNames": [ "libvirt-dbus" ]
+    },
+    {
+      "name": "libvirt-glib",
+      "packageNames": [ "libvirt-glib" ]
+    },
+    {
+      "name": "libvirt-java",
+      "packageNames": [ "libvirt-java" ]
+    },
+    {
+      "name": "libvirt-python",
+      "packageNames": [ "libvirt-python" ]
+    },
+    {
+      "name": "libvoikko",
+      "packageNames": [ "libvoikko" ]
+    },
+    {
+      "name": "libwacom",
+      "packageNames": [ "libwacom" ]
+    },
+    {
+      "name": "libwebp",
+      "packageNames": [ "libwebp" ]
+    },
+    {
+      "name": "libX11",
+      "packageNames": [ "libX11" ]
+    },
+    {
+      "name": "libXau",
+      "packageNames": [ "libXau" ]
+    },
+    {
+      "name": "libXaw",
+      "packageNames": [ "libXaw" ]
+    },
+    {
+      "name": "libxcb",
+      "packageNames": [ "libxcb" ]
+    },
+    {
+      "name": "libXcomposite",
+      "packageNames": [ "libXcomposite" ]
+    },
+    {
+      "name": "libxcrypt",
+      "packageNames": [ "libxcrypt" ]
+    },
+    {
+      "name": "libXcursor",
+      "packageNames": [ "libXcursor" ]
+    },
+    {
+      "name": "libXdamage",
+      "packageNames": [ "libXdamage" ]
+    },
+    {
+      "name": "libXdmcp",
+      "packageNames": [ "libXdmcp" ]
+    },
+    {
+      "name": "libXext",
+      "packageNames": [ "libXext" ]
+    },
+    {
+      "name": "libxfce4util",
+      "packageNames": [ "libxfce4util" ]
+    },
+    {
+      "name": "libXfixes",
+      "packageNames": [ "libXfixes" ]
+    },
+    {
+      "name": "libXfont2",
+      "packageNames": [ "libXfont2" ]
+    },
+    {
+      "name": "libXft",
+      "packageNames": [ "libXft" ]
+    },
+    {
+      "name": "libXi",
+      "packageNames": [ "libXi" ]
+    },
+    {
+      "name": "libXinerama",
+      "packageNames": [ "libXinerama" ]
+    },
+    {
+      "name": "libxkbcommon",
+      "packageNames": [ "libxkbcommon" ]
+    },
+    {
+      "name": "libxkbfile",
+      "packageNames": [ "libxkbfile" ]
+    },
+    {
+      "name": "libxml++",
+      "packageNames": [ "libxml++" ]
+    },
+    {
+      "name": "libxml2",
+      "packageNames": [ "libxml2" ]
+    },
+    {
+      "name": "libXmu",
+      "packageNames": [ "libXmu" ]
+    },
+    {
+      "name": "libXpm",
+      "packageNames": [ "libXpm" ]
+    },
+    {
+      "name": "libXrandr",
+      "packageNames": [ "libXrandr" ]
+    },
+    {
+      "name": "libXrender",
+      "packageNames": [ "libXrender" ]
+    },
+    {
+      "name": "libxshmfence",
+      "packageNames": [ "libxshmfence" ]
+    },
+    {
+      "name": "libxslt",
+      "packageNames": [ "libxslt" ]
+    },
+    {
+      "name": "libXt",
+      "packageNames": [ "libXt" ]
+    },
+    {
+      "name": "libXtst",
+      "packageNames": [ "libXtst" ]
+    },
+    {
+      "name": "libXxf86vm",
+      "packageNames": [ "libXxf86vm" ]
+    },
+    {
+      "name": "libyaml",
+      "packageNames": [ "libyaml" ]
+    },
+    {
+      "name": "libyang",
+      "packageNames": [ "libyang" ]
+    },
+    {
+      "name": "libzip",
+      "packageNames": [ "libzip" ]
+    },
+    {
+      "name": "LICENSES-AND-NOTICES",
+      "packageNames": [ "LICENSES-AND-NOTICES" ]
+    },
+    {
+      "name": "linux-firmware",
+      "packageNames": [ "linux-firmware" ]
+    },
+    {
+      "name": "livepatch-5.15.102.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.102.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.102.1-3.cm2",
+      "packageNames": [ "livepatch-5.15.102.1-3.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.107.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.107.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.110.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.110.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.111.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.111.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.112.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.112.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.112.1-2.cm2",
+      "packageNames": [ "livepatch-5.15.112.1-2.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.116.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.116.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.116.1-2.cm2",
+      "packageNames": [ "livepatch-5.15.116.1-2.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.122.1-2.cm2",
+      "packageNames": [ "livepatch-5.15.122.1-2.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.125.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.125.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.125.1-2.cm2",
+      "packageNames": [ "livepatch-5.15.125.1-2.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.126.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.126.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.94.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.94.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.95.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.95.1-1.cm2" ]
+    },
+    {
+      "name": "livepatch-5.15.98.1-1.cm2",
+      "packageNames": [ "livepatch-5.15.98.1-1.cm2" ]
+    },
+    {
+      "name": "livepatching",
+      "packageNames": [ "livepatching" ]
+    },
+    {
+      "name": "lld",
+      "packageNames": [ "lld" ]
+    },
+    {
+      "name": "lld16",
+      "packageNames": [ "lld16" ]
+    },
+    {
+      "name": "lldb",
+      "packageNames": [ "lldb" ]
+    },
+    {
+      "name": "lldpad",
+      "packageNames": [ "lldpad" ]
+    },
+    {
+      "name": "lldpd",
+      "packageNames": [ "lldpd" ]
+    },
+    {
+      "name": "llvm",
+      "packageNames": [ "llvm" ]
+    },
+    {
+      "name": "llvm16",
+      "packageNames": [ "llvm16" ]
+    },
+    {
+      "name": "lmdb",
+      "packageNames": [ "lmdb" ]
+    },
+    {
+      "name": "lm-sensors",
+      "packageNames": [ "lm-sensors" ]
+    },
+    {
+      "name": "local-path-provisioner",
+      "packageNames": [ "local-path-provisioner" ]
+    },
+    {
+      "name": "log4cpp",
+      "packageNames": [ "log4cpp" ]
+    },
+    {
+      "name": "logrotate",
+      "packageNames": [ "logrotate" ]
+    },
+    {
+      "name": "lsb-release",
+      "packageNames": [ "lsb-release" ]
+    },
+    {
+      "name": "lshw",
+      "packageNames": [ "lshw" ]
+    },
+    {
+      "name": "lsof",
+      "packageNames": [ "lsof" ]
+    },
+    {
+      "name": "lsscsi",
+      "packageNames": [ "lsscsi" ]
+    },
+    {
+      "name": "ltp",
+      "packageNames": [ "ltp" ]
+    },
+    {
+      "name": "ltrace",
+      "packageNames": [ "ltrace" ]
+    },
+    {
+      "name": "lttng-consume",
+      "packageNames": [ "lttng-consume" ]
+    },
+    {
+      "name": "lttng-tools",
+      "packageNames": [ "lttng-tools" ]
+    },
+    {
+      "name": "lttng-ust",
+      "packageNames": [ "lttng-ust" ]
+    },
+    {
+      "name": "lua",
+      "packageNames": [ "lua" ]
+    },
+    {
+      "name": "luajit",
+      "packageNames": [ "luajit" ]
+    },
+    {
+      "name": "lua-rpm-macros",
+      "packageNames": [ "lua-rpm-macros" ]
+    },
+    {
+      "name": "lutok",
+      "packageNames": [ "lutok" ]
+    },
+    {
+      "name": "lvm2",
+      "packageNames": [ "lvm2" ]
+    },
+    {
+      "name": "lynx",
+      "packageNames": [ "lynx" ]
+    },
+    {
+      "name": "lz4",
+      "packageNames": [ "lz4" ]
+    },
+    {
+      "name": "lzo",
+      "packageNames": [ "lzo" ]
+    },
+    {
+      "name": "lzop",
+      "packageNames": [ "lzop" ]
+    },
+    {
+      "name": "m2crypto",
+      "packageNames": [ "m2crypto" ]
+    },
+    {
+      "name": "m4",
+      "packageNames": [ "m4" ]
+    },
+    {
+      "name": "mac-robber",
+      "packageNames": [ "mac-robber" ]
+    },
+    {
+      "name": "mailcap",
+      "packageNames": [ "mailcap" ]
+    },
+    {
+      "name": "make",
+      "packageNames": [ "make" ]
+    },
+    {
+      "name": "malaga",
+      "packageNames": [ "malaga" ]
+    },
+    {
+      "name": "malaga-suomi-voikko",
+      "packageNames": [ "malaga-suomi-voikko" ]
+    },
+    {
+      "name": "man-db",
+      "packageNames": [ "man-db" ]
+    },
+    {
+      "name": "man-pages",
+      "packageNames": [ "man-pages" ]
+    },
+    {
+      "name": "mariadb",
+      "packageNames": [ "mariadb" ]
+    },
+    {
+      "name": "mariadb-connector-c",
+      "packageNames": [ "mariadb-connector-c" ]
+    },
+    {
+      "name": "mariner-release",
+      "packageNames": [ "mariner-release" ]
+    },
+    {
+      "name": "mariner-repos",
+      "packageNames": [ "mariner-repos" ]
+    },
+    {
+      "name": "mariner-rpm-macros",
+      "packageNames": [ "mariner-rpm-macros" ]
+    },
+    {
+      "name": "maven",
+      "packageNames": [ "maven" ]
+    },
+    {
+      "name": "maven3",
+      "packageNames": [ "maven3" ]
+    },
+    {
+      "name": "maven-compiler-plugin",
+      "packageNames": [ "maven-compiler-plugin" ]
+    },
+    {
+      "name": "maven-jar-plugin",
+      "packageNames": [ "maven-jar-plugin" ]
+    },
+    {
+      "name": "maven-resolver",
+      "packageNames": [ "maven-resolver" ]
+    },
+    {
+      "name": "maven-resources-plugin",
+      "packageNames": [ "maven-resources-plugin" ]
+    },
+    {
+      "name": "maven-surefire",
+      "packageNames": [ "maven-surefire" ]
+    },
+    {
+      "name": "maven-wagon",
+      "packageNames": [ "maven-wagon" ]
+    },
+    {
+      "name": "mc",
+      "packageNames": [ "mc" ]
+    },
+    {
+      "name": "mcpp",
+      "packageNames": [ "mcpp" ]
+    },
+    {
+      "name": "mcstrans",
+      "packageNames": [ "mcstrans" ]
+    },
+    {
+      "name": "mdadm",
+      "packageNames": [ "mdadm" ]
+    },
+    {
+      "name": "memcached",
+      "packageNames": [ "memcached" ]
+    },
+    {
+      "name": "mercurial",
+      "packageNames": [ "mercurial" ]
+    },
+    {
+      "name": "mesa",
+      "packageNames": [ "mesa" ]
+    },
+    {
+      "name": "mesa-libGLU",
+      "packageNames": [ "mesa-libGLU" ]
+    },
+    {
+      "name": "meson",
+      "packageNames": [ "meson" ]
+    },
+    {
+      "name": "mlnx-ofa_kernel",
+      "packageNames": [ "mlnx-ofa_kernel" ]
+    },
+    {
+      "name": "mlnx-tools",
+      "packageNames": [ "mlnx-tools" ]
+    },
+    {
+      "name": "mlocate",
+      "packageNames": [ "mlocate" ]
+    },
+    {
+      "name": "mlx-bootctl",
+      "packageNames": [ "mlx-bootctl" ]
+    },
+    {
+      "name": "mm-common",
+      "packageNames": [ "mm-common" ]
+    },
+    {
+      "name": "moby-buildx",
+      "packageNames": [ "moby-buildx" ]
+    },
+    {
+      "name": "moby-cli",
+      "packageNames": [ "moby-cli" ]
+    },
+    {
+      "name": "moby-compose",
+      "packageNames": [ "moby-compose" ]
+    },
+    {
+      "name": "moby-containerd",
+      "packageNames": [ "moby-containerd" ]
+    },
+    {
+      "name": "moby-containerd-cc",
+      "packageNames": [ "moby-containerd-cc" ]
+    },
+    {
+      "name": "moby-engine",
+      "packageNames": [ "moby-engine" ]
+    },
+    {
+      "name": "moby-runc",
+      "packageNames": [ "moby-runc" ]
+    },
+    {
+      "name": "ModemManager",
+      "packageNames": [ "ModemManager" ]
+    },
+    {
+      "name": "mokutil",
+      "packageNames": [ "mokutil" ]
+    },
+    {
+      "name": "mozjs",
+      "packageNames": [ "mozjs" ]
+    },
+    {
+      "name": "mpfr",
+      "packageNames": [ "mpfr" ]
+    },
+    {
+      "name": "msft-golang",
+      "packageNames": [ "msft-golang" ]
+    },
+    {
+      "name": "msgpack",
+      "packageNames": [ "msgpack" ]
+    },
+    {
+      "name": "msr-tools",
+      "packageNames": [ "msr-tools" ]
+    },
+    {
+      "name": "mstflint",
+      "packageNames": [ "mstflint" ]
+    },
+    {
+      "name": "mtdev",
+      "packageNames": [ "mtdev" ]
+    },
+    {
+      "name": "mtools",
+      "packageNames": [ "mtools" ]
+    },
+    {
+      "name": "multilib-rpm-config",
+      "packageNames": [ "multilib-rpm-config" ]
+    },
+    {
+      "name": "multus",
+      "packageNames": [ "multus" ]
+    },
+    {
+      "name": "munge",
+      "packageNames": [ "munge" ]
+    },
+    {
+      "name": "mysql",
+      "packageNames": [ "mysql" ]
+    },
+    {
+      "name": "nano",
+      "packageNames": [ "nano" ]
+    },
+    {
+      "name": "nasm",
+      "packageNames": [ "nasm" ]
+    },
+    {
+      "name": "nbd",
+      "packageNames": [ "nbd" ]
+    },
+    {
+      "name": "nbdkit",
+      "packageNames": [ "nbdkit" ]
+    },
+    {
+      "name": "ncompress",
+      "packageNames": [ "ncompress" ]
+    },
+    {
+      "name": "ncurses",
+      "packageNames": [ "ncurses" ]
+    },
+    {
+      "name": "ndctl",
+      "packageNames": [ "ndctl" ]
+    },
+    {
+      "name": "netavark",
+      "packageNames": [ "netavark" ]
+    },
+    {
+      "name": "netplan",
+      "packageNames": [ "netplan" ]
+    },
+    {
+      "name": "net-snmp",
+      "packageNames": [ "net-snmp" ]
+    },
+    {
+      "name": "nettle",
+      "packageNames": [ "nettle" ]
+    },
+    {
+      "name": "net-tools",
+      "packageNames": [ "net-tools" ]
+    },
+    {
+      "name": "networkd-dispatcher",
+      "packageNames": [ "networkd-dispatcher" ]
+    },
+    {
+      "name": "newt",
+      "packageNames": [ "newt" ]
+    },
+    {
+      "name": "nfs4-acl-tools",
+      "packageNames": [ "nfs4-acl-tools" ]
+    },
+    {
+      "name": "nfs-utils",
+      "packageNames": [ "nfs-utils" ]
+    },
+    {
+      "name": "nftables",
+      "packageNames": [ "nftables" ]
+    },
+    {
+      "name": "nghttp2",
+      "packageNames": [ "nghttp2" ]
+    },
+    {
+      "name": "nginx",
+      "packageNames": [ "nginx" ]
+    },
+    {
+      "name": "ninja-build",
+      "packageNames": [ "ninja-build" ]
+    },
+    {
+      "name": "nlohmann-json",
+      "packageNames": [ "nlohmann-json" ]
+    },
+    {
+      "name": "nlopt",
+      "packageNames": [ "nlopt" ]
+    },
+    {
+      "name": "nmap",
+      "packageNames": [ "nmap" ]
+    },
+    {
+      "name": "nmi",
+      "packageNames": [ "nmi" ]
+    },
+    {
+      "name": "nodejs",
+      "packageNames": [ "nodejs" ]
+    },
+    {
+      "name": "nodejs18",
+      "packageNames": [ "nodejs18" ]
+    },
+    {
+      "name": "node-problem-detector",
+      "packageNames": [ "node-problem-detector" ]
+    },
+    {
+      "name": "npth",
+      "packageNames": [ "npth" ]
+    },
+    {
+      "name": "nspr",
+      "packageNames": [ "nspr" ]
+    },
+    {
+      "name": "nss",
+      "packageNames": [ "nss" ]
+    },
+    {
+      "name": "nss-altfiles",
+      "packageNames": [ "nss-altfiles" ]
+    },
+    {
+      "name": "nss_nis",
+      "packageNames": [ "nss_nis" ]
+    },
+    {
+      "name": "nss_wrapper",
+      "packageNames": [ "nss_wrapper" ]
+    },
+    {
+      "name": "ntfs-3g",
+      "packageNames": [ "ntfs-3g" ]
+    },
+    {
+      "name": "ntfs-3g-system-compression",
+      "packageNames": [ "ntfs-3g-system-compression" ]
+    },
+    {
+      "name": "ntopng",
+      "packageNames": [ "ntopng" ]
+    },
+    {
+      "name": "ntp",
+      "packageNames": [ "ntp" ]
+    },
+    {
+      "name": "numactl",
+      "packageNames": [ "numactl" ]
+    },
+    {
+      "name": "numad",
+      "packageNames": [ "numad" ]
+    },
+    {
+      "name": "numpy",
+      "packageNames": [ "numpy" ]
+    },
+    {
+      "name": "nvidia-container-runtime",
+      "packageNames": [ "nvidia-container-runtime" ]
+    },
+    {
+      "name": "nvidia-container-toolkit",
+      "packageNames": [ "nvidia-container-toolkit" ]
+    },
+    {
+      "name": "nvidia-docker2",
+      "packageNames": [ "nvidia-docker2" ]
+    },
+    {
+      "name": "nvme-cli",
+      "packageNames": [ "nvme-cli" ]
+    },
+    {
+      "name": "nvml",
+      "packageNames": [ "nvml" ]
+    },
+    {
+      "name": "oath-toolkit",
+      "packageNames": [ "oath-toolkit" ]
+    },
+    {
+      "name": "objectweb-asm",
+      "packageNames": [ "objectweb-asm" ]
+    },
+    {
+      "name": "ocaml",
+      "packageNames": [ "ocaml" ]
+    },
+    {
+      "name": "ocaml-alcotest",
+      "packageNames": [ "ocaml-alcotest" ]
+    },
+    {
+      "name": "ocaml-astring",
+      "packageNames": [ "ocaml-astring" ]
+    },
+    {
+      "name": "ocaml-base",
+      "packageNames": [ "ocaml-base" ]
+    },
+    {
+      "name": "ocaml-bigarray-compat",
+      "packageNames": [ "ocaml-bigarray-compat" ]
+    },
+    {
+      "name": "ocaml-bisect-ppx",
+      "packageNames": [ "ocaml-bisect-ppx" ]
+    },
+    {
+      "name": "ocaml-camomile",
+      "packageNames": [ "ocaml-camomile" ]
+    },
+    {
+      "name": "ocaml-cinaps",
+      "packageNames": [ "ocaml-cinaps" ]
+    },
+    {
+      "name": "ocaml-cmdliner",
+      "packageNames": [ "ocaml-cmdliner" ]
+    },
+    {
+      "name": "ocaml-compiler-libs-janestreet",
+      "packageNames": [ "ocaml-compiler-libs-janestreet" ]
+    },
+    {
+      "name": "ocaml-cppo",
+      "packageNames": [ "ocaml-cppo" ]
+    },
+    {
+      "name": "ocaml-csexp",
+      "packageNames": [ "ocaml-csexp" ]
+    },
+    {
+      "name": "ocaml-ctypes",
+      "packageNames": [ "ocaml-ctypes" ]
+    },
+    {
+      "name": "ocaml-dune",
+      "packageNames": [ "ocaml-dune" ]
+    },
+    {
+      "name": "ocaml-fileutils",
+      "packageNames": [ "ocaml-fileutils" ]
+    },
+    {
+      "name": "ocaml-findlib",
+      "packageNames": [ "ocaml-findlib" ]
+    },
+    {
+      "name": "ocaml-fmt",
+      "packageNames": [ "ocaml-fmt" ]
+    },
+    {
+      "name": "ocaml-gettext",
+      "packageNames": [ "ocaml-gettext" ]
+    },
+    {
+      "name": "ocaml-integers",
+      "packageNames": [ "ocaml-integers" ]
+    },
+    {
+      "name": "ocaml-luv",
+      "packageNames": [ "ocaml-luv" ]
+    },
+    {
+      "name": "ocaml-lwt",
+      "packageNames": [ "ocaml-lwt" ]
+    },
+    {
+      "name": "ocaml-migrate-parsetree",
+      "packageNames": [ "ocaml-migrate-parsetree" ]
+    },
+    {
+      "name": "ocaml-mmap",
+      "packageNames": [ "ocaml-mmap" ]
+    },
+    {
+      "name": "ocaml-num",
+      "packageNames": [ "ocaml-num" ]
+    },
+    {
+      "name": "ocaml-ocamlbuild",
+      "packageNames": [ "ocaml-ocamlbuild" ]
+    },
+    {
+      "name": "ocaml-ocplib-endian",
+      "packageNames": [ "ocaml-ocplib-endian" ]
+    },
+    {
+      "name": "ocaml-ounit",
+      "packageNames": [ "ocaml-ounit" ]
+    },
+    {
+      "name": "ocaml-ppx-derivers",
+      "packageNames": [ "ocaml-ppx-derivers" ]
+    },
+    {
+      "name": "ocaml-ppxlib",
+      "packageNames": [ "ocaml-ppxlib" ]
+    },
+    {
+      "name": "ocaml-re",
+      "packageNames": [ "ocaml-re" ]
+    },
+    {
+      "name": "ocaml-react",
+      "packageNames": [ "ocaml-react" ]
+    },
+    {
+      "name": "ocaml-result",
+      "packageNames": [ "ocaml-result" ]
+    },
+    {
+      "name": "ocaml-seq",
+      "packageNames": [ "ocaml-seq" ]
+    },
+    {
+      "name": "ocaml-sexplib0",
+      "packageNames": [ "ocaml-sexplib0" ]
+    },
+    {
+      "name": "ocaml-stdio",
+      "packageNames": [ "ocaml-stdio" ]
+    },
+    {
+      "name": "ocaml-topkg",
+      "packageNames": [ "ocaml-topkg" ]
+    },
+    {
+      "name": "ocaml-uuidm",
+      "packageNames": [ "ocaml-uuidm" ]
+    },
+    {
+      "name": "ocaml-uutf",
+      "packageNames": [ "ocaml-uutf" ]
+    },
+    {
+      "name": "ofed-scripts",
+      "packageNames": [ "ofed-scripts" ]
+    },
+    {
+      "name": "oniguruma",
+      "packageNames": [ "oniguruma" ]
+    },
+    {
+      "name": "opa",
+      "packageNames": [ "opa" ]
+    },
+    {
+      "name": "openblas",
+      "packageNames": [ "openblas" ]
+    },
+    {
+      "name": "opencsd",
+      "packageNames": [ "opencsd" ]
+    },
+    {
+      "name": "OpenIPMI",
+      "packageNames": [ "OpenIPMI" ]
+    },
+    {
+      "name": "openjade",
+      "packageNames": [ "openjade" ]
+    },
+    {
+      "name": "openldap",
+      "packageNames": [ "openldap" ]
+    },
+    {
+      "name": "openmpi",
+      "packageNames": [ "openmpi" ]
+    },
+    {
+      "name": "opensc",
+      "packageNames": [ "opensc" ]
+    },
+    {
+      "name": "openscap",
+      "packageNames": [ "openscap" ]
+    },
+    {
+      "name": "opensm",
+      "packageNames": [ "opensm" ]
+    },
+    {
+      "name": "opensp",
+      "packageNames": [ "opensp" ]
+    },
+    {
+      "name": "openssh",
+      "packageNames": [ "openssh" ]
+    },
+    {
+      "name": "openssl",
+      "packageNames": [ "openssl" ]
+    },
+    {
+      "name": "openssl-pkcs11",
+      "packageNames": [ "openssl-pkcs11" ]
+    },
+    {
+      "name": "opentelemetry-cpp",
+      "packageNames": [ "opentelemetry-cpp" ]
+    },
+    {
+      "name": "open-vm-tools",
+      "packageNames": [ "open-vm-tools" ]
+    },
+    {
+      "name": "openvswitch",
+      "packageNames": [ "openvswitch" ]
+    },
+    {
+      "name": "orangefs",
+      "packageNames": [ "orangefs" ]
+    },
+    {
+      "name": "ostree",
+      "packageNames": [ "ostree" ]
+    },
+    {
+      "name": "p11-kit",
+      "packageNames": [ "p11-kit" ]
+    },
+    {
+      "name": "p7zip",
+      "packageNames": [ "p7zip" ]
+    },
+    {
+      "name": "packer",
+      "packageNames": [ "packer" ]
+    },
+    {
+      "name": "pam",
+      "packageNames": [ "pam" ]
+    },
+    {
+      "name": "pam_krb5",
+      "packageNames": [ "pam_krb5" ]
+    },
+    {
+      "name": "pam_wrapper",
+      "packageNames": [ "pam_wrapper" ]
+    },
+    {
+      "name": "pango",
+      "packageNames": [ "pango" ]
+    },
+    {
+      "name": "parted",
+      "packageNames": [ "parted" ]
+    },
+    {
+      "name": "patch",
+      "packageNames": [ "patch" ]
+    },
+    {
+      "name": "patchelf",
+      "packageNames": [ "patchelf" ]
+    },
+    {
+      "name": "patchutils",
+      "packageNames": [ "patchutils" ]
+    },
+    {
+      "name": "patterns-ceph-containers",
+      "packageNames": [ "patterns-ceph-containers" ]
+    },
+    {
+      "name": "pcaudiolib",
+      "packageNames": [ "pcaudiolib" ]
+    },
+    {
+      "name": "pciutils",
+      "packageNames": [ "pciutils" ]
+    },
+    {
+      "name": "pcre",
+      "packageNames": [ "pcre" ]
+    },
+    {
+      "name": "pcre2",
+      "packageNames": [ "pcre2" ]
+    },
+    {
+      "name": "pcsc-lite",
+      "packageNames": [ "pcsc-lite" ]
+    },
+    {
+      "name": "pcsc-lite-ccid",
+      "packageNames": [ "pcsc-lite-ccid" ]
+    },
+    {
+      "name": "perftest",
+      "packageNames": [ "perftest" ]
+    },
+    {
+      "name": "perl",
+      "packageNames": [ "perl" ]
+    },
+    {
+      "name": "perl-App-cpanminus",
+      "packageNames": [ "perl-App-cpanminus" ]
+    },
+    {
+      "name": "perl-Archive-Zip",
+      "packageNames": [ "perl-Archive-Zip" ]
+    },
+    {
+      "name": "perl-Bit-Vector",
+      "packageNames": [ "perl-Bit-Vector" ]
+    },
+    {
+      "name": "perl-Bytes-Random-Secure",
+      "packageNames": [ "perl-Bytes-Random-Secure" ]
+    },
+    {
+      "name": "perl-Canary-Stability",
+      "packageNames": [ "perl-Canary-Stability" ]
+    },
+    {
+      "name": "perl-Capture-Tiny",
+      "packageNames": [ "perl-Capture-Tiny" ]
+    },
+    {
+      "name": "perl-Carp-Clan",
+      "packageNames": [ "perl-Carp-Clan" ]
+    },
+    {
+      "name": "perl-CGI",
+      "packageNames": [ "perl-CGI" ]
+    },
+    {
+      "name": "perl-common-sense",
+      "packageNames": [ "perl-common-sense" ]
+    },
+    {
+      "name": "perl-Compress-Bzip2",
+      "packageNames": [ "perl-Compress-Bzip2" ]
+    },
+    {
+      "name": "perl-CPAN-Changes",
+      "packageNames": [ "perl-CPAN-Changes" ]
+    },
+    {
+      "name": "perl-CPAN-DistnameInfo",
+      "packageNames": [ "perl-CPAN-DistnameInfo" ]
+    },
+    {
+      "name": "perl-CPAN-Meta-Check",
+      "packageNames": [ "perl-CPAN-Meta-Check" ]
+    },
+    {
+      "name": "perl-Crypt-Random-Seed",
+      "packageNames": [ "perl-Crypt-Random-Seed" ]
+    },
+    {
+      "name": "perl-Crypt-SSLeay",
+      "packageNames": [ "perl-Crypt-SSLeay" ]
+    },
+    {
+      "name": "perl-Data-Dump",
+      "packageNames": [ "perl-Data-Dump" ]
+    },
+    {
+      "name": "perl-Date-Calc",
+      "packageNames": [ "perl-Date-Calc" ]
+    },
+    {
+      "name": "perl-DBD-SQLite",
+      "packageNames": [ "perl-DBD-SQLite" ]
+    },
+    {
+      "name": "perl-DBI",
+      "packageNames": [ "perl-DBI" ]
+    },
+    {
+      "name": "perl-DBIx-Simple",
+      "packageNames": [ "perl-DBIx-Simple" ]
+    },
+    {
+      "name": "perl-Devel-CheckLib",
+      "packageNames": [ "perl-Devel-CheckLib" ]
+    },
+    {
+      "name": "perl-Devel-StackTrace",
+      "packageNames": [ "perl-Devel-StackTrace" ]
+    },
+    {
+      "name": "perl-Devel-Symdump",
+      "packageNames": [ "perl-Devel-Symdump" ]
+    },
+    {
+      "name": "perl-Digest-HMAC",
+      "packageNames": [ "perl-Digest-HMAC" ]
+    },
+    {
+      "name": "perl-Digest-SHA1",
+      "packageNames": [ "perl-Digest-SHA1" ]
+    },
+    {
+      "name": "perl-Encode-Locale",
+      "packageNames": [ "perl-Encode-Locale" ]
+    },
+    {
+      "name": "perl-Expect",
+      "packageNames": [ "perl-Expect" ]
+    },
+    {
+      "name": "perl-Exporter-Tiny",
+      "packageNames": [ "perl-Exporter-Tiny" ]
+    },
+    {
+      "name": "perl-Fedora-VSP",
+      "packageNames": [ "perl-Fedora-VSP" ]
+    },
+    {
+      "name": "perl-File-HomeDir",
+      "packageNames": [ "perl-File-HomeDir" ]
+    },
+    {
+      "name": "perl-File-Listing",
+      "packageNames": [ "perl-File-Listing" ]
+    },
+    {
+      "name": "perl-File-pushd",
+      "packageNames": [ "perl-File-pushd" ]
+    },
+    {
+      "name": "perl-File-Which",
+      "packageNames": [ "perl-File-Which" ]
+    },
+    {
+      "name": "perl-generators",
+      "packageNames": [ "perl-generators" ]
+    },
+    {
+      "name": "perl-HTML-Parser",
+      "packageNames": [ "perl-HTML-Parser" ]
+    },
+    {
+      "name": "perl-HTML-Tagset",
+      "packageNames": [ "perl-HTML-Tagset" ]
+    },
+    {
+      "name": "perl-HTTP-Cookies",
+      "packageNames": [ "perl-HTTP-Cookies" ]
+    },
+    {
+      "name": "perl-HTTP-Daemon",
+      "packageNames": [ "perl-HTTP-Daemon" ]
+    },
+    {
+      "name": "perl-HTTP-Date",
+      "packageNames": [ "perl-HTTP-Date" ]
+    },
+    {
+      "name": "perl-HTTP-Message",
+      "packageNames": [ "perl-HTTP-Message" ]
+    },
+    {
+      "name": "perl-HTTP-Negotiate",
+      "packageNames": [ "perl-HTTP-Negotiate" ]
+    },
+    {
+      "name": "perl-IO-HTML",
+      "packageNames": [ "perl-IO-HTML" ]
+    },
+    {
+      "name": "perl-IO-Socket-SSL",
+      "packageNames": [ "perl-IO-Socket-SSL" ]
+    },
+    {
+      "name": "perl-IO-stringy",
+      "packageNames": [ "perl-IO-stringy" ]
+    },
+    {
+      "name": "perl-IO-Tty",
+      "packageNames": [ "perl-IO-Tty" ]
+    },
+    {
+      "name": "perl-JSON",
+      "packageNames": [ "perl-JSON" ]
+    },
+    {
+      "name": "perl-JSON-Any",
+      "packageNames": [ "perl-JSON-Any" ]
+    },
+    {
+      "name": "perl-JSON-XS",
+      "packageNames": [ "perl-JSON-XS" ]
+    },
+    {
+      "name": "perl-libintl-perl",
+      "packageNames": [ "perl-libintl-perl" ]
+    },
+    {
+      "name": "perl-libwww-perl",
+      "packageNames": [ "perl-libwww-perl" ]
+    },
+    {
+      "name": "perl-List-MoreUtils",
+      "packageNames": [ "perl-List-MoreUtils" ]
+    },
+    {
+      "name": "perl-local-lib",
+      "packageNames": [ "perl-local-lib" ]
+    },
+    {
+      "name": "perl-LWP-MediaTypes",
+      "packageNames": [ "perl-LWP-MediaTypes" ]
+    },
+    {
+      "name": "perl-Math-Random-ISAAC",
+      "packageNames": [ "perl-Math-Random-ISAAC" ]
+    },
+    {
+      "name": "perl-Mock-Config",
+      "packageNames": [ "perl-Mock-Config" ]
+    },
+    {
+      "name": "perl-Module-Build",
+      "packageNames": [ "perl-Module-Build" ]
+    },
+    {
+      "name": "perl-Module-CPANfile",
+      "packageNames": [ "perl-Module-CPANfile" ]
+    },
+    {
+      "name": "perl-Module-Install",
+      "packageNames": [ "perl-Module-Install" ]
+    },
+    {
+      "name": "perl-Module-Install-AuthorTests",
+      "packageNames": [ "perl-Module-Install-AuthorTests" ]
+    },
+    {
+      "name": "perl-Module-Install-Repository",
+      "packageNames": [ "perl-Module-Install-Repository" ]
+    },
+    {
+      "name": "perl-Module-ScanDeps",
+      "packageNames": [ "perl-Module-ScanDeps" ]
+    },
+    {
+      "name": "perl-NetAddr-IP",
+      "packageNames": [ "perl-NetAddr-IP" ]
+    },
+    {
+      "name": "perl-Net-HTTP",
+      "packageNames": [ "perl-Net-HTTP" ]
+    },
+    {
+      "name": "perl-Net-SSLeay",
+      "packageNames": [ "perl-Net-SSLeay" ]
+    },
+    {
+      "name": "perl-NTLM",
+      "packageNames": [ "perl-NTLM" ]
+    },
+    {
+      "name": "perl-Object-Accessor",
+      "packageNames": [ "perl-Object-Accessor" ]
+    },
+    {
+      "name": "perl-Parse-PMFile",
+      "packageNames": [ "perl-Parse-PMFile" ]
+    },
+    {
+      "name": "perl-Path-Class",
+      "packageNames": [ "perl-Path-Class" ]
+    },
+    {
+      "name": "perl-Pod-Coverage",
+      "packageNames": [ "perl-Pod-Coverage" ]
+    },
+    {
+      "name": "perl-Pod-Parser",
+      "packageNames": [ "perl-Pod-Parser" ]
+    },
+    {
+      "name": "perl-String-ShellQuote",
+      "packageNames": [ "perl-String-ShellQuote" ]
+    },
+    {
+      "name": "perl-Sys-Virt",
+      "packageNames": [ "perl-Sys-Virt" ]
+    },
+    {
+      "name": "perl-Test-Deep",
+      "packageNames": [ "perl-Test-Deep" ]
+    },
+    {
+      "name": "perl-Test-Fatal",
+      "packageNames": [ "perl-Test-Fatal" ]
+    },
+    {
+      "name": "perl-Test-LeakTrace",
+      "packageNames": [ "perl-Test-LeakTrace" ]
+    },
+    {
+      "name": "perl-Test-Needs",
+      "packageNames": [ "perl-Test-Needs" ]
+    },
+    {
+      "name": "perl-Test-NoWarnings",
+      "packageNames": [ "perl-Test-NoWarnings" ]
+    },
+    {
+      "name": "perl-Test-Pod",
+      "packageNames": [ "perl-Test-Pod" ]
+    },
+    {
+      "name": "perl-Test-Pod-Coverage",
+      "packageNames": [ "perl-Test-Pod-Coverage" ]
+    },
+    {
+      "name": "perl-Test-Warnings",
+      "packageNames": [ "perl-Test-Warnings" ]
+    },
+    {
+      "name": "perl-Text-Template",
+      "packageNames": [ "perl-Text-Template" ]
+    },
+    {
+      "name": "perl-TimeDate",
+      "packageNames": [ "perl-TimeDate" ]
+    },
+    {
+      "name": "perl-Try-Tiny",
+      "packageNames": [ "perl-Try-Tiny" ]
+    },
+    {
+      "name": "perl-Types-Serialiser",
+      "packageNames": [ "perl-Types-Serialiser" ]
+    },
+    {
+      "name": "perl-URI",
+      "packageNames": [ "perl-URI" ]
+    },
+    {
+      "name": "perl-WWW-Curl",
+      "packageNames": [ "perl-WWW-Curl" ]
+    },
+    {
+      "name": "perl-WWW-RobotRules",
+      "packageNames": [ "perl-WWW-RobotRules" ]
+    },
+    {
+      "name": "perl-XML-LibXML",
+      "packageNames": [ "perl-XML-LibXML" ]
+    },
+    {
+      "name": "perl-XML-NamespaceSupport",
+      "packageNames": [ "perl-XML-NamespaceSupport" ]
+    },
+    {
+      "name": "perl-XML-Parser",
+      "packageNames": [ "perl-XML-Parser" ]
+    },
+    {
+      "name": "perl-XML-SAX",
+      "packageNames": [ "perl-XML-SAX" ]
+    },
+    {
+      "name": "perl-XML-SAX-Base",
+      "packageNames": [ "perl-XML-SAX-Base" ]
+    },
+    {
+      "name": "perl-XML-XPath",
+      "packageNames": [ "perl-XML-XPath" ]
+    },
+    {
+      "name": "perl-YAML",
+      "packageNames": [ "perl-YAML" ]
+    },
+    {
+      "name": "perl-YAML-Tiny",
+      "packageNames": [ "perl-YAML-Tiny" ]
+    },
+    {
+      "name": "pgbouncer",
+      "packageNames": [ "pgbouncer" ]
+    },
+    {
+      "name": "php",
+      "packageNames": [ "php" ]
+    },
+    {
+      "name": "php-pear",
+      "packageNames": [ "php-pear" ]
+    },
+    {
+      "name": "php-pecl-zip",
+      "packageNames": [ "php-pecl-zip" ]
+    },
+    {
+      "name": "picosat",
+      "packageNames": [ "picosat" ]
+    },
+    {
+      "name": "pigz",
+      "packageNames": [ "pigz" ]
+    },
+    {
+      "name": "pinentry",
+      "packageNames": [ "pinentry" ]
+    },
+    {
+      "name": "pixman",
+      "packageNames": [ "pixman" ]
+    },
+    {
+      "name": "pkgconf",
+      "packageNames": [ "pkgconf" ]
+    },
+    {
+      "name": "plexus-cipher",
+      "packageNames": [ "plexus-cipher" ]
+    },
+    {
+      "name": "plexus-classworlds",
+      "packageNames": [ "plexus-classworlds" ]
+    },
+    {
+      "name": "plexus-containers",
+      "packageNames": [ "plexus-containers" ]
+    },
+    {
+      "name": "plexus-interpolation",
+      "packageNames": [ "plexus-interpolation" ]
+    },
+    {
+      "name": "plexus-sec-dispatcher",
+      "packageNames": [ "plexus-sec-dispatcher" ]
+    },
+    {
+      "name": "plexus-utils",
+      "packageNames": [ "plexus-utils" ]
+    },
+    {
+      "name": "pmix",
+      "packageNames": [ "pmix" ]
+    },
+    {
+      "name": "policycoreutils",
+      "packageNames": [ "policycoreutils" ]
+    },
+    {
+      "name": "polkit",
+      "packageNames": [ "polkit" ]
+    },
+    {
+      "name": "popt",
+      "packageNames": [ "popt" ]
+    },
+    {
+      "name": "postfix",
+      "packageNames": [ "postfix" ]
+    },
+    {
+      "name": "postgresql",
+      "packageNames": [ "postgresql" ]
+    },
+    {
+      "name": "prebuilt-ca-certificates",
+      "packageNames": [ "prebuilt-ca-certificates" ]
+    },
+    {
+      "name": "prebuilt-ca-certificates-base",
+      "packageNames": [ "prebuilt-ca-certificates-base" ]
+    },
+    {
+      "name": "priv_wrapper",
+      "packageNames": [ "priv_wrapper" ]
+    },
+    {
+      "name": "procps-ng",
+      "packageNames": [ "procps-ng" ]
+    },
+    {
+      "name": "prometheus",
+      "packageNames": [ "prometheus" ]
+    },
+    {
+      "name": "prometheus-adapter",
+      "packageNames": [ "prometheus-adapter" ]
+    },
+    {
+      "name": "prometheus-node-exporter",
+      "packageNames": [ "prometheus-node-exporter" ]
+    },
+    {
+      "name": "prometheus-process-exporter",
+      "packageNames": [ "prometheus-process-exporter" ]
+    },
+    {
+      "name": "protobuf",
+      "packageNames": [ "protobuf" ]
+    },
+    {
+      "name": "protobuf-c",
+      "packageNames": [ "protobuf-c" ]
+    },
+    {
+      "name": "psmisc",
+      "packageNames": [ "psmisc" ]
+    },
+    {
+      "name": "pth",
+      "packageNames": [ "pth" ]
+    },
+    {
+      "name": "pugixml",
+      "packageNames": [ "pugixml" ]
+    },
+    {
+      "name": "pwgen",
+      "packageNames": [ "pwgen" ]
+    },
+    {
+      "name": "pyasn1-modules",
+      "packageNames": [ "pyasn1-modules" ]
+    },
+    {
+      "name": "pycairo",
+      "packageNames": [ "pycairo" ]
+    },
+    {
+      "name": "pyelftools",
+      "packageNames": [ "pyelftools" ]
+    },
+    {
+      "name": "pygobject3",
+      "packageNames": [ "pygobject3" ]
+    },
+    {
+      "name": "pyOpenSSL",
+      "packageNames": [ "pyOpenSSL" ]
+    },
+    {
+      "name": "PyPAM",
+      "packageNames": [ "PyPAM" ]
+    },
+    {
+      "name": "pyparsing",
+      "packageNames": [ "pyparsing" ]
+    },
+    {
+      "name": "pyproject-rpm-macros",
+      "packageNames": [ "pyproject-rpm-macros" ]
+    },
+    {
+      "name": "pytest",
+      "packageNames": [ "pytest" ]
+    },
+    {
+      "name": "python3",
+      "packageNames": [ "python3" ]
+    },
+    {
+      "name": "python3-pytest-asyncio",
+      "packageNames": [ "python3-pytest-asyncio" ]
+    },
+    {
+      "name": "python-absl-py",
+      "packageNames": [ "python-absl-py" ]
+    },
+    {
+      "name": "python-appdirs",
+      "packageNames": [ "python-appdirs" ]
+    },
+    {
+      "name": "python-asn1crypto",
+      "packageNames": [ "python-asn1crypto" ]
+    },
+    {
+      "name": "python-astunparse",
+      "packageNames": [ "python-astunparse" ]
+    },
+    {
+      "name": "python-async-generator",
+      "packageNames": [ "python-async-generator" ]
+    },
+    {
+      "name": "python-atomicwrites",
+      "packageNames": [ "python-atomicwrites" ]
+    },
+    {
+      "name": "python-attrs",
+      "packageNames": [ "python-attrs" ]
+    },
+    {
+      "name": "python-bcrypt",
+      "packageNames": [ "python-bcrypt" ]
+    },
+    {
+      "name": "python-cached_property",
+      "packageNames": [ "python-cached_property" ]
+    },
+    {
+      "name": "python-cachetools",
+      "packageNames": [ "python-cachetools" ]
+    },
+    {
+      "name": "python-certifi",
+      "packageNames": [ "python-certifi" ]
+    },
+    {
+      "name": "python-cffi",
+      "packageNames": [ "python-cffi" ]
+    },
+    {
+      "name": "python-chardet",
+      "packageNames": [ "python-chardet" ]
+    },
+    {
+      "name": "python-charset-normalizer",
+      "packageNames": [ "python-charset-normalizer" ]
+    },
+    {
+      "name": "python-cherrypy",
+      "packageNames": [ "python-cherrypy" ]
+    },
+    {
+      "name": "python-click",
+      "packageNames": [ "python-click" ]
+    },
+    {
+      "name": "python-conda-package-handling",
+      "packageNames": [ "python-conda-package-handling" ]
+    },
+    {
+      "name": "python-configobj",
+      "packageNames": [ "python-configobj" ]
+    },
+    {
+      "name": "python-constantly",
+      "packageNames": [ "python-constantly" ]
+    },
+    {
+      "name": "python-coverage",
+      "packageNames": [ "python-coverage" ]
+    },
+    {
+      "name": "python-cpuinfo",
+      "packageNames": [ "python-cpuinfo" ]
+    },
+    {
+      "name": "python-cryptography",
+      "packageNames": [ "python-cryptography" ]
+    },
+    {
+      "name": "python-cstruct",
+      "packageNames": [ "python-cstruct" ]
+    },
+    {
+      "name": "python-cytoolz",
+      "packageNames": [ "python-cytoolz" ]
+    },
+    {
+      "name": "python-daemon",
+      "packageNames": [ "python-daemon" ]
+    },
+    {
+      "name": "python-dateutil",
+      "packageNames": [ "python-dateutil" ]
+    },
+    {
+      "name": "python-decorator",
+      "packageNames": [ "python-decorator" ]
+    },
+    {
+      "name": "python-defusedxml",
+      "packageNames": [ "python-defusedxml" ]
+    },
+    {
+      "name": "python-distlib",
+      "packageNames": [ "python-distlib" ]
+    },
+    {
+      "name": "python-distro",
+      "packageNames": [ "python-distro" ]
+    },
+    {
+      "name": "python-docopt",
+      "packageNames": [ "python-docopt" ]
+    },
+    {
+      "name": "python-docutils",
+      "packageNames": [ "python-docutils" ]
+    },
+    {
+      "name": "python-ecdsa",
+      "packageNames": [ "python-ecdsa" ]
+    },
+    {
+      "name": "python-ethtool",
+      "packageNames": [ "python-ethtool" ]
+    },
+    {
+      "name": "python-execnet",
+      "packageNames": [ "python-execnet" ]
+    },
+    {
+      "name": "python-fields",
+      "packageNames": [ "python-fields" ]
+    },
+    {
+      "name": "python-filelock",
+      "packageNames": [ "python-filelock" ]
+    },
+    {
+      "name": "python-flit",
+      "packageNames": [ "python-flit" ]
+    },
+    {
+      "name": "python-flit-core",
+      "packageNames": [ "python-flit-core" ]
+    },
+    {
+      "name": "python-frozendict",
+      "packageNames": [ "python-frozendict" ]
+    },
+    {
+      "name": "python-gast",
+      "packageNames": [ "python-gast" ]
+    },
+    {
+      "name": "python-gevent",
+      "packageNames": [ "python-gevent" ]
+    },
+    {
+      "name": "python-google-auth",
+      "packageNames": [ "python-google-auth" ]
+    },
+    {
+      "name": "python-google-auth-oauthlib",
+      "packageNames": [ "python-google-auth-oauthlib" ]
+    },
+    {
+      "name": "python-google-pasta",
+      "packageNames": [ "python-google-pasta" ]
+    },
+    {
+      "name": "python-greenlet",
+      "packageNames": [ "python-greenlet" ]
+    },
+    {
+      "name": "python-h5py",
+      "packageNames": [ "python-h5py" ]
+    },
+    {
+      "name": "python-html5lib",
+      "packageNames": [ "python-html5lib" ]
+    },
+    {
+      "name": "python-hyperlink",
+      "packageNames": [ "python-hyperlink" ]
+    },
+    {
+      "name": "python-hypothesis",
+      "packageNames": [ "python-hypothesis" ]
+    },
+    {
+      "name": "python-idna",
+      "packageNames": [ "python-idna" ]
+    },
+    {
+      "name": "python-imagesize",
+      "packageNames": [ "python-imagesize" ]
+    },
+    {
+      "name": "python-importlib-metadata",
+      "packageNames": [ "python-importlib-metadata" ]
+    },
+    {
+      "name": "python-incremental",
+      "packageNames": [ "python-incremental" ]
+    },
+    {
+      "name": "python-iniparse",
+      "packageNames": [ "python-iniparse" ]
+    },
+    {
+      "name": "python-ipaddr",
+      "packageNames": [ "python-ipaddr" ]
+    },
+    {
+      "name": "python-jinja2",
+      "packageNames": [ "python-jinja2" ]
+    },
+    {
+      "name": "python-jmespath",
+      "packageNames": [ "python-jmespath" ]
+    },
+    {
+      "name": "python-jsonpatch",
+      "packageNames": [ "python-jsonpatch" ]
+    },
+    {
+      "name": "python-jsonpointer",
+      "packageNames": [ "python-jsonpointer" ]
+    },
+    {
+      "name": "python-jsonschema",
+      "packageNames": [ "python-jsonschema" ]
+    },
+    {
+      "name": "python-jwt",
+      "packageNames": [ "python-jwt" ]
+    },
+    {
+      "name": "python-kubernetes",
+      "packageNames": [ "python-kubernetes" ]
+    },
+    {
+      "name": "python-libclang",
+      "packageNames": [ "python-libclang" ]
+    },
+    {
+      "name": "python-linux-procfs",
+      "packageNames": [ "python-linux-procfs" ]
+    },
+    {
+      "name": "python-lockfile",
+      "packageNames": [ "python-lockfile" ]
+    },
+    {
+      "name": "python-logutils",
+      "packageNames": [ "python-logutils" ]
+    },
+    {
+      "name": "python-lxml",
+      "packageNames": [ "python-lxml" ]
+    },
+    {
+      "name": "python-m2r",
+      "packageNames": [ "python-m2r" ]
+    },
+    {
+      "name": "python-mako",
+      "packageNames": [ "python-mako" ]
+    },
+    {
+      "name": "python-markdown",
+      "packageNames": [ "python-markdown" ]
+    },
+    {
+      "name": "python-markupsafe",
+      "packageNames": [ "python-markupsafe" ]
+    },
+    {
+      "name": "python-mistune",
+      "packageNames": [ "python-mistune" ]
+    },
+    {
+      "name": "python-mock",
+      "packageNames": [ "python-mock" ]
+    },
+    {
+      "name": "python-more-itertools",
+      "packageNames": [ "python-more-itertools" ]
+    },
+    {
+      "name": "python-mpmath",
+      "packageNames": [ "python-mpmath" ]
+    },
+    {
+      "name": "python-msgpack",
+      "packageNames": [ "python-msgpack" ]
+    },
+    {
+      "name": "python-netaddr",
+      "packageNames": [ "python-netaddr" ]
+    },
+    {
+      "name": "python-netifaces",
+      "packageNames": [ "python-netifaces" ]
+    },
+    {
+      "name": "python-networkx",
+      "packageNames": [ "python-networkx" ]
+    },
+    {
+      "name": "python-nocasedict",
+      "packageNames": [ "python-nocasedict" ]
+    },
+    {
+      "name": "python-nose2",
+      "packageNames": [ "python-nose2" ]
+    },
+    {
+      "name": "python-ntplib",
+      "packageNames": [ "python-ntplib" ]
+    },
+    {
+      "name": "python-oauthlib",
+      "packageNames": [ "python-oauthlib" ]
+    },
+    {
+      "name": "python-opt-einsum",
+      "packageNames": [ "python-opt-einsum" ]
+    },
+    {
+      "name": "python-packaging",
+      "packageNames": [ "python-packaging" ]
+    },
+    {
+      "name": "python-pam",
+      "packageNames": [ "python-pam" ]
+    },
+    {
+      "name": "python-pbr",
+      "packageNames": [ "python-pbr" ]
+    },
+    {
+      "name": "python-pecan",
+      "packageNames": [ "python-pecan" ]
+    },
+    {
+      "name": "python-pefile",
+      "packageNames": [ "python-pefile" ]
+    },
+    {
+      "name": "python-pexpect",
+      "packageNames": [ "python-pexpect" ]
+    },
+    {
+      "name": "python-pkgconfig",
+      "packageNames": [ "python-pkgconfig" ]
+    },
+    {
+      "name": "python-platformdirs",
+      "packageNames": [ "python-platformdirs" ]
+    },
+    {
+      "name": "python-pluggy",
+      "packageNames": [ "python-pluggy" ]
+    },
+    {
+      "name": "python-ply",
+      "packageNames": [ "python-ply" ]
+    },
+    {
+      "name": "python-prettytable",
+      "packageNames": [ "python-prettytable" ]
+    },
+    {
+      "name": "python-process-tests",
+      "packageNames": [ "python-process-tests" ]
+    },
+    {
+      "name": "python-psutil",
+      "packageNames": [ "python-psutil" ]
+    },
+    {
+      "name": "python-psycopg2",
+      "packageNames": [ "python-psycopg2" ]
+    },
+    {
+      "name": "python-ptyprocess",
+      "packageNames": [ "python-ptyprocess" ]
+    },
+    {
+      "name": "python-py",
+      "packageNames": [ "python-py" ]
+    },
+    {
+      "name": "python-pyasn1",
+      "packageNames": [ "python-pyasn1" ]
+    },
+    {
+      "name": "python-pycodestyle",
+      "packageNames": [ "python-pycodestyle" ]
+    },
+    {
+      "name": "python-pycosat",
+      "packageNames": [ "python-pycosat" ]
+    },
+    {
+      "name": "python-pycparser",
+      "packageNames": [ "python-pycparser" ]
+    },
+    {
+      "name": "python-pycurl",
+      "packageNames": [ "python-pycurl" ]
+    },
+    {
+      "name": "python-pygments",
+      "packageNames": [ "python-pygments" ]
+    },
+    {
+      "name": "python-pynacl",
+      "packageNames": [ "python-pynacl" ]
+    },
+    {
+      "name": "python-pyrpm",
+      "packageNames": [ "python-pyrpm" ]
+    },
+    {
+      "name": "python-pytest-benchmark",
+      "packageNames": [ "python-pytest-benchmark" ]
+    },
+    {
+      "name": "python-pytest-cov",
+      "packageNames": [ "python-pytest-cov" ]
+    },
+    {
+      "name": "python-pytest-expect",
+      "packageNames": [ "python-pytest-expect" ]
+    },
+    {
+      "name": "python-pytest-forked",
+      "packageNames": [ "python-pytest-forked" ]
+    },
+    {
+      "name": "python-pytest-mock",
+      "packageNames": [ "python-pytest-mock" ]
+    },
+    {
+      "name": "python-pytest-xdist",
+      "packageNames": [ "python-pytest-xdist" ]
+    },
+    {
+      "name": "python-pyudev",
+      "packageNames": [ "python-pyudev" ]
+    },
+    {
+      "name": "python-pywbem",
+      "packageNames": [ "python-pywbem" ]
+    },
+    {
+      "name": "python-remoto",
+      "packageNames": [ "python-remoto" ]
+    },
+    {
+      "name": "python-repoze-lru",
+      "packageNames": [ "python-repoze-lru" ]
+    },
+    {
+      "name": "python-requests",
+      "packageNames": [ "python-requests" ]
+    },
+    {
+      "name": "python-requests-oauthlib",
+      "packageNames": [ "python-requests-oauthlib" ]
+    },
+    {
+      "name": "python-resolvelib",
+      "packageNames": [ "python-resolvelib" ]
+    },
+    {
+      "name": "python-responses",
+      "packageNames": [ "python-responses" ]
+    },
+    {
+      "name": "python-retrying",
+      "packageNames": [ "python-retrying" ]
+    },
+    {
+      "name": "python-routes",
+      "packageNames": [ "python-routes" ]
+    },
+    {
+      "name": "python-rsa",
+      "packageNames": [ "python-rsa" ]
+    },
+    {
+      "name": "python-ruamel-yaml",
+      "packageNames": [ "python-ruamel-yaml" ]
+    },
+    {
+      "name": "python-ruamel-yaml-clib",
+      "packageNames": [ "python-ruamel-yaml-clib" ]
+    },
+    {
+      "name": "python-schedutils",
+      "packageNames": [ "python-schedutils" ]
+    },
+    {
+      "name": "python-setuptools_scm",
+      "packageNames": [ "python-setuptools_scm" ]
+    },
+    {
+      "name": "python-simplejson",
+      "packageNames": [ "python-simplejson" ]
+    },
+    {
+      "name": "python-six",
+      "packageNames": [ "python-six" ]
+    },
+    {
+      "name": "python-snowballstemmer",
+      "packageNames": [ "python-snowballstemmer" ]
+    },
+    {
+      "name": "python-sphinx",
+      "packageNames": [ "python-sphinx" ]
+    },
+    {
+      "name": "python-sphinxcontrib-applehelp",
+      "packageNames": [ "python-sphinxcontrib-applehelp" ]
+    },
+    {
+      "name": "python-sphinxcontrib-devhelp",
+      "packageNames": [ "python-sphinxcontrib-devhelp" ]
+    },
+    {
+      "name": "python-sphinxcontrib-htmlhelp",
+      "packageNames": [ "python-sphinxcontrib-htmlhelp" ]
+    },
+    {
+      "name": "python-sphinxcontrib-jsmath",
+      "packageNames": [ "python-sphinxcontrib-jsmath" ]
+    },
+    {
+      "name": "python-sphinxcontrib-qthelp",
+      "packageNames": [ "python-sphinxcontrib-qthelp" ]
+    },
+    {
+      "name": "python-sphinxcontrib-serializinghtml",
+      "packageNames": [ "python-sphinxcontrib-serializinghtml" ]
+    },
+    {
+      "name": "python-sphinxcontrib-websupport",
+      "packageNames": [ "python-sphinxcontrib-websupport" ]
+    },
+    {
+      "name": "python-sphinx_rtd_theme",
+      "packageNames": [ "python-sphinx_rtd_theme" ]
+    },
+    {
+      "name": "python-sphinx-theme-alabaster",
+      "packageNames": [ "python-sphinx-theme-alabaster" ]
+    },
+    {
+      "name": "python-sphinx-theme-py3doc-enhanced",
+      "packageNames": [ "python-sphinx-theme-py3doc-enhanced" ]
+    },
+    {
+      "name": "python-sqlalchemy",
+      "packageNames": [ "python-sqlalchemy" ]
+    },
+    {
+      "name": "python-tensorboard",
+      "packageNames": [ "python-tensorboard" ]
+    },
+    {
+      "name": "python-tensorboard-plugin-wit",
+      "packageNames": [ "python-tensorboard-plugin-wit" ]
+    },
+    {
+      "name": "python-tensorflow-estimator",
+      "packageNames": [ "python-tensorflow-estimator" ]
+    },
+    {
+      "name": "python-termcolor",
+      "packageNames": [ "python-termcolor" ]
+    },
+    {
+      "name": "python-tidy",
+      "packageNames": [ "python-tidy" ]
+    },
+    {
+      "name": "python-tomli",
+      "packageNames": [ "python-tomli" ]
+    },
+    {
+      "name": "python-toolz",
+      "packageNames": [ "python-toolz" ]
+    },
+    {
+      "name": "python-tox-current-env",
+      "packageNames": [ "python-tox-current-env" ]
+    },
+    {
+      "name": "python-tqdm",
+      "packageNames": [ "python-tqdm" ]
+    },
+    {
+      "name": "python-twisted",
+      "packageNames": [ "python-twisted" ]
+    },
+    {
+      "name": "python-typing-extensions",
+      "packageNames": [ "python-typing-extensions" ]
+    },
+    {
+      "name": "python-urllib3",
+      "packageNames": [ "python-urllib3" ]
+    },
+    {
+      "name": "python-vcversioner",
+      "packageNames": [ "python-vcversioner" ]
+    },
+    {
+      "name": "python-virt-firmware",
+      "packageNames": [ "python-virt-firmware" ]
+    },
+    {
+      "name": "python-virtualenv",
+      "packageNames": [ "python-virtualenv" ]
+    },
+    {
+      "name": "python-wcwidth",
+      "packageNames": [ "python-wcwidth" ]
+    },
+    {
+      "name": "python-webob",
+      "packageNames": [ "python-webob" ]
+    },
+    {
+      "name": "python-websocket-client",
+      "packageNames": [ "python-websocket-client" ]
+    },
+    {
+      "name": "python-werkzeug",
+      "packageNames": [ "python-werkzeug" ]
+    },
+    {
+      "name": "python-wheel",
+      "packageNames": [ "python-wheel" ]
+    },
+    {
+      "name": "python-wrapt",
+      "packageNames": [ "python-wrapt" ]
+    },
+    {
+      "name": "python-yamlloader",
+      "packageNames": [ "python-yamlloader" ]
+    },
+    {
+      "name": "python-zipp",
+      "packageNames": [ "python-zipp" ]
+    },
+    {
+      "name": "python-zope-interface",
+      "packageNames": [ "python-zope-interface" ]
+    },
+    {
+      "name": "pytorch",
+      "packageNames": [ "pytorch" ]
+    },
+    {
+      "name": "pytz",
+      "packageNames": [ "pytz" ]
+    },
+    {
+      "name": "PyYAML",
+      "packageNames": [ "PyYAML" ]
+    },
+    {
+      "name": "qdox",
+      "packageNames": [ "qdox" ]
+    },
+    {
+      "name": "qemu",
+      "packageNames": [ "qemu" ]
+    },
+    {
+      "name": "qt5-qtbase",
+      "packageNames": [ "qt5-qtbase" ]
+    },
+    {
+      "name": "qt5-qtdeclarative",
+      "packageNames": [ "qt5-qtdeclarative" ]
+    },
+    {
+      "name": "qt5-qtsvg",
+      "packageNames": [ "qt5-qtsvg" ]
+    },
+    {
+      "name": "qt5-qttools",
+      "packageNames": [ "qt5-qttools" ]
+    },
+    {
+      "name": "qt5-rpm-macros",
+      "packageNames": [ "qt5-rpm-macros" ]
+    },
+    {
+      "name": "quota",
+      "packageNames": [ "quota" ]
+    },
+    {
+      "name": "R",
+      "packageNames": [ "R" ]
+    },
+    {
+      "name": "rabbitmq-server",
+      "packageNames": [ "rabbitmq-server" ]
+    },
+    {
+      "name": "radvd",
+      "packageNames": [ "radvd" ]
+    },
+    {
+      "name": "ragel",
+      "packageNames": [ "ragel" ]
+    },
+    {
+      "name": "rapidjson",
+      "packageNames": [ "rapidjson" ]
+    },
+    {
+      "name": "rdma-core",
+      "packageNames": [ "rdma-core" ]
+    },
+    {
+      "name": "re2",
+      "packageNames": [ "re2" ]
+    },
+    {
+      "name": "readline",
+      "packageNames": [ "readline" ]
+    },
+    {
+      "name": "reaper",
+      "packageNames": [ "reaper" ]
+    },
+    {
+      "name": "redis",
+      "packageNames": [ "redis" ]
+    },
+    {
+      "name": "rest",
+      "packageNames": [ "rest" ]
+    },
+    {
+      "name": "rlwrap",
+      "packageNames": [ "rlwrap" ]
+    },
+    {
+      "name": "rng-tools",
+      "packageNames": [ "rng-tools" ]
+    },
+    {
+      "name": "rocksdb",
+      "packageNames": [ "rocksdb" ]
+    },
+    {
+      "name": "rook",
+      "packageNames": [ "rook" ]
+    },
+    {
+      "name": "rpcbind",
+      "packageNames": [ "rpcbind" ]
+    },
+    {
+      "name": "rpcsvc-proto",
+      "packageNames": [ "rpcsvc-proto" ]
+    },
+    {
+      "name": "rpm",
+      "packageNames": [ "rpm" ]
+    },
+    {
+      "name": "rpmdevtools",
+      "packageNames": [ "rpmdevtools" ]
+    },
+    {
+      "name": "rpm-mpi-hooks",
+      "packageNames": [ "rpm-mpi-hooks" ]
+    },
+    {
+      "name": "rpm-ostree",
+      "packageNames": [ "rpm-ostree" ]
+    },
+    {
+      "name": "rrdtool",
+      "packageNames": [ "rrdtool" ]
+    },
+    {
+      "name": "rsync",
+      "packageNames": [ "rsync" ]
+    },
+    {
+      "name": "rsyslog",
+      "packageNames": [ "rsyslog" ]
+    },
+    {
+      "name": "rtctl",
+      "packageNames": [ "rtctl" ]
+    },
+    {
+      "name": "rtl-sdr",
+      "packageNames": [ "rtl-sdr" ]
+    },
+    {
+      "name": "rt-setup",
+      "packageNames": [ "rt-setup" ]
+    },
+    {
+      "name": "rt-tests",
+      "packageNames": [ "rt-tests" ]
+    },
+    {
+      "name": "ruby",
+      "packageNames": [ "ruby" ]
+    },
+    {
+      "name": "rubygem-addressable",
+      "packageNames": [ "rubygem-addressable" ]
+    },
+    {
+      "name": "rubygem-asciidoctor",
+      "packageNames": [ "rubygem-asciidoctor" ]
+    },
+    {
+      "name": "rubygem-async",
+      "packageNames": [ "rubygem-async" ]
+    },
+    {
+      "name": "rubygem-async-http",
+      "packageNames": [ "rubygem-async-http" ]
+    },
+    {
+      "name": "rubygem-async-io",
+      "packageNames": [ "rubygem-async-io" ]
+    },
+    {
+      "name": "rubygem-async-pool",
+      "packageNames": [ "rubygem-async-pool" ]
+    },
+    {
+      "name": "rubygem-aws-eventstream",
+      "packageNames": [ "rubygem-aws-eventstream" ]
+    },
+    {
+      "name": "rubygem-aws-partitions",
+      "packageNames": [ "rubygem-aws-partitions" ]
+    },
+    {
+      "name": "rubygem-aws-sdk-core",
+      "packageNames": [ "rubygem-aws-sdk-core" ]
+    },
+    {
+      "name": "rubygem-aws-sdk-kms",
+      "packageNames": [ "rubygem-aws-sdk-kms" ]
+    },
+    {
+      "name": "rubygem-aws-sdk-s3",
+      "packageNames": [ "rubygem-aws-sdk-s3" ]
+    },
+    {
+      "name": "rubygem-aws-sdk-sqs",
+      "packageNames": [ "rubygem-aws-sdk-sqs" ]
+    },
+    {
+      "name": "rubygem-aws-sigv4",
+      "packageNames": [ "rubygem-aws-sigv4" ]
+    },
+    {
+      "name": "rubygem-bigdecimal",
+      "packageNames": [ "rubygem-bigdecimal" ]
+    },
+    {
+      "name": "rubygem-bindata",
+      "packageNames": [ "rubygem-bindata" ]
+    },
+    {
+      "name": "rubygem-concurrent-ruby",
+      "packageNames": [ "rubygem-concurrent-ruby" ]
+    },
+    {
+      "name": "rubygem-connection_pool",
+      "packageNames": [ "rubygem-connection_pool" ]
+    },
+    {
+      "name": "rubygem-console",
+      "packageNames": [ "rubygem-console" ]
+    },
+    {
+      "name": "rubygem-cool.io",
+      "packageNames": [ "rubygem-cool.io" ]
+    },
+    {
+      "name": "rubygem-digest-crc",
+      "packageNames": [ "rubygem-digest-crc" ]
+    },
+    {
+      "name": "rubygem-elasticsearch",
+      "packageNames": [ "rubygem-elasticsearch" ]
+    },
+    {
+      "name": "rubygem-elasticsearch-api",
+      "packageNames": [ "rubygem-elasticsearch-api" ]
+    },
+    {
+      "name": "rubygem-elastic-transport",
+      "packageNames": [ "rubygem-elastic-transport" ]
+    },
+    {
+      "name": "rubygem-excon",
+      "packageNames": [ "rubygem-excon" ]
+    },
+    {
+      "name": "rubygem-faraday",
+      "packageNames": [ "rubygem-faraday" ]
+    },
+    {
+      "name": "rubygem-faraday-em_http",
+      "packageNames": [ "rubygem-faraday-em_http" ]
+    },
+    {
+      "name": "rubygem-faraday-em_synchrony",
+      "packageNames": [ "rubygem-faraday-em_synchrony" ]
+    },
+    {
+      "name": "rubygem-faraday-excon",
+      "packageNames": [ "rubygem-faraday-excon" ]
+    },
+    {
+      "name": "rubygem-faraday-httpclient",
+      "packageNames": [ "rubygem-faraday-httpclient" ]
+    },
+    {
+      "name": "rubygem-faraday-multipart",
+      "packageNames": [ "rubygem-faraday-multipart" ]
+    },
+    {
+      "name": "rubygem-faraday-net_http",
+      "packageNames": [ "rubygem-faraday-net_http" ]
+    },
+    {
+      "name": "rubygem-faraday-net_http_persistent",
+      "packageNames": [ "rubygem-faraday-net_http_persistent" ]
+    },
+    {
+      "name": "rubygem-faraday-patron",
+      "packageNames": [ "rubygem-faraday-patron" ]
+    },
+    {
+      "name": "rubygem-faraday-rack",
+      "packageNames": [ "rubygem-faraday-rack" ]
+    },
+    {
+      "name": "rubygem-faraday-retry",
+      "packageNames": [ "rubygem-faraday-retry" ]
+    },
+    {
+      "name": "rubygem-ffi",
+      "packageNames": [ "rubygem-ffi" ]
+    },
+    {
+      "name": "rubygem-fiber-local",
+      "packageNames": [ "rubygem-fiber-local" ]
+    },
+    {
+      "name": "rubygem-fluent-config-regexp-type",
+      "packageNames": [ "rubygem-fluent-config-regexp-type" ]
+    },
+    {
+      "name": "rubygem-fluentd",
+      "packageNames": [ "rubygem-fluentd" ]
+    },
+    {
+      "name": "rubygem-fluent-logger",
+      "packageNames": [ "rubygem-fluent-logger" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-elasticsearch",
+      "packageNames": [ "rubygem-fluent-plugin-elasticsearch" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-kafka",
+      "packageNames": [ "rubygem-fluent-plugin-kafka" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-prometheus",
+      "packageNames": [ "rubygem-fluent-plugin-prometheus" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-prometheus_pushgateway",
+      "packageNames": [ "rubygem-fluent-plugin-prometheus_pushgateway" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-record-modifier",
+      "packageNames": [ "rubygem-fluent-plugin-record-modifier" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-rewrite-tag-filter",
+      "packageNames": [ "rubygem-fluent-plugin-rewrite-tag-filter" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-s3",
+      "packageNames": [ "rubygem-fluent-plugin-s3" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-systemd",
+      "packageNames": [ "rubygem-fluent-plugin-systemd" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-td",
+      "packageNames": [ "rubygem-fluent-plugin-td" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-webhdfs",
+      "packageNames": [ "rubygem-fluent-plugin-webhdfs" ]
+    },
+    {
+      "name": "rubygem-fluent-plugin-windows-exporter",
+      "packageNames": [ "rubygem-fluent-plugin-windows-exporter" ]
+    },
+    {
+      "name": "rubygem-hirb",
+      "packageNames": [ "rubygem-hirb" ]
+    },
+    {
+      "name": "rubygem-hoe",
+      "packageNames": [ "rubygem-hoe" ]
+    },
+    {
+      "name": "rubygem-hpricot",
+      "packageNames": [ "rubygem-hpricot" ]
+    },
+    {
+      "name": "rubygem-httpclient",
+      "packageNames": [ "rubygem-httpclient" ]
+    },
+    {
+      "name": "rubygem-http_parser.rb",
+      "packageNames": [ "rubygem-http_parser.rb" ]
+    },
+    {
+      "name": "rubygem-introspection",
+      "packageNames": [ "rubygem-introspection" ]
+    },
+    {
+      "name": "rubygem-io-event",
+      "packageNames": [ "rubygem-io-event" ]
+    },
+    {
+      "name": "rubygem-jmespath",
+      "packageNames": [ "rubygem-jmespath" ]
+    },
+    {
+      "name": "rubygem-ltsv",
+      "packageNames": [ "rubygem-ltsv" ]
+    },
+    {
+      "name": "rubygem-metaclass",
+      "packageNames": [ "rubygem-metaclass" ]
+    },
+    {
+      "name": "rubygem-mini_portile2",
+      "packageNames": [ "rubygem-mini_portile2" ]
+    },
+    {
+      "name": "rubygem-minitest",
+      "packageNames": [ "rubygem-minitest" ]
+    },
+    {
+      "name": "rubygem-mocha",
+      "packageNames": [ "rubygem-mocha" ]
+    },
+    {
+      "name": "rubygem-msgpack",
+      "packageNames": [ "rubygem-msgpack" ]
+    },
+    {
+      "name": "rubygem-multi_json",
+      "packageNames": [ "rubygem-multi_json" ]
+    },
+    {
+      "name": "rubygem-multipart-post",
+      "packageNames": [ "rubygem-multipart-post" ]
+    },
+    {
+      "name": "rubygem-mustache",
+      "packageNames": [ "rubygem-mustache" ]
+    },
+    {
+      "name": "rubygem-net-http-persistent",
+      "packageNames": [ "rubygem-net-http-persistent" ]
+    },
+    {
+      "name": "rubygem-nio4r",
+      "packageNames": [ "rubygem-nio4r" ]
+    },
+    {
+      "name": "rubygem-nokogiri",
+      "packageNames": [ "rubygem-nokogiri" ]
+    },
+    {
+      "name": "rubygem-oj",
+      "packageNames": [ "rubygem-oj" ]
+    },
+    {
+      "name": "rubygem-parallel",
+      "packageNames": [ "rubygem-parallel" ]
+    },
+    {
+      "name": "rubygem-power_assert",
+      "packageNames": [ "rubygem-power_assert" ]
+    },
+    {
+      "name": "rubygem-prometheus-client",
+      "packageNames": [ "rubygem-prometheus-client" ]
+    },
+    {
+      "name": "rubygem-protocol-hpack",
+      "packageNames": [ "rubygem-protocol-hpack" ]
+    },
+    {
+      "name": "rubygem-protocol-http",
+      "packageNames": [ "rubygem-protocol-http" ]
+    },
+    {
+      "name": "rubygem-protocol-http1",
+      "packageNames": [ "rubygem-protocol-http1" ]
+    },
+    {
+      "name": "rubygem-protocol-http2",
+      "packageNames": [ "rubygem-protocol-http2" ]
+    },
+    {
+      "name": "rubygem-public_suffix",
+      "packageNames": [ "rubygem-public_suffix" ]
+    },
+    {
+      "name": "rubygem-rake",
+      "packageNames": [ "rubygem-rake" ]
+    },
+    {
+      "name": "rubygem-rake-compiler",
+      "packageNames": [ "rubygem-rake-compiler" ]
+    },
+    {
+      "name": "rubygem-rdiscount",
+      "packageNames": [ "rubygem-rdiscount" ]
+    },
+    {
+      "name": "rubygem-rdkafka",
+      "packageNames": [ "rubygem-rdkafka" ]
+    },
+    {
+      "name": "rubygem-rexml",
+      "packageNames": [ "rubygem-rexml" ]
+    },
+    {
+      "name": "rubygem-ronn",
+      "packageNames": [ "rubygem-ronn" ]
+    },
+    {
+      "name": "rubygem-rspec",
+      "packageNames": [ "rubygem-rspec" ]
+    },
+    {
+      "name": "rubygem-ruby-kafka",
+      "packageNames": [ "rubygem-ruby-kafka" ]
+    },
+    {
+      "name": "rubygem-ruby-progressbar",
+      "packageNames": [ "rubygem-ruby-progressbar" ]
+    },
+    {
+      "name": "rubygem-rubyzip",
+      "packageNames": [ "rubygem-rubyzip" ]
+    },
+    {
+      "name": "rubygem-semantic_puppet",
+      "packageNames": [ "rubygem-semantic_puppet" ]
+    },
+    {
+      "name": "rubygem-serverengine",
+      "packageNames": [ "rubygem-serverengine" ]
+    },
+    {
+      "name": "rubygem-sigdump",
+      "packageNames": [ "rubygem-sigdump" ]
+    },
+    {
+      "name": "rubygem-strptime",
+      "packageNames": [ "rubygem-strptime" ]
+    },
+    {
+      "name": "rubygem-systemd-journal",
+      "packageNames": [ "rubygem-systemd-journal" ]
+    },
+    {
+      "name": "rubygem-td",
+      "packageNames": [ "rubygem-td" ]
+    },
+    {
+      "name": "rubygem-td-client",
+      "packageNames": [ "rubygem-td-client" ]
+    },
+    {
+      "name": "rubygem-td-logger",
+      "packageNames": [ "rubygem-td-logger" ]
+    },
+    {
+      "name": "rubygem-test-unit",
+      "packageNames": [ "rubygem-test-unit" ]
+    },
+    {
+      "name": "rubygem-timers",
+      "packageNames": [ "rubygem-timers" ]
+    },
+    {
+      "name": "rubygem-tzinfo",
+      "packageNames": [ "rubygem-tzinfo" ]
+    },
+    {
+      "name": "rubygem-tzinfo-data",
+      "packageNames": [ "rubygem-tzinfo-data" ]
+    },
+    {
+      "name": "rubygem-webhdfs",
+      "packageNames": [ "rubygem-webhdfs" ]
+    },
+    {
+      "name": "rubygem-webrick",
+      "packageNames": [ "rubygem-webrick" ]
+    },
+    {
+      "name": "rubygem-yajl-ruby",
+      "packageNames": [ "rubygem-yajl-ruby" ]
+    },
+    {
+      "name": "rubygem-zip-zip",
+      "packageNames": [ "rubygem-zip-zip" ]
+    },
+    {
+      "name": "rust",
+      "packageNames": [ "rust" ]
+    },
+    {
+      "name": "sanlock",
+      "packageNames": [ "sanlock" ]
+    },
+    {
+      "name": "scons",
+      "packageNames": [ "scons" ]
+    },
+    {
+      "name": "scrub",
+      "packageNames": [ "scrub" ]
+    },
+    {
+      "name": "sdbus-cpp",
+      "packageNames": [ "sdbus-cpp" ]
+    },
+    {
+      "name": "seabios",
+      "packageNames": [ "seabios" ]
+    },
+    {
+      "name": "secilc",
+      "packageNames": [ "secilc" ]
+    },
+    {
+      "name": "sed",
+      "packageNames": [ "sed" ]
+    },
+    {
+      "name": "selinux-policy",
+      "packageNames": [ "selinux-policy" ]
+    },
+    {
+      "name": "setools",
+      "packageNames": [ "setools" ]
+    },
+    {
+      "name": "sg3_utils",
+      "packageNames": [ "sg3_utils" ]
+    },
+    {
+      "name": "sgabios",
+      "packageNames": [ "sgabios" ]
+    },
+    {
+      "name": "sgml-common",
+      "packageNames": [ "sgml-common" ]
+    },
+    {
+      "name": "sgx-backwards-compatability",
+      "packageNames": [ "sgx-backwards-compatability" ]
+    },
+    {
+      "name": "shadow-utils",
+      "packageNames": [ "shadow-utils" ]
+    },
+    {
+      "name": "shared-mime-info",
+      "packageNames": [ "shared-mime-info" ]
+    },
+    {
+      "name": "sharutils",
+      "packageNames": [ "sharutils" ]
+    },
+    {
+      "name": "shim",
+      "packageNames": [ "shim" ]
+    },
+    {
+      "name": "shim-unsigned",
+      "packageNames": [ "shim-unsigned" ]
+    },
+    {
+      "name": "shim-unsigned-aarch64",
+      "packageNames": [ "shim-unsigned-aarch64" ]
+    },
+    {
+      "name": "shim-unsigned-x64",
+      "packageNames": [ "shim-unsigned-x64" ]
+    },
+    {
+      "name": "sisu",
+      "packageNames": [ "sisu" ]
+    },
+    {
+      "name": "skopeo",
+      "packageNames": [ "skopeo" ]
+    },
+    {
+      "name": "slang",
+      "packageNames": [ "slang" ]
+    },
+    {
+      "name": "sleuthkit",
+      "packageNames": [ "sleuthkit" ]
+    },
+    {
+      "name": "slf4j",
+      "packageNames": [ "slf4j" ]
+    },
+    {
+      "name": "smartmontools",
+      "packageNames": [ "smartmontools" ]
+    },
+    {
+      "name": "snappy",
+      "packageNames": [ "snappy" ]
+    },
+    {
+      "name": "socat",
+      "packageNames": [ "socat" ]
+    },
+    {
+      "name": "socket_wrapper",
+      "packageNames": [ "socket_wrapper" ]
+    },
+    {
+      "name": "softhsm",
+      "packageNames": [ "softhsm" ]
+    },
+    {
+      "name": "sos",
+      "packageNames": [ "sos" ]
+    },
+    {
+      "name": "span-lite",
+      "packageNames": [ "span-lite" ]
+    },
+    {
+      "name": "sqlite",
+      "packageNames": [ "sqlite" ]
+    },
+    {
+      "name": "squashfs-tools",
+      "packageNames": [ "squashfs-tools" ]
+    },
+    {
+      "name": "sriov-network-device-plugin",
+      "packageNames": [ "sriov-network-device-plugin" ]
+    },
+    {
+      "name": "sscg",
+      "packageNames": [ "sscg" ]
+    },
+    {
+      "name": "sshpass",
+      "packageNames": [ "sshpass" ]
+    },
+    {
+      "name": "strace",
+      "packageNames": [ "strace" ]
+    },
+    {
+      "name": "strongswan",
+      "packageNames": [ "strongswan" ]
+    },
+    {
+      "name": "subversion",
+      "packageNames": [ "subversion" ]
+    },
+    {
+      "name": "sudo",
+      "packageNames": [ "sudo" ]
+    },
+    {
+      "name": "supermin",
+      "packageNames": [ "supermin" ]
+    },
+    {
+      "name": "swig",
+      "packageNames": [ "swig" ]
+    },
+    {
+      "name": "swupdate",
+      "packageNames": [ "swupdate" ]
+    },
+    {
+      "name": "SymCrypt",
+      "packageNames": [ "SymCrypt" ]
+    },
+    {
+      "name": "SymCrypt-OpenSSL",
+      "packageNames": [ "SymCrypt-OpenSSL" ]
+    },
+    {
+      "name": "symlinks",
+      "packageNames": [ "symlinks" ]
+    },
+    {
+      "name": "sympy",
+      "packageNames": [ "sympy" ]
+    },
+    {
+      "name": "sysbench",
+      "packageNames": [ "sysbench" ]
+    },
+    {
+      "name": "syslinux",
+      "packageNames": [ "syslinux" ]
+    },
+    {
+      "name": "syslog-ng",
+      "packageNames": [ "syslog-ng" ]
+    },
+    {
+      "name": "sysstat",
+      "packageNames": [ "sysstat" ]
+    },
+    {
+      "name": "systemd",
+      "packageNames": [ "systemd", "systemd-bootstrap" ]
+    },
+    {
+      "name": "systemtap",
+      "packageNames": [ "systemtap" ]
+    },
+    {
+      "name": "tar",
+      "packageNames": [ "tar" ]
+    },
+    {
+      "name": "tboot",
+      "packageNames": [ "tboot" ]
+    },
+    {
+      "name": "tcl",
+      "packageNames": [ "tcl" ]
+    },
+    {
+      "name": "tcpdump",
+      "packageNames": [ "tcpdump" ]
+    },
+    {
+      "name": "tcsh",
+      "packageNames": [ "tcsh" ]
+    },
+    {
+      "name": "tdnf",
+      "packageNames": [ "tdnf" ]
+    },
+    {
+      "name": "telegraf",
+      "packageNames": [ "telegraf" ]
+    },
+    {
+      "name": "tensorflow",
+      "packageNames": [ "tensorflow" ]
+    },
+    {
+      "name": "terraform",
+      "packageNames": [ "terraform" ]
+    },
+    {
+      "name": "texinfo",
+      "packageNames": [ "texinfo" ]
+    },
+    {
+      "name": "tidy",
+      "packageNames": [ "tidy" ]
+    },
+    {
+      "name": "time",
+      "packageNames": [ "time" ]
+    },
+    {
+      "name": "tini",
+      "packageNames": [ "tini" ]
+    },
+    {
+      "name": "tinycdb",
+      "packageNames": [ "tinycdb" ]
+    },
+    {
+      "name": "tinyxml2",
+      "packageNames": [ "tinyxml2" ]
+    },
+    {
+      "name": "tmux",
+      "packageNames": [ "tmux" ]
+    },
+    {
+      "name": "tokyocabinet",
+      "packageNames": [ "tokyocabinet" ]
+    },
+    {
+      "name": "toml11",
+      "packageNames": [ "toml11" ]
+    },
+    {
+      "name": "tpm2-abrmd",
+      "packageNames": [ "tpm2-abrmd" ]
+    },
+    {
+      "name": "tpm2-tools",
+      "packageNames": [ "tpm2-tools" ]
+    },
+    {
+      "name": "tpm2-tss",
+      "packageNames": [ "tpm2-tss" ]
+    },
+    {
+      "name": "tracelogging",
+      "packageNames": [ "tracelogging" ]
+    },
+    {
+      "name": "traceroute",
+      "packageNames": [ "traceroute" ]
+    },
+    {
+      "name": "tree",
+      "packageNames": [ "tree" ]
+    },
+    {
+      "name": "trousers",
+      "packageNames": [ "trousers" ]
+    },
+    {
+      "name": "ttembed",
+      "packageNames": [ "ttembed" ]
+    },
+    {
+      "name": "tuna",
+      "packageNames": [ "tuna" ]
+    },
+    {
+      "name": "tuned",
+      "packageNames": [ "tuned" ]
+    },
+    {
+      "name": "tzdata",
+      "packageNames": [ "tzdata" ]
+    },
+    {
+      "name": "uclibc-ng",
+      "packageNames": [ "uclibc-ng" ]
+    },
+    {
+      "name": "ucx",
+      "packageNames": [ "ucx" ]
+    },
+    {
+      "name": "uid_wrapper",
+      "packageNames": [ "uid_wrapper" ]
+    },
+    {
+      "name": "unbound",
+      "packageNames": [ "unbound" ]
+    },
+    {
+      "name": "unixODBC",
+      "packageNames": [ "unixODBC" ]
+    },
+    {
+      "name": "unzip",
+      "packageNames": [ "unzip" ]
+    },
+    {
+      "name": "usbip",
+      "packageNames": [ "usbip" ]
+    },
+    {
+      "name": "usbredir",
+      "packageNames": [ "usbredir" ]
+    },
+    {
+      "name": "usbutils",
+      "packageNames": [ "usbutils" ]
+    },
+    {
+      "name": "userspace-rcu",
+      "packageNames": [ "userspace-rcu" ]
+    },
+    {
+      "name": "usrsctp",
+      "packageNames": [ "usrsctp" ]
+    },
+    {
+      "name": "utf8proc",
+      "packageNames": [ "utf8proc" ]
+    },
+    {
+      "name": "util-linux",
+      "packageNames": [ "util-linux" ]
+    },
+    {
+      "name": "uuid",
+      "packageNames": [ "uuid" ]
+    },
+    {
+      "name": "vala",
+      "packageNames": [ "vala" ]
+    },
+    {
+      "name": "valgrind",
+      "packageNames": [ "valgrind" ]
+    },
+    {
+      "name": "verity-read-only-root",
+      "packageNames": [ "verity-read-only-root" ]
+    },
+    {
+      "name": "vim",
+      "packageNames": [ "vim" ]
+    },
+    {
+      "name": "virglrenderer",
+      "packageNames": [ "virglrenderer" ]
+    },
+    {
+      "name": "virt-what",
+      "packageNames": [ "virt-what" ]
+    },
+    {
+      "name": "vitess",
+      "packageNames": [ "vitess" ]
+    },
+    {
+      "name": "vnstat",
+      "packageNames": [ "vnstat" ]
+    },
+    {
+      "name": "vsftpd",
+      "packageNames": [ "vsftpd" ]
+    },
+    {
+      "name": "vte291",
+      "packageNames": [ "vte291" ]
+    },
+    {
+      "name": "vulkan-headers",
+      "packageNames": [ "vulkan-headers" ]
+    },
+    {
+      "name": "vulkan-loader",
+      "packageNames": [ "vulkan-loader" ]
+    },
+    {
+      "name": "WALinuxAgent",
+      "packageNames": [ "WALinuxAgent" ]
+    },
+    {
+      "name": "wayland",
+      "packageNames": [ "wayland" ]
+    },
+    {
+      "name": "wayland-protocols",
+      "packageNames": [ "wayland-protocols" ]
+    },
+    {
+      "name": "websocketpp",
+      "packageNames": [ "websocketpp" ]
+    },
+    {
+      "name": "wget",
+      "packageNames": [ "wget" ]
+    },
+    {
+      "name": "which",
+      "packageNames": [ "which" ]
+    },
+    {
+      "name": "wireguard-tools",
+      "packageNames": [ "wireguard-tools" ]
+    },
+    {
+      "name": "wireless-regdb",
+      "packageNames": [ "wireless-regdb" ]
+    },
+    {
+      "name": "words",
+      "packageNames": [ "words" ]
+    },
+    {
+      "name": "wpa_supplicant",
+      "packageNames": [ "wpa_supplicant" ]
+    },
+    {
+      "name": "xcb-proto",
+      "packageNames": [ "xcb-proto" ]
+    },
+    {
+      "name": "xcursor-themes",
+      "packageNames": [ "xcursor-themes" ]
+    },
+    {
+      "name": "xerces-c",
+      "packageNames": [ "xerces-c" ]
+    },
+    {
+      "name": "xfsprogs",
+      "packageNames": [ "xfsprogs" ]
+    },
+    {
+      "name": "xinetd",
+      "packageNames": [ "xinetd" ]
+    },
+    {
+      "name": "xkeyboard-config",
+      "packageNames": [ "xkeyboard-config" ]
+    },
+    {
+      "name": "xml-commons-apis",
+      "packageNames": [ "xml-commons-apis" ]
+    },
+    {
+      "name": "xml-commons-resolver",
+      "packageNames": [ "xml-commons-resolver" ]
+    },
+    {
+      "name": "xmlsec1",
+      "packageNames": [ "xmlsec1" ]
+    },
+    {
+      "name": "xmlstarlet",
+      "packageNames": [ "xmlstarlet" ]
+    },
+    {
+      "name": "xmlto",
+      "packageNames": [ "xmlto" ]
+    },
+    {
+      "name": "xmltoman",
+      "packageNames": [ "xmltoman" ]
+    },
+    {
+      "name": "xmvn",
+      "packageNames": [ "xmvn" ]
+    },
+    {
+      "name": "xorg-x11-apps",
+      "packageNames": [ "xorg-x11-apps" ]
+    },
+    {
+      "name": "xorg-x11-drv-libinput",
+      "packageNames": [ "xorg-x11-drv-libinput" ]
+    },
+    {
+      "name": "xorg-x11-font-utils",
+      "packageNames": [ "xorg-x11-font-utils" ]
+    },
+    {
+      "name": "xorg-x11-proto-devel",
+      "packageNames": [ "xorg-x11-proto-devel" ]
+    },
+    {
+      "name": "xorg-x11-server",
+      "packageNames": [ "xorg-x11-server" ]
+    },
+    {
+      "name": "xorg-x11-server-utils",
+      "packageNames": [ "xorg-x11-server-utils" ]
+    },
+    {
+      "name": "xorg-x11-util-macros",
+      "packageNames": [ "xorg-x11-util-macros" ]
+    },
+    {
+      "name": "xorg-x11-xauth",
+      "packageNames": [ "xorg-x11-xauth" ]
+    },
+    {
+      "name": "xorg-x11-xbitmaps",
+      "packageNames": [ "xorg-x11-xbitmaps" ]
+    },
+    {
+      "name": "xorg-x11-xinit",
+      "packageNames": [ "xorg-x11-xinit" ]
+    },
+    {
+      "name": "xorg-x11-xkb-utils",
+      "packageNames": [ "xorg-x11-xkb-utils" ]
+    },
+    {
+      "name": "xorg-x11-xtrans-devel",
+      "packageNames": [ "xorg-x11-xtrans-devel" ]
+    },
+    {
+      "name": "xxhash",
+      "packageNames": [ "xxhash" ]
+    },
+    {
+      "name": "xz",
+      "packageNames": [ "xz" ]
+    },
+    {
+      "name": "xz-java",
+      "packageNames": [ "xz-java" ]
+    },
+    {
+      "name": "yajl",
+      "packageNames": [ "yajl" ]
+    },
+    {
+      "name": "yaml-cpp",
+      "packageNames": [ "yaml-cpp" ]
+    },
+    {
+      "name": "yasm",
+      "packageNames": [ "yasm" ]
+    },
+    {
+      "name": "ypbind",
+      "packageNames": [ "ypbind" ]
+    },
+    {
+      "name": "yp-tools",
+      "packageNames": [ "yp-tools" ]
+    },
+    {
+      "name": "zchunk",
+      "packageNames": [ "zchunk" ]
+    },
+    {
+      "name": "zerofree",
+      "packageNames": [ "zerofree" ]
+    },
+    {
+      "name": "zeromq",
+      "packageNames": [ "zeromq" ]
+    },
+    {
+      "name": "zfs-fuse",
+      "packageNames": [ "zfs-fuse" ]
+    },
+    {
+      "name": "zip",
+      "packageNames": [ "zip" ]
+    },
+    {
+      "name": "zipper",
+      "packageNames": [ "zipper" ]
+    },
+    {
+      "name": "zlib",
+      "packageNames": [ "zlib" ]
+    },
+    {
+      "name": "zsh",
+      "packageNames": [ "zsh" ]
+    },
+    {
+      "name": "zstd",
+      "packageNames": [ "zstd" ]
     }
   ]
 }
