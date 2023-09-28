@@ -62,7 +62,7 @@ type CCacheArchive struct {
 }
 
 type CCacheManager struct {
-	Configuration CCacheConfiguration
+	Configuration *CCacheConfiguration
 	RootCCacheDir string
 	DownloadsDir  string
 	UploadsDir    string
@@ -76,7 +76,7 @@ type CCacheManager struct {
 	PkgTagFile  CCacheArchive
 }
 
-func loadConfiguration(configFileName string) (configuration CCacheConfiguration, err error) {
+func loadConfiguration(configFileName string) (configuration *CCacheConfiguration, err error) {
 
 	logger.Log.Infof("  loading ccache configuration file: %s", configFileName)
 
@@ -336,7 +336,7 @@ func (m *CCacheManager) getPkgCCacheDir(pkgCCacheGroupName string, pkgArchitectu
 
 func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
-	logger.Log.Infof("  processing download of ccache artifacts...")
+	logger.Log.Infof("** processing download of ccache artifacts...")
 
 	if m.PkgGroupName == CommonGroupName {
 		logger.Log.Infof("  %s group - skipping download...", CommonGroupName)
@@ -406,7 +406,7 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 
-	logger.Log.Infof("  processing upload of ccache artifacts...")
+	logger.Log.Infof("** processing upload of ccache artifacts...")
 
 	if m.PkgGroupName == CommonGroupName {
 		logger.Log.Infof("  %s group - skipping upload...", CommonGroupName)
