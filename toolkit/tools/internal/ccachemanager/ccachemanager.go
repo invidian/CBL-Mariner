@@ -172,10 +172,10 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 	m.PkgTarFile.LocalTargetPath = m.UploadsDir + "/" + m.PkgGroupName + CCacheTarSuffix
 	m.PkgTarFile.RemoteTargetPath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.UploadFolder + "/" + m.PkgGroupName + CCacheTarSuffix
 
-	logger.Log.Infof("  tar local source    : (%s)", m.PkgTarFile.LocalSourcePath)
-	logger.Log.Infof("  tar remote source   : (%s)", m.PkgTarFile.RemoteSourcePath)
-	logger.Log.Infof("  tar local target    : (%s)", m.PkgTarFile.LocalTargetPath)
-	logger.Log.Infof("  tar remote target   : (%s)", m.PkgTarFile.RemoteTargetPath)
+	logger.Log.Infof("  tar local source  : (%s)", m.PkgTarFile.LocalSourcePath)
+	logger.Log.Infof("  tar remote source : (%s)", m.PkgTarFile.RemoteSourcePath)
+	logger.Log.Infof("  tar local target  : (%s)", m.PkgTarFile.LocalTargetPath)
+	logger.Log.Infof("  tar remote target : (%s)", m.PkgTarFile.RemoteTargetPath)
 
 	CCacheTagSuffix := "-latest-build.txt"
 	m.PkgTagFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheTagSuffix
@@ -378,10 +378,20 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 		return nil
 	}
 
+	pkgCCacheDirContents, err := getChildFolders(m.PkgCCacheDir)
+	if err != nil {
+		logger.Log.Warnf("Failed to enumerate the contents of (%s). Error: %v", m.PkgCCacheDir, err)
+	}
+
+	if len(pkgCCacheDirContents) == 0 {
+		logger.Log.Infof("  %s is empty. Nothing to archive and upload. Skipping...", m.PkgCCacheDir)
+		return nil
+	}
+
     remoteStoreConfig := m.Configuration.RemoteStoreConfig
 	if !remoteStoreConfig.UploadEnabled {
 		logger.Log.Infof("  ccache update is disabled for this build.")
-		return
+		return nil
 	}
 
 	logger.Log.Infof("  archiving and uploading...")
@@ -411,12 +421,6 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 		logger.Log.Warnf("Unable to upload ccache archive. Error: %v", err)
 		return err
 	}
-
-	// logger.Log.Infof("  removing ccache archive (%s)...", m.PkgTarFile.LocalTargetPath)
-	// err := os.Remove(m.PkgTarFile.LocalTargetPath)
-	// if err != nil {
-	// 	logger.Log.Warnf("Unable to delete ccache archive (%s). Error: %v", m.PkgTarFile.LocalTargetPath, err)
-	// }
 
 	if remoteStoreConfig.UpdateLatest {
 		// Create the latest tag file...

@@ -196,7 +196,6 @@ func main() {
 	if *useCcache {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
 		var ccacheManager ccachemanagerpkg.CCacheManager
-
 		err = ccacheManager.Initialize(*ccacheConfig, *ccacheDir)
 		if err == nil {
 			err = ccacheManager.UploadAllPkgGroupCCaches()
