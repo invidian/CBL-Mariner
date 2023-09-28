@@ -36,7 +36,7 @@ type RemoteStoreConfig struct {
 	Password        string `json:"password"`
 	StorageAccount  string `json:"storageAccount"`
 	ContainerName   string `json:"containerName"`
-	VersionsFolder  string `json:"versionsFolder"`
+	TagsFolder      string `json:"tagsFolder"`
 	DownloadEnabled bool   `json:"downloadEnabled"`
 	DownloadFolder  string `json:"downloadFolder"`
 	UploadEnabled   bool   `json:"uploadEnabled"`
@@ -68,7 +68,7 @@ type CCacheManager struct {
 	PkgCCacheDir  string
 
 	PkgTarFile    CCacheArchive
-	PkgLabelFile  CCacheArchive
+	PkgTagFile  CCacheArchive
 }
 
 func loadConfiguration(configFileName string) (configuration CCacheConfiguration, err error) {
@@ -85,7 +85,7 @@ func loadConfiguration(configFileName string) (configuration CCacheConfiguration
 		// logger.Log.Infof("  Password      : %s", configuration.RemoteStoreConfig.Password)
 		logger.Log.Infof("  StorageAccount : %s", configuration.RemoteStoreConfig.StorageAccount)
 		logger.Log.Infof("  ContainerName  : %s", configuration.RemoteStoreConfig.ContainerName)
-		logger.Log.Infof("  Versionsfolder : %s", configuration.RemoteStoreConfig.VersionsFolder)
+		logger.Log.Infof("  Tagsfolder     : %s", configuration.RemoteStoreConfig.TagsFolder)
 		logger.Log.Infof("  DownloadEnabled: %v", configuration.RemoteStoreConfig.DownloadEnabled)
 		logger.Log.Infof("  DownloadFolder : %s", configuration.RemoteStoreConfig.DownloadFolder)
 		logger.Log.Infof("  UploadEnabled  : %v", configuration.RemoteStoreConfig.UploadEnabled)
@@ -119,7 +119,6 @@ func (m *CCacheManager) Initialize(configFileName string, rootDir string) (err e
 	m.DownloadsDir = m.RootCCacheDir + "-downloads"
 	m.UploadsDir = m.RootCCacheDir + "-uploads"
 
-	logger.Log.Infof("  m.RootCCacheDir : (%s)", m.RootCCacheDir)
 	return nil
 }
 
@@ -173,16 +172,16 @@ func (m *CCacheManager) setPackageInternal(groupName string, groupSize int, arch
 	logger.Log.Infof("  tar local target    : (%s)", m.PkgTarFile.LocalTargetPath)
 	logger.Log.Infof("  tar remote target   : (%s)", m.PkgTarFile.RemoteTargetPath)
 
-	CCacheVersionSuffix := "-latest-build.txt"
-	m.PkgLabelFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheVersionSuffix
-	m.PkgLabelFile.RemoteSourcePath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.VersionsFolder + "/" + m.PkgGroupName + CCacheVersionSuffix
-	m.PkgLabelFile.LocalTargetPath = m.UploadsDir + "/" + m.PkgGroupName + CCacheVersionSuffix
-	m.PkgLabelFile.RemoteTargetPath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.VersionsFolder + "/" + m.PkgGroupName + CCacheVersionSuffix
+	CCacheTagSuffix := "-latest-build.txt"
+	m.PkgTagFile.LocalSourcePath = m.DownloadsDir + "/" + m.PkgGroupName + CCacheTagSuffix
+	m.PkgTagFile.RemoteSourcePath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.TagsFolder + "/" + m.PkgGroupName + CCacheTagSuffix
+	m.PkgTagFile.LocalTargetPath = m.UploadsDir + "/" + m.PkgGroupName + CCacheTagSuffix
+	m.PkgTagFile.RemoteTargetPath = m.PkgArch + "/" + m.Configuration.RemoteStoreConfig.TagsFolder + "/" + m.PkgGroupName + CCacheTagSuffix
 
-	logger.Log.Infof("  label local source  : (%s)", m.PkgLabelFile.LocalSourcePath)
-	logger.Log.Infof("  label remote source : (%s)", m.PkgLabelFile.RemoteSourcePath)
-	logger.Log.Infof("  label local target  : (%s)", m.PkgLabelFile.LocalTargetPath)
-	logger.Log.Infof("  label remote target : (%s)", m.PkgLabelFile.RemoteTargetPath)
+	logger.Log.Infof("  tag local source  : (%s)", m.PkgTagFile.LocalSourcePath)
+	logger.Log.Infof("  tag remote source : (%s)", m.PkgTagFile.RemoteSourcePath)
+	logger.Log.Infof("  tag local target  : (%s)", m.PkgTagFile.LocalTargetPath)
+	logger.Log.Infof("  tag remote target : (%s)", m.PkgTagFile.RemoteTargetPath)
 
 	return nil
 }
@@ -333,23 +332,23 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 		logger.Log.Infof("  ccache is configured to use the latest...")
 
-		// Download the versions file...
-		logger.Log.Infof("  downloading (%s) to (%s)...", m.PkgLabelFile.RemoteSourcePath, m.PkgLabelFile.LocalSourcePath)
-		err = azureblobstorage.Download(context.Background(), remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteSourcePath, m.PkgLabelFile.LocalSourcePath)
+		// Download the tags file...
+		logger.Log.Infof("  downloading (%s) to (%s)...", m.PkgTagFile.RemoteSourcePath, m.PkgTagFile.LocalSourcePath)
+		err = azureblobstorage.Download(context.Background(), remoteStoreConfig.ContainerName, m.PkgTagFile.RemoteSourcePath, m.PkgTagFile.LocalSourcePath)
 		if err != nil {
 			logger.Log.Warnf("  unable to download ccache archive. Error: %v", err)
 			return err
 		}
 
 		// Read the text contents...
-		latestBuildLabel, err := ioutil.ReadFile(m.PkgLabelFile.LocalSourcePath)
+		latestBuildTag, err := ioutil.ReadFile(m.PkgTagFile.LocalSourcePath)
 		if err != nil {
-			logger.Log.Warnf("Unable to read ccache version file contents. Error: %v", err)
+			logger.Log.Warnf("Unable to read ccache tag file contents. Error: %v", err)
 			return err
 		}
 
-		// Adjust the download folder from 'latest' to the label loaded from the file...
-		remoteStoreConfig.DownloadFolder = string(latestBuildLabel) 
+		// Adjust the download folder from 'latest' to the tag loaded from the file...
+		remoteStoreConfig.DownloadFolder = string(latestBuildTag) 
 		logger.Log.Infof("  ccache latest archive folder is (%s)...", remoteStoreConfig.DownloadFolder)
 	}
 
@@ -419,17 +418,17 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 	// }
 
 	if remoteStoreConfig.UpdateLatest {
-		// Create the latest label file...
-		logger.Log.Infof("  creating a label file (%s) with content: (%s)...", m.PkgLabelFile.LocalTargetPath, remoteStoreConfig.UploadFolder)
-		err = ioutil.WriteFile(m.PkgLabelFile.LocalTargetPath, []byte(remoteStoreConfig.UploadFolder), 0644)
+		// Create the latest tag file...
+		logger.Log.Infof("  creating a tag file (%s) with content: (%s)...", m.PkgTagFile.LocalTargetPath, remoteStoreConfig.UploadFolder)
+		err = ioutil.WriteFile(m.PkgTagFile.LocalTargetPath, []byte(remoteStoreConfig.UploadFolder), 0644)
 		if err != nil {
-			logger.Log.Warnf("Unable to write label information to temporary file. Error: %v", err)
+			logger.Log.Warnf("Unable to write tag information to temporary file. Error: %v", err)
 			return err
 		}
 
-		// Upload the latest label file...
-		logger.Log.Infof("  uploading label version (%s) to (%s)...", m.PkgLabelFile.LocalTargetPath, m.PkgLabelFile.RemoteTargetPath)
-		err = azureblobstorage.Upload(context.Background(), m.PkgLabelFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgLabelFile.RemoteTargetPath)
+		// Upload the latest tag file...
+		logger.Log.Infof("  uploading tag file (%s) to (%s)...", m.PkgTagFile.LocalTargetPath, m.PkgTagFile.RemoteTargetPath)
+		err = azureblobstorage.Upload(context.Background(), m.PkgTagFile.LocalTargetPath, remoteStoreConfig.ContainerName, m.PkgTagFile.RemoteTargetPath)
 		if err != nil {
 			logger.Log.Warnf("Unable to upload ccache archive. Error: %v", err)
 			return err

@@ -6,7 +6,7 @@
     "password": "",
     "storageAccount": "marinerccache",
     "containerName": "20-stable",
-    "versionsFolder": "versions",
+    "tagsFolder": "tags",
     "downloadEnabled": true,
     "downloadFolder": "latest",
     "uploadEnabled": false,
