@@ -164,7 +164,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		}
 
-		ccacheManager.SetPackage(*basePackageName, outArch)
+		ccacheManager.SetCurrentPkgGroup(*basePackageName, outArch)
 		if err != nil {
 			logger.Log.Warnf("Failed to set package ccache configuration. Error (%v)", err)
 		}
@@ -183,7 +183,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 	rpmCacheMount := safechroot.NewMountPoint(*cacheDir, chrootLocalRpmsCacheDir, "", safechroot.BindMountPointFlags, "")
 	mountPoints := []*safechroot.MountPoint{outRpmsOverlayMount, toolchainRpmsOverlayMount, rpmCacheMount}
 	if useCcache {
-		ccacheMount := safechroot.NewMountPoint(ccacheManager.PkgCCacheDir, chrootCcacheDir, "", safechroot.BindMountPointFlags, "")
+		ccacheMount := safechroot.NewMountPoint(ccacheManager.CurrentPkgGroup.CCacheDir, chrootCcacheDir, "", safechroot.BindMountPointFlags, "")
 		mountPoints = append(mountPoints, ccacheMount)
 	}
 	extraDirs := append(outRpmsOverlayExtraDirs, chrootLocalRpmsCacheDir, chrootCcacheDir)
@@ -214,7 +214,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 
 	// Only if the groupSize is 1 we can archive since no other packages will
 	// re-update this cache.
-	if useCcache && ccacheManager.PkgGroupSize == 1 {
+	if useCcache && ccacheManager.CurrentPkgGroup.Size == 1 {
 		err = ccacheManager.UploadPkgGroupCCache()
 		if err != nil {
 			logger.Log.Infof("  unable to upload ccache archive. Error: %v", err)
