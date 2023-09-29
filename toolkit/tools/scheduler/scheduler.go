@@ -9,6 +9,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"sync"
 	"time"
 
@@ -195,8 +196,7 @@ func main() {
 
 	if *useCcache {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
-		var ccacheManager ccachemanagerpkg.CCacheManager
-		err = ccacheManager.Initialize(*ccacheDir, *ccacheConfig)
+		ccacheManager, err := ccachemanagerpkg.CreateManager(*ccacheDir, *ccacheConfig)
 		if err == nil {
 			err = ccacheManager.UploadAllPkgGroupCCaches()
 			if err != nil {
@@ -296,19 +296,52 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
 func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int) {
+	logger.Log.Infof("Dumping stuck nodes...")
+
+	traversalStack := make(map[int64]bool)
+	visitedSet := make(map[int64]bool)
+
+	debugStuckNodeInternal(buildState, pkgGraph, stuckNode, indent, traversalStack, visitedSet)
+}
+
+// debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
+func debugStuckNodeInternal(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, traversalStack map[int64]bool, visitedSet map[int64]bool) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
 
-	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
-	logger.Log.Debugf("%*s", indent, nodeName)
+	indentStr := strings.Repeat(" ", indent * 4)
+	logger.Log.Infof("%s(%s)", indentStr, stuckNode.FriendlyName())
+
+	_, exists := traversalStack[stuckNode.ID()]
+	if exists {
+		// This should never happen since cyclic dependencies should have been
+		// detected earlier in the build and resolved.
+		logger.Log.Infof("%sA CYCLE HAS BEEN DETECTED FOR (%s)!", indentStr, stuckNode.FriendlyName())
+		return
+	} else {
+		traversalStack[stuckNode.ID()] = true
+	}
+
+	_, exists = visitedSet[stuckNode.ID()]
+	if exists {
+		logger.Log.Infof("%sSubtree (%s) already visited.", indentStr, stuckNode.FriendlyName())
+		// rewind the stack.
+		delete(traversalStack, stuckNode.ID())
+		return
+	} else {
+		visitedSet[stuckNode.ID()] = true
+	}
 
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1)
+		debugStuckNodeInternal(buildState, pkgGraph, dependent, indent+1, traversalStack, visitedSet)
 	}
+
+	// rewind the stack.
+	delete(traversalStack, stuckNode.ID())
 }
 
 // buildAllNodes will build all nodes in a given dependency graph.
@@ -481,7 +514,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				logger.Log.Infof("%d currently active test(s): %v.", len(activeTests), activeTests)
 			}
 		}
-
 	}
 
 	// Let the workers know they are done

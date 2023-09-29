@@ -16,5658 +16,8486 @@
   "groups": [
     {
       "name": "abseil-cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "abseil-cpp" ]
     },
     {
       "name": "acl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "acl" ]
     },
     {
       "name": "acpica-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "acpica-tools" ]
     },
     {
       "name": "adwaita-icon-theme",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "adwaita-icon-theme" ]
     },
     {
       "name": "afflib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "afflib" ]
     },
     {
       "name": "aide",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "aide" ]
     },
     {
       "name": "alsa-lib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "alsa-lib" ]
     },
     {
       "name": "alsa-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "alsa-utils" ]
     },
     {
       "name": "ansible",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ansible" ]
     },
     {
       "name": "ant",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ant" ]
     },
     {
       "name": "ant-junit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ant-junit" ]
     },
     {
       "name": "antlr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "antlr" ]
     },
     {
       "name": "apache-commons-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apache-commons-cli" ]
     },
     {
       "name": "apache-commons-lang3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apache-commons-lang3" ]
     },
     {
       "name": "apache-commons-logging",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apache-commons-logging" ]
     },
     {
       "name": "apparmor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apparmor" ]
     },
     {
       "name": "application-gateway-kubernetes-ingress",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "application-gateway-kubernetes-ingress" ]
     },
     {
       "name": "apr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apr" ]
     },
     {
       "name": "apr-util",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "apr-util" ]
     },
     {
       "name": "archivemount",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "archivemount" ]
     },
     {
       "name": "asc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "asc" ]
     },
     {
       "name": "asciidoc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "asciidoc" ]
     },
     {
       "name": "aspell",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "aspell" ]
     },
     {
       "name": "at",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "at" ]
     },
     {
       "name": "atf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "atf" ]
     },
     {
       "name": "atftp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "atftp" ]
     },
     {
       "name": "atinject",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "atinject" ]
     },
     {
       "name": "atk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "atk" ]
     },
     {
       "name": "atop",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "atop" ]
     },
     {
       "name": "at-spi2-atk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "at-spi2-atk" ]
     },
     {
       "name": "at-spi2-core",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "at-spi2-core" ]
     },
     {
       "name": "attr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "attr" ]
     },
     {
       "name": "audit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "audit" ]
     },
     {
       "name": "augeas",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "augeas" ]
     },
     {
       "name": "authbind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "authbind" ]
     },
     {
       "name": "authd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "authd" ]
     },
     {
       "name": "autoconf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "autoconf" ]
     },
     {
       "name": "autoconf213",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "autoconf213" ]
     },
     {
       "name": "autoconf-archive",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "autoconf-archive" ]
     },
     {
       "name": "autofs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "autofs" ]
     },
     {
       "name": "autogen",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "autogen" ]
     },
     {
       "name": "automake",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "automake" ]
     },
     {
       "name": "avahi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "avahi" ]
     },
     {
       "name": "azcopy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "azcopy" ]
     },
     {
       "name": "azure-iot-sdk-c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "azure-iot-sdk-c" ]
     },
     {
       "name": "azure-storage-cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "azure-storage-cpp" ]
     },
     {
       "name": "babel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "babel" ]
     },
     {
       "name": "babeltrace2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "babeltrace2" ]
     },
     {
       "name": "bash",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bash" ]
     },
     {
       "name": "bash-completion",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bash-completion" ]
     },
     {
       "name": "bazel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bazel" ]
     },
     {
       "name": "bazel-workspaces",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bazel-workspaces" ]
     },
     {
       "name": "bc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bc" ]
     },
     {
       "name": "bcc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bcc" ]
     },
     {
       "name": "bind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bind" ]
     },
     {
       "name": "binutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "binutils" ]
     },
     {
       "name": "bison",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bison" ]
     },
     {
       "name": "blktrace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "blktrace" ]
     },
     {
       "name": "blobfuse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "blobfuse" ]
     },
     {
       "name": "blobfuse2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "blobfuse2" ]
     },
     {
       "name": "bluez",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bluez" ]
     },
     {
       "name": "bmake",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bmake" ]
     },
     {
       "name": "bmon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bmon" ]
     },
     {
       "name": "boost",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "boost" ]
     },
     {
       "name": "bpftrace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bpftrace" ]
     },
     {
       "name": "bridge-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bridge-utils" ]
     },
     {
       "name": "brotli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "brotli" ]
     },
     {
       "name": "btrfs-progs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "btrfs-progs" ]
     },
     {
       "name": "bubblewrap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bubblewrap" ]
     },
     {
       "name": "build-essential",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "build-essential" ]
     },
     {
       "name": "busybox",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "busybox" ]
     },
     {
       "name": "byacc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "byacc" ]
     },
     {
       "name": "byaccj",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "byaccj" ]
     },
     {
       "name": "bzip2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "bzip2" ]
     },
     {
       "name": "ca-certificates",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ca-certificates" ]
     },
     {
       "name": "cairo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cairo" ]
     },
     {
       "name": "cal10n",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cal10n" ]
     },
     {
       "name": "calamares",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "calamares" ]
     },
     {
       "name": "c-ares",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "c-ares" ]
     },
     {
       "name": "catch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "catch" ]
     },
     {
       "name": "ccache",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ccache" ]
     },
     {
       "name": "cdrkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cdrkit" ]
     },
     {
       "name": "ceph",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ceph" ]
     },
     {
       "name": "cereal",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cereal" ]
     },
     {
       "name": "cert-manager",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cert-manager" ]
     },
     {
       "name": "cf-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cf-cli" ]
     },
     {
       "name": "check",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "check" ]
     },
     {
       "name": "checkpolicy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "checkpolicy" ]
     },
     {
       "name": "check-restart",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "check-restart" ]
     },
     {
       "name": "checksec",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "checksec" ]
     },
     {
       "name": "chkconfig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "chkconfig" ]
     },
     {
       "name": "chrony",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "chrony" ]
     },
     {
       "name": "chrpath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "chrpath" ]
     },
     {
       "name": "cifs-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cifs-utils" ]
     },
     {
       "name": "clamav",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "clamav" ]
     },
     {
       "name": "clang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "clang" ]
     },
     {
       "name": "clang16",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "clang16" ]
     },
     {
       "name": "cloud-hypervisor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cloud-hypervisor" ]
     },
     {
       "name": "cloud-init",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cloud-init" ]
     },
     {
       "name": "cloud-utils-growpart",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cloud-utils-growpart" ]
     },
     {
       "name": "cmake",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cmake" ]
     },
     {
       "name": "cmocka",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cmocka" ]
     },
     {
       "name": "cni",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cni" ]
     },
     {
       "name": "cni-plugins",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cni-plugins" ]
     },
     {
       "name": "collectd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "collectd" ]
     },
     {
       "name": "colm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "colm" ]
     },
     {
       "name": "colord",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "colord" ]
     },
     {
       "name": "color-filesystem",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "color-filesystem" ]
     },
     {
       "name": "compiler-rt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "compiler-rt" ]
     },
     {
       "name": "conda",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "conda" ]
     },
     {
       "name": "conmon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "conmon" ]
     },
     {
       "name": "conntrack-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "conntrack-tools" ]
     },
     {
       "name": "containerized-data-importer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "containerized-data-importer" ]
     },
     {
       "name": "coredns-1.9.3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "coredns-1.9.3" ]
     },
     {
       "name": "coredns-1.8.4",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "coredns-1.8.4" ]
     },
     {
       "name": "coredns-1.8.6",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "coredns-1.8.6" ]
     },
     {
       "name": "coredns-1.8.0",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "coredns-1.8.0" ]
     },
     {
       "name": "core-packages",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "core-packages" ]
     },
     {
       "name": "coreutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "coreutils" ]
     },
     {
       "name": "cpio",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cpio" ]
     },
     {
       "name": "cpprest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cpprest" ]
     },
     {
       "name": "cppunit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cppunit" ]
     },
     {
       "name": "cpulimit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cpulimit" ]
     },
     {
       "name": "cracklib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cracklib" ]
     },
     {
       "name": "crash",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "crash" ]
     },
     {
       "name": "crash-gcore-command",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "crash-gcore-command" ]
     },
     {
       "name": "createrepo_c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "createrepo_c" ]
     },
     {
       "name": "cri-o",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cri-o" ]
     },
     {
       "name": "cri-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cri-tools" ]
     },
     {
       "name": "cronie",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cronie" ]
     },
     {
       "name": "cryptsetup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cryptsetup" ]
     },
     {
       "name": "csi-driver-lvm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "csi-driver-lvm" ]
     },
     {
       "name": "ctags",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ctags" ]
     },
     {
       "name": "CUnit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "CUnit" ]
     },
     {
       "name": "cups",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cups" ]
     },
     {
       "name": "curl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "curl" ]
     },
     {
       "name": "cyrus-sasl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cyrus-sasl" ]
     },
     {
       "name": "cyrus-sasl-bootstrap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "cyrus-sasl-bootstrap" ]
     },
     {
       "name": "Cython",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "Cython" ]
     },
     {
       "name": "dbus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dbus" ]
     },
     {
       "name": "dbus-glib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dbus-glib" ]
     },
     {
       "name": "dbus-python",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dbus-python" ]
     },
     {
       "name": "dconf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dconf" ]
     },
     {
       "name": "dcos-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dcos-cli" ]
     },
     {
       "name": "debootstrap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "debootstrap" ]
     },
     {
       "name": "debugedit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "debugedit" ]
     },
     {
       "name": "dejagnu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dejagnu" ]
     },
     {
       "name": "dejavu-fonts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dejavu-fonts" ]
     },
     {
       "name": "desktop-file-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "desktop-file-utils" ]
     },
     {
       "name": "device-mapper-multipath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "device-mapper-multipath" ]
     },
     {
       "name": "dhcp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dhcp" ]
     },
     {
       "name": "dialog",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dialog" ]
     },
     {
       "name": "dietlibc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dietlibc" ]
     },
     {
       "name": "diffutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "diffutils" ]
     },
     {
       "name": "ding-libs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ding-libs" ]
     },
     {
       "name": "distroless-packages",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "distroless-packages" ]
     },
     {
       "name": "dkms",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dkms" ]
     },
     {
       "name": "dmidecode",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dmidecode" ]
     },
     {
       "name": "dnf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dnf" ]
     },
     {
       "name": "dnf5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dnf5" ]
     },
     {
       "name": "dnf-plugins-core",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dnf-plugins-core" ]
     },
     {
       "name": "dnsmasq",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dnsmasq" ]
     },
     {
       "name": "docbook5-schemas",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "docbook5-schemas" ]
     },
     {
       "name": "docbook-dtds",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "docbook-dtds" ]
     },
     {
       "name": "docbook-dtd-xml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "docbook-dtd-xml" ]
     },
     {
       "name": "docbook-style-dsssl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "docbook-style-dsssl" ]
     },
     {
       "name": "docbook-style-xsl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "docbook-style-xsl" ]
     },
     {
       "name": "dos2unix",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dos2unix" ]
     },
     {
       "name": "dosfstools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dosfstools" ]
     },
     {
       "name": "doxygen",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "doxygen" ]
     },
     {
       "name": "dpdk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dpdk" ]
     },
     {
       "name": "dracut",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dracut" ]
     },
     {
       "name": "dstat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dstat" ]
     },
     {
       "name": "dtc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dtc" ]
     },
     {
       "name": "dwarves",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dwarves" ]
     },
     {
       "name": "dwz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "dwz" ]
     },
     {
       "name": "e2fsprogs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "e2fsprogs" ]
     },
     {
       "name": "ebtables",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ebtables" ]
     },
     {
       "name": "ed",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ed" ]
     },
     {
       "name": "edk2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "edk2" ]
     },
     {
       "name": "efibootmgr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "efibootmgr" ]
     },
     {
       "name": "efivar",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "efivar" ]
     },
     {
       "name": "elfutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "elfutils" ]
     },
     {
       "name": "elixir",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "elixir" ]
     },
     {
       "name": "emacs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "emacs" ]
     },
     {
       "name": "enchant2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "enchant2" ]
     },
     {
       "name": "environment-modules",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "environment-modules" ]
     },
     {
       "name": "erlang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "erlang" ]
     },
     {
       "name": "espeak-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "espeak-ng" ]
     },
     {
       "name": "espeakup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "espeakup" ]
     },
     {
       "name": "etcd-3.5.0",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.0" ]
     },
     {
       "name": "etcd-3.5.1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.1" ]
     },
     {
       "name": "etcd-3.5.3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.3" ]
     },
     {
       "name": "etcd-3.5.4",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.4" ]
     },
     {
       "name": "etcd-3.5.5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.5" ]
     },
     {
       "name": "etcd-3.5.6",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "etcd-3.5.6" ]
     },
     {
       "name": "ethtool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ethtool" ]
     },
     {
       "name": "execstack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "execstack" ]
     },
     {
       "name": "expat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "expat" ]
     },
     {
       "name": "expect",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "expect" ]
     },
     {
       "name": "extra-cmake-modules",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "extra-cmake-modules" ]
     },
     {
       "name": "fakeroot",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fakeroot" ]
     },
     {
       "name": "fcgi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fcgi" ]
     },
     {
       "name": "fdupes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fdupes" ]
     },
     {
       "name": "file",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "file" ]
     },
     {
       "name": "filesystem",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "filesystem" ]
     },
     {
       "name": "fillup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fillup" ]
     },
     {
       "name": "findutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "findutils" ]
     },
     {
       "name": "finger",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "finger" ]
     },
     {
       "name": "fio",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fio" ]
     },
     {
       "name": "firewalld",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "firewalld" ]
     },
     {
       "name": "fish",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fish" ]
     },
     {
       "name": "flannel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "flannel" ]
     },
     {
       "name": "flatbuffers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "flatbuffers" ]
     },
     {
       "name": "flex",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "flex" ]
     },
     {
       "name": "fluent-bit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fluent-bit" ]
     },
     {
       "name": "flux",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "flux" ]
     },
     {
       "name": "fmt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fmt" ]
     },
     {
       "name": "fontawesome-fonts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fontawesome-fonts" ]
     },
     {
       "name": "fontconfig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fontconfig" ]
     },
     {
       "name": "fontpackages",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fontpackages" ]
     },
     {
       "name": "fping",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fping" ]
     },
     {
       "name": "freefont",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "freefont" ]
     },
     {
       "name": "freeipmi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "freeipmi" ]
     },
     {
       "name": "freetds",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "freetds" ]
     },
     {
       "name": "freetype",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "freetype" ]
     },
     {
       "name": "fribidi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fribidi" ]
     },
     {
       "name": "frr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "frr" ]
     },
     {
       "name": "fsverity-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fsverity-utils" ]
     },
     {
       "name": "fuse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fuse" ]
     },
     {
       "name": "fuse3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fuse3" ]
     },
     {
       "name": "fuse-zip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "fuse-zip" ]
     },
     {
       "name": "future",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "future" ]
     },
     {
       "name": "gawk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gawk" ]
     },
     {
       "name": "gc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gc" ]
     },
     {
       "name": "gcc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gcc" ]
     },
     {
       "name": "gcovr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gcovr" ]
     },
     {
       "name": "gd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gd" ]
     },
     {
       "name": "gdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gdb" ]
     },
     {
       "name": "gdbm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gdbm" ]
     },
     {
       "name": "gdk-pixbuf2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gdk-pixbuf2" ]
     },
     {
       "name": "geos",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "geos" ]
     },
     {
       "name": "gettext",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gettext" ]
     },
     {
       "name": "gflags",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gflags" ]
     },
     {
       "name": "gfs2-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gfs2-utils" ]
     },
     {
       "name": "gh",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gh" ]
     },
     {
       "name": "giflib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "giflib" ]
     },
     {
       "name": "git",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "git" ]
     },
     {
       "name": "git-lfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "git-lfs" ]
     },
     {
       "name": "glassfish-servlet-api",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glassfish-servlet-api" ]
     },
     {
       "name": "glib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glib" ]
     },
     {
       "name": "glibc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glibc" ]
     },
     {
       "name": "glibmm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glibmm" ]
     },
     {
       "name": "glib-networking",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glib-networking" ]
     },
     {
       "name": "glide",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glide" ]
     },
     {
       "name": "glusterfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "glusterfs" ]
     },
     {
       "name": "gmp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gmp" ]
     },
     {
       "name": "gnome-common",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gnome-common" ]
     },
     {
       "name": "gnu-efi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gnu-efi" ]
     },
     {
       "name": "gnupg2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gnupg2" ]
     },
     {
       "name": "gnuplot",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gnuplot" ]
     },
     {
       "name": "gnutls",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gnutls" ]
     },
     {
       "name": "gobject-introspection",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gobject-introspection" ]
     },
     {
       "name": "golang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "golang" ]
     },
     {
       "name": "golang-1.17",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "golang-1.17" ]
     },
     {
       "name": "golang-1.18",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "golang-1.18" ]
     },
     {
       "name": "golang-packaging",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "golang-packaging" ]
     },
     {
       "name": "go-md2man",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "go-md2man" ]
     },
     {
       "name": "google-guice",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "google-guice" ]
     },
     {
       "name": "google-roboto-slab-fonts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "google-roboto-slab-fonts" ]
     },
     {
       "name": "gperf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gperf" ]
     },
     {
       "name": "gperftools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gperftools" ]
     },
     {
       "name": "gpgme",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gpgme" ]
     },
     {
       "name": "gptfdisk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gptfdisk" ]
     },
     {
       "name": "graphviz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "graphviz" ]
     },
     {
       "name": "grep",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "grep" ]
     },
     {
       "name": "groff",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "groff" ]
     },
     {
       "name": "grpc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "grpc" ]
     },
     {
       "name": "grub2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "grub2" ]
     },
     {
       "name": "grubby",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "grubby" ]
     },
     {
       "name": "gsettings-desktop-schemas",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gsettings-desktop-schemas" ]
     },
     {
       "name": "GSL",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "GSL" ]
     },
     {
       "name": "gsm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gsm" ]
     },
     {
       "name": "gtest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gtest" ]
     },
     {
       "name": "gtk2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gtk2" ]
     },
     {
       "name": "gtk3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gtk3" ]
     },
     {
       "name": "gtk-doc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gtk-doc" ]
     },
     {
       "name": "gtk-update-icon-cache",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gtk-update-icon-cache" ]
     },
     {
       "name": "guava",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "guava" ]
     },
     {
       "name": "guile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "guile" ]
     },
     {
       "name": "gzip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "gzip" ]
     },
     {
       "name": "hamcrest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hamcrest" ]
     },
     {
       "name": "haproxy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "haproxy" ]
     },
     {
       "name": "hardening-check",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hardening-check" ]
     },
     {
       "name": "harfbuzz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "harfbuzz" ]
     },
     {
       "name": "haveged",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "haveged" ]
     },
     {
       "name": "hdf5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hdf5" ]
     },
     {
       "name": "hdparm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hdparm" ]
     },
     {
       "name": "heimdal",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "heimdal" ]
     },
     {
       "name": "helm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "helm" ]
     },
     {
       "name": "help2man",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "help2man" ]
     },
     {
       "name": "hexedit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hexedit" ]
     },
     {
       "name": "hicolor-icon-theme",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hicolor-icon-theme" ]
     },
     {
       "name": "hivex",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hivex" ]
     },
     {
       "name": "hostname",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hostname" ]
     },
     {
       "name": "htop",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "htop" ]
     },
     {
       "name": "httpd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "httpd" ]
     },
     {
       "name": "http-parser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "http-parser" ]
     },
     {
       "name": "hunspell",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hunspell" ]
     },
     {
       "name": "hunspell-en",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hunspell-en" ]
     },
     {
       "name": "hvloader",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hvloader" ]
     },
     {
       "name": "hwdata",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hwdata" ]
     },
     {
       "name": "hwloc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hwloc" ]
     },
     {
       "name": "hyperscan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hyperscan" ]
     },
     {
       "name": "hyperv-daemons",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "hyperv-daemons" ]
     },
     {
       "name": "i2c-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "i2c-tools" ]
     },
     {
       "name": "iana-etc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iana-etc" ]
     },
     {
       "name": "icoutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "icoutils" ]
     },
     {
       "name": "icu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "icu" ]
     },
     {
       "name": "im-chooser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "im-chooser" ]
     },
     {
       "name": "imsettings",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "imsettings" ]
     },
     {
       "name": "infinipath-psm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "infinipath-psm" ]
     },
     {
       "name": "influx-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "influx-cli" ]
     },
     {
       "name": "influxdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "influxdb" ]
     },
     {
       "name": "inih",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "inih" ]
     },
     {
       "name": "initramfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "initramfs" ]
     },
     {
       "name": "initscripts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "initscripts" ]
     },
     {
       "name": "inotify-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "inotify-tools" ]
     },
     {
       "name": "installkernel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "installkernel" ]
     },
     {
       "name": "intel-ipsec-mb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "intel-ipsec-mb" ]
     },
     {
       "name": "intel-pf-bb-config",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "intel-pf-bb-config" ]
     },
     {
       "name": "intltool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "intltool" ]
     },
     {
       "name": "iotop",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iotop" ]
     },
     {
       "name": "IP2Location",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "IP2Location" ]
     },
     {
       "name": "iperf3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iperf3" ]
     },
     {
       "name": "ipmitool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ipmitool" ]
     },
     {
       "name": "iproute",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iproute" ]
     },
     {
       "name": "ipset",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ipset" ]
     },
     {
       "name": "iptables",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iptables" ]
     },
     {
       "name": "iptraf-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iptraf-ng" ]
     },
     {
       "name": "iputils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iputils" ]
     },
     {
       "name": "ipvsadm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ipvsadm" ]
     },
     {
       "name": "ipxe",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ipxe" ]
     },
     {
       "name": "irqbalance",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "irqbalance" ]
     },
     {
       "name": "iscsi-initiator-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iscsi-initiator-utils" ]
     },
     {
       "name": "isns-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "isns-utils" ]
     },
     {
       "name": "itstool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "itstool" ]
     },
     {
       "name": "ivykis",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ivykis" ]
     },
     {
       "name": "iw",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "iw" ]
     },
     {
       "name": "jansson",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jansson" ]
     },
     {
       "name": "jasper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jasper" ]
     },
     {
       "name": "java-cup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "java-cup", "java-cup-bootstrap" ]
     },
     {
       "name": "javapackages-bootstrap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "javapackages-bootstrap" ]
     },
     {
       "name": "javapackages-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "javapackages-tools" ]
     },
     {
       "name": "javassist",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "javassist" ]
     },
     {
       "name": "jemalloc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jemalloc" ]
     },
     {
       "name": "jflex",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jflex", "jflex-bootstrap" ]
     },
     {
       "name": "jna",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jna" ]
     },
     {
       "name": "jq",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jq" ]
     },
     {
       "name": "jsonbuilder",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jsonbuilder" ]
     },
     {
       "name": "json-c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "json-c" ]
     },
     {
       "name": "json-glib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "json-glib" ]
     },
     {
       "name": "jsr-305",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jsr-305" ]
     },
     {
       "name": "junit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "junit" ]
     },
     {
       "name": "jx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "jx" ]
     },
     {
       "name": "kata-containers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kata-containers" ]
     },
     {
       "name": "kata-containers-cc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kata-containers-cc" ]
     },
     {
       "name": "kbd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kbd" ]
     },
     {
       "name": "kde-settings",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kde-settings" ]
     },
     {
       "name": "keda",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "keda" ]
     },
     {
       "name": "keepalived",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "keepalived" ]
     },
     {
       "name": "keras",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "keras" ]
     },
     {
       "name": "kernel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kernel", "kernel-azure", "kernel-hci", "kernel-mshv", "kernel-uvm" ]
     },
     {
       "name": "kernel-headers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kernel-headers" ]
     },
     {
       "name": "kexec-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kexec-tools" ]
     },
     {
       "name": "KeysInUse-OpenSSL",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "KeysInUse-OpenSSL" ]
     },
     {
       "name": "keyutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "keyutils" ]
     },
     {
       "name": "kf5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kf5" ]
     },
     {
       "name": "kf5-kconfig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kf5-kconfig" ]
     },
     {
       "name": "kf5-kcoreaddons",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kf5-kcoreaddons" ]
     },
     {
       "name": "kf5-ki18n",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kf5-ki18n" ]
     },
     {
       "name": "kf5-kwidgetsaddons",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kf5-kwidgetsaddons" ]
     },
     {
       "name": "kmod",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kmod" ]
     },
     {
       "name": "knem",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "knem" ]
     },
     {
       "name": "kpatch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kpatch" ]
     },
     {
       "name": "kpmcore",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kpmcore" ]
     },
     {
       "name": "krb5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "krb5" ]
     },
     {
       "name": "ksh",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ksh" ]
     },
     {
       "name": "kube-vip-cloud-provider",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kube-vip-cloud-provider" ]
     },
     {
       "name": "kubevirt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kubevirt" ]
     },
     {
       "name": "kured",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kured" ]
     },
     {
       "name": "kyua",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "kyua" ]
     },
     {
       "name": "lapack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lapack" ]
     },
     {
       "name": "lato-fonts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lato-fonts" ]
     },
     {
       "name": "lcms2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lcms2" ]
     },
     {
       "name": "ldns",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ldns" ]
     },
     {
       "name": "less",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "less" ]
     },
     {
       "name": "leveldb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "leveldb" ]
     },
     {
       "name": "libacvp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libacvp" ]
     },
     {
       "name": "libaec",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libaec" ]
     },
     {
       "name": "libaio",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libaio" ]
     },
     {
       "name": "libarchive",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libarchive" ]
     },
     {
       "name": "libassuan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libassuan" ]
     },
     {
       "name": "libatasmart",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libatasmart" ]
     },
     {
       "name": "libatomic_ops",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libatomic_ops" ]
     },
     {
       "name": "libbpf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libbpf" ]
     },
     {
       "name": "libburn",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libburn" ]
     },
     {
       "name": "libcacard",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcacard" ]
     },
     {
       "name": "libcap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcap" ]
     },
     {
       "name": "libcap-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcap-ng" ]
     },
     {
       "name": "libcgroup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcgroup" ]
     },
     {
       "name": "libcomps",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcomps" ]
     },
     {
       "name": "libconfig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libconfig" ]
     },
     {
       "name": "libconfini",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libconfini" ]
     },
     {
       "name": "libconfuse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libconfuse" ]
     },
     {
       "name": "libcontainers-common",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libcontainers-common" ]
     },
     {
       "name": "libdaemon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libdaemon" ]
     },
     {
       "name": "libdb",
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "libdb" ]
     },
     {
       "name": "libdnet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libdnet" ]
     },
     {
       "name": "libdnf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libdnf" ]
     },
     {
       "name": "libdrm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libdrm" ]
     },
     {
       "name": "libedit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libedit" ]
     },
     {
       "name": "libell",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libell" ]
     },
     {
       "name": "libepoxy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libepoxy" ]
     },
     {
       "name": "libestr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libestr" ]
     },
     {
       "name": "libev",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libev" ]
     },
     {
       "name": "libevdev",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libevdev" ]
     },
     {
       "name": "libevent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libevent" ]
     },
     {
       "name": "libewf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libewf" ]
     },
     {
       "name": "libexif",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libexif" ]
     },
     {
       "name": "libfabric",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libfabric" ]
     },
     {
       "name": "libfastjson",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libfastjson" ]
     },
     {
       "name": "libffi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libffi" ]
     },
     {
       "name": "libfontenc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libfontenc" ]
     },
     {
       "name": "libgcrypt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgcrypt" ]
     },
     {
       "name": "libgdiplus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgdiplus" ]
     },
     {
       "name": "libgit2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgit2" ]
     },
     {
       "name": "libglvnd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libglvnd" ]
     },
     {
       "name": "libgpg-error",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgpg-error" ]
     },
     {
       "name": "libgssglue",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgssglue" ]
     },
     {
       "name": "libgsystem",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgsystem" ]
     },
     {
       "name": "libgudev",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgudev" ]
     },
     {
       "name": "libguestfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libguestfs" ]
     },
     {
       "name": "libgusb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgusb" ]
     },
     {
       "name": "libgxim",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libgxim" ]
     },
     {
       "name": "libhugetlbfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libhugetlbfs" ]
     },
     {
       "name": "libical",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libical" ]
     },
     {
       "name": "libICE",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libICE" ]
     },
     {
       "name": "libinput",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libinput" ]
     },
     {
       "name": "libiscsi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libiscsi" ]
     },
     {
       "name": "libisoburn",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libisoburn" ]
     },
     {
       "name": "libisofs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libisofs" ]
     },
     {
       "name": "libjpeg-turbo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libjpeg-turbo" ]
     },
     {
       "name": "libkcapi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libkcapi" ]
     },
     {
       "name": "libksba",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libksba" ]
     },
     {
       "name": "libldm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libldm" ]
     },
     {
       "name": "liblogging",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "liblogging" ]
     },
     {
       "name": "liblognorm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "liblognorm" ]
     },
     {
       "name": "liblzf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "liblzf" ]
     },
     {
       "name": "libmaxminddb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmaxminddb" ]
     },
     {
       "name": "libmbim",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmbim" ]
     },
     {
       "name": "libmemcached-awesome",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmemcached-awesome" ]
     },
     {
       "name": "libmetalink",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmetalink" ]
     },
     {
       "name": "libmnl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmnl" ]
     },
     {
       "name": "libmodulemd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmodulemd" ]
     },
     {
       "name": "libmpc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmpc" ]
     },
     {
       "name": "libmspack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libmspack" ]
     },
     {
       "name": "libnbd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnbd" ]
     },
     {
       "name": "libndp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libndp" ]
     },
     {
       "name": "libnetfilter_conntrack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnetfilter_conntrack" ]
     },
     {
       "name": "libnetfilter_cthelper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnetfilter_cthelper" ]
     },
     {
       "name": "libnetfilter_cttimeout",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnetfilter_cttimeout" ]
     },
     {
       "name": "libnetfilter_log",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnetfilter_log" ]
     },
     {
       "name": "libnetfilter_queue",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnetfilter_queue" ]
     },
     {
       "name": "libnfnetlink",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnfnetlink" ]
     },
     {
       "name": "libnfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnfs" ]
     },
     {
       "name": "libnftnl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnftnl" ]
     },
     {
       "name": "libnl3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnl3" ]
     },
     {
       "name": "libnotify",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnotify" ]
     },
     {
       "name": "libnsl2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnsl2" ]
     },
     {
       "name": "libnvidia-container",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libnvidia-container" ]
     },
     {
       "name": "libpcap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpcap" ]
     },
     {
       "name": "libpciaccess",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpciaccess" ]
     },
     {
       "name": "libpipeline",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpipeline" ]
     },
     {
       "name": "libpng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpng" ]
     },
     {
       "name": "libpsl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpsl" ]
     },
     {
       "name": "libpsm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpsm2" ]
     },
     {
       "name": "libpwquality",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libpwquality" ]
     },
     {
       "name": "libqmi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libqmi" ]
     },
     {
       "name": "librdkafka",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "librdkafka" ]
     },
     {
       "name": "librelp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "librelp" ]
     },
     {
       "name": "librepo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "librepo" ]
     },
     {
       "name": "libreswan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libreswan" ]
     },
     {
       "name": "librsvg2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "librsvg2" ]
     },
     {
       "name": "librsync",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "librsync" ]
     },
     {
       "name": "libsafec",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsafec" ]
     },
     {
       "name": "libseccomp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libseccomp" ]
     },
     {
       "name": "libselinux",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libselinux" ]
     },
     {
       "name": "libsemanage",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsemanage" ]
     },
     {
       "name": "libsepol",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsepol" ]
     },
     {
       "name": "libserf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libserf" ]
     },
     {
       "name": "libsigc++30",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsigc++30" ]
     },
     {
       "name": "libslirp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libslirp" ]
     },
     {
       "name": "libSM",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libSM" ]
     },
     {
       "name": "libsmi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsmi" ]
     },
     {
       "name": "libsndfile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsndfile" ]
     },
     {
       "name": "libsodium",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsodium" ]
     },
     {
       "name": "libsolv",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsolv" ]
     },
     {
       "name": "libsoup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libsoup" ]
     },
     {
       "name": "libssh",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libssh" ]
     },
     {
       "name": "libssh2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libssh2" ]
     },
     {
       "name": "libstoragemgmt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libstoragemgmt" ]
     },
     {
       "name": "libtalloc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtalloc" ]
     },
     {
       "name": "libtar",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtar" ]
     },
     {
       "name": "libtasn1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtasn1" ]
     },
     {
       "name": "libtiff",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtiff" ]
     },
     {
       "name": "libtirpc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtirpc" ]
     },
     {
       "name": "libtool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtool" ]
     },
     {
       "name": "libtraceevent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libtraceevent" ]
     },
     {
       "name": "libunistring",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libunistring" ]
     },
     {
       "name": "libunwind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libunwind" ]
     },
     {
       "name": "liburing",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "liburing" ]
     },
     {
       "name": "libusb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libusb" ]
     },
     {
       "name": "libuv",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libuv" ]
     },
     {
       "name": "libvirt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvirt" ]
     },
     {
       "name": "libvirt-dbus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvirt-dbus" ]
     },
     {
       "name": "libvirt-glib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvirt-glib" ]
     },
     {
       "name": "libvirt-java",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvirt-java" ]
     },
     {
       "name": "libvirt-python",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvirt-python" ]
     },
     {
       "name": "libvoikko",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libvoikko" ]
     },
     {
       "name": "libwacom",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libwacom" ]
     },
     {
       "name": "libwebp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libwebp" ]
     },
     {
       "name": "libX11",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libX11" ]
     },
     {
       "name": "libXau",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXau" ]
     },
     {
       "name": "libXaw",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXaw" ]
     },
     {
       "name": "libxcb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxcb" ]
     },
     {
       "name": "libXcomposite",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXcomposite" ]
     },
     {
       "name": "libxcrypt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxcrypt" ]
     },
     {
       "name": "libXcursor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXcursor" ]
     },
     {
       "name": "libXdamage",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXdamage" ]
     },
     {
       "name": "libXdmcp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXdmcp" ]
     },
     {
       "name": "libXext",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXext" ]
     },
     {
       "name": "libxfce4util",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxfce4util" ]
     },
     {
       "name": "libXfixes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXfixes" ]
     },
     {
       "name": "libXfont2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXfont2" ]
     },
     {
       "name": "libXft",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXft" ]
     },
     {
       "name": "libXi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXi" ]
     },
     {
       "name": "libXinerama",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXinerama" ]
     },
     {
       "name": "libxkbcommon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxkbcommon" ]
     },
     {
       "name": "libxkbfile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxkbfile" ]
     },
     {
       "name": "libxml++",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxml++" ]
     },
     {
       "name": "libxml2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxml2" ]
     },
     {
       "name": "libXmu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXmu" ]
     },
     {
       "name": "libXpm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXpm" ]
     },
     {
       "name": "libXrandr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXrandr" ]
     },
     {
       "name": "libXrender",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXrender" ]
     },
     {
       "name": "libxshmfence",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxshmfence" ]
     },
     {
       "name": "libxslt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libxslt" ]
     },
     {
       "name": "libXt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXt" ]
     },
     {
       "name": "libXtst",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXtst" ]
     },
     {
       "name": "libXxf86vm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libXxf86vm" ]
     },
     {
       "name": "libyaml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libyaml" ]
     },
     {
       "name": "libyang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libyang" ]
     },
     {
       "name": "libzip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "libzip" ]
     },
     {
       "name": "LICENSES-AND-NOTICES",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "LICENSES-AND-NOTICES" ]
     },
     {
       "name": "linux-firmware",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "linux-firmware" ]
     },
     {
       "name": "livepatch-5.15.102.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.102.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.102.1-3.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.102.1-3.cm2" ]
     },
     {
       "name": "livepatch-5.15.107.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.107.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.110.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.110.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.111.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.111.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.112.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.112.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.112.1-2.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.112.1-2.cm2" ]
     },
     {
       "name": "livepatch-5.15.116.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.116.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.116.1-2.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.116.1-2.cm2" ]
     },
     {
       "name": "livepatch-5.15.122.1-2.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.122.1-2.cm2" ]
     },
     {
       "name": "livepatch-5.15.125.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.125.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.125.1-2.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.125.1-2.cm2" ]
     },
     {
       "name": "livepatch-5.15.126.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.126.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.94.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.94.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.95.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.95.1-1.cm2" ]
     },
     {
       "name": "livepatch-5.15.98.1-1.cm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatch-5.15.98.1-1.cm2" ]
     },
     {
       "name": "livepatching",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "livepatching" ]
     },
     {
       "name": "lld",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lld" ]
     },
     {
       "name": "lld16",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lld16" ]
     },
     {
       "name": "lldb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lldb" ]
     },
     {
       "name": "lldpad",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lldpad" ]
     },
     {
       "name": "lldpd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lldpd" ]
     },
     {
       "name": "llvm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "llvm" ]
     },
     {
       "name": "llvm16",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "llvm16" ]
     },
     {
       "name": "lmdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lmdb" ]
     },
     {
       "name": "lm-sensors",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lm-sensors" ]
     },
     {
       "name": "local-path-provisioner",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "local-path-provisioner" ]
     },
     {
       "name": "log4cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "log4cpp" ]
     },
     {
       "name": "logrotate",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "logrotate" ]
     },
     {
       "name": "lsb-release",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lsb-release" ]
     },
     {
       "name": "lshw",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lshw" ]
     },
     {
       "name": "lsof",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lsof" ]
     },
     {
       "name": "lsscsi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lsscsi" ]
     },
     {
       "name": "ltp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ltp" ]
     },
     {
       "name": "ltrace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ltrace" ]
     },
     {
       "name": "lttng-consume",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lttng-consume" ]
     },
     {
       "name": "lttng-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lttng-tools" ]
     },
     {
       "name": "lttng-ust",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lttng-ust" ]
     },
     {
       "name": "lua",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lua" ]
     },
     {
       "name": "luajit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "luajit" ]
     },
     {
       "name": "lua-rpm-macros",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lua-rpm-macros" ]
     },
     {
       "name": "lutok",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lutok" ]
     },
     {
       "name": "lvm2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lvm2" ]
     },
     {
       "name": "lynx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lynx" ]
     },
     {
       "name": "lz4",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lz4" ]
     },
     {
       "name": "lzo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lzo" ]
     },
     {
       "name": "lzop",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "lzop" ]
     },
     {
       "name": "m2crypto",
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "m2crypto" ]
     },
     {
       "name": "m4",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "m4" ]
     },
     {
       "name": "mac-robber",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mac-robber" ]
     },
     {
       "name": "mailcap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mailcap" ]
     },
     {
       "name": "make",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "make" ]
     },
     {
       "name": "malaga",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "malaga" ]
     },
     {
       "name": "malaga-suomi-voikko",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "malaga-suomi-voikko" ]
     },
     {
       "name": "man-db",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "man-db" ]
     },
     {
       "name": "man-pages",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "man-pages" ]
     },
     {
       "name": "mariadb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mariadb" ]
     },
     {
       "name": "mariadb-connector-c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mariadb-connector-c" ]
     },
     {
       "name": "mariner-release",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mariner-release" ]
     },
     {
       "name": "mariner-repos",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mariner-repos" ]
     },
     {
       "name": "mariner-rpm-macros",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mariner-rpm-macros" ]
     },
     {
       "name": "maven",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven" ]
     },
     {
       "name": "maven3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven3" ]
     },
     {
       "name": "maven-compiler-plugin",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-compiler-plugin" ]
     },
     {
       "name": "maven-jar-plugin",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-jar-plugin" ]
     },
     {
       "name": "maven-resolver",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-resolver" ]
     },
     {
       "name": "maven-resources-plugin",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-resources-plugin" ]
     },
     {
       "name": "maven-surefire",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-surefire" ]
     },
     {
       "name": "maven-wagon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "maven-wagon" ]
     },
     {
       "name": "mc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mc" ]
     },
     {
       "name": "mcpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mcpp" ]
     },
     {
       "name": "mcstrans",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mcstrans" ]
     },
     {
       "name": "mdadm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mdadm" ]
     },
     {
       "name": "memcached",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "memcached" ]
     },
     {
       "name": "mercurial",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mercurial" ]
     },
     {
       "name": "mesa",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mesa" ]
     },
     {
       "name": "mesa-libGLU",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mesa-libGLU" ]
     },
     {
       "name": "meson",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "meson" ]
     },
     {
       "name": "mlnx-ofa_kernel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mlnx-ofa_kernel" ]
     },
     {
       "name": "mlnx-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mlnx-tools" ]
     },
     {
       "name": "mlocate",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mlocate" ]
     },
     {
       "name": "mlx-bootctl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mlx-bootctl" ]
     },
     {
       "name": "mm-common",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mm-common" ]
     },
     {
       "name": "moby-buildx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-buildx" ]
     },
     {
       "name": "moby-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-cli" ]
     },
     {
       "name": "moby-compose",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-compose" ]
     },
     {
       "name": "moby-containerd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-containerd" ]
     },
     {
       "name": "moby-containerd-cc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-containerd-cc" ]
     },
     {
       "name": "moby-engine",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-engine" ]
     },
     {
       "name": "moby-runc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "moby-runc" ]
     },
     {
       "name": "ModemManager",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ModemManager" ]
     },
     {
       "name": "mokutil",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mokutil" ]
     },
     {
       "name": "mozjs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mozjs" ]
     },
     {
       "name": "mpfr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mpfr" ]
     },
     {
       "name": "msft-golang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "msft-golang" ]
     },
     {
       "name": "msgpack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "msgpack" ]
     },
     {
       "name": "msr-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "msr-tools" ]
     },
     {
       "name": "mstflint",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mstflint" ]
     },
     {
       "name": "mtdev",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mtdev" ]
     },
     {
       "name": "mtools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mtools" ]
     },
     {
       "name": "multilib-rpm-config",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "multilib-rpm-config" ]
     },
     {
       "name": "multus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "multus" ]
     },
     {
       "name": "munge",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "munge" ]
     },
     {
       "name": "mysql",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "mysql" ]
     },
     {
       "name": "nano",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nano" ]
     },
     {
       "name": "nasm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nasm" ]
     },
     {
       "name": "nbd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nbd" ]
     },
     {
       "name": "nbdkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nbdkit" ]
     },
     {
       "name": "ncompress",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ncompress" ]
     },
     {
       "name": "ncurses",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ncurses" ]
     },
     {
       "name": "ndctl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ndctl" ]
     },
     {
       "name": "netavark",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "netavark" ]
     },
     {
       "name": "netplan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "netplan" ]
     },
     {
       "name": "net-snmp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "net-snmp" ]
     },
     {
       "name": "nettle",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nettle" ]
     },
     {
       "name": "net-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "net-tools" ]
     },
     {
       "name": "networkd-dispatcher",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "networkd-dispatcher" ]
     },
     {
       "name": "newt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "newt" ]
     },
     {
       "name": "nfs4-acl-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nfs4-acl-tools" ]
     },
     {
       "name": "nfs-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nfs-utils" ]
     },
     {
       "name": "nftables",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nftables" ]
     },
     {
       "name": "nghttp2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nghttp2" ]
     },
     {
       "name": "nginx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nginx" ]
     },
     {
       "name": "ninja-build",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ninja-build" ]
     },
     {
       "name": "nlohmann-json",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nlohmann-json" ]
     },
     {
       "name": "nlopt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nlopt" ]
     },
     {
       "name": "nmap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nmap" ]
     },
     {
       "name": "nmi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nmi" ]
     },
     {
       "name": "nodejs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nodejs" ]
     },
     {
       "name": "nodejs18",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nodejs18" ]
     },
     {
       "name": "node-problem-detector",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "node-problem-detector" ]
     },
     {
       "name": "npth",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "npth" ]
     },
     {
       "name": "nspr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nspr" ]
     },
     {
       "name": "nss",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nss" ]
     },
     {
       "name": "nss-altfiles",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nss-altfiles" ]
     },
     {
       "name": "nss_nis",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nss_nis" ]
     },
     {
       "name": "nss_wrapper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nss_wrapper" ]
     },
     {
       "name": "ntfs-3g",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ntfs-3g" ]
     },
     {
       "name": "ntfs-3g-system-compression",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ntfs-3g-system-compression" ]
     },
     {
       "name": "ntopng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ntopng" ]
     },
     {
       "name": "ntp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ntp" ]
     },
     {
       "name": "numactl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "numactl" ]
     },
     {
       "name": "numad",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "numad" ]
     },
     {
       "name": "numpy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "numpy" ]
     },
     {
       "name": "nvidia-container-runtime",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nvidia-container-runtime" ]
     },
     {
       "name": "nvidia-container-toolkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nvidia-container-toolkit" ]
     },
     {
       "name": "nvidia-docker2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nvidia-docker2" ]
     },
     {
       "name": "nvme-cli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nvme-cli" ]
     },
     {
       "name": "nvml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "nvml" ]
     },
     {
       "name": "oath-toolkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "oath-toolkit" ]
     },
     {
       "name": "objectweb-asm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "objectweb-asm" ]
     },
     {
       "name": "ocaml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml" ]
     },
     {
       "name": "ocaml-alcotest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-alcotest" ]
     },
     {
       "name": "ocaml-astring",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-astring" ]
     },
     {
       "name": "ocaml-base",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-base" ]
     },
     {
       "name": "ocaml-bigarray-compat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-bigarray-compat" ]
     },
     {
       "name": "ocaml-bisect-ppx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-bisect-ppx" ]
     },
     {
       "name": "ocaml-camomile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-camomile" ]
     },
     {
       "name": "ocaml-cinaps",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-cinaps" ]
     },
     {
       "name": "ocaml-cmdliner",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-cmdliner" ]
     },
     {
       "name": "ocaml-compiler-libs-janestreet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-compiler-libs-janestreet" ]
     },
     {
       "name": "ocaml-cppo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-cppo" ]
     },
     {
       "name": "ocaml-csexp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-csexp" ]
     },
     {
       "name": "ocaml-ctypes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ctypes" ]
     },
     {
       "name": "ocaml-dune",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-dune" ]
     },
     {
       "name": "ocaml-fileutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-fileutils" ]
     },
     {
       "name": "ocaml-findlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-findlib" ]
     },
     {
       "name": "ocaml-fmt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-fmt" ]
     },
     {
       "name": "ocaml-gettext",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-gettext" ]
     },
     {
       "name": "ocaml-integers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-integers" ]
     },
     {
       "name": "ocaml-luv",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-luv" ]
     },
     {
       "name": "ocaml-lwt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-lwt" ]
     },
     {
       "name": "ocaml-migrate-parsetree",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-migrate-parsetree" ]
     },
     {
       "name": "ocaml-mmap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-mmap" ]
     },
     {
       "name": "ocaml-num",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-num" ]
     },
     {
       "name": "ocaml-ocamlbuild",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ocamlbuild" ]
     },
     {
       "name": "ocaml-ocplib-endian",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ocplib-endian" ]
     },
     {
       "name": "ocaml-ounit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ounit" ]
     },
     {
       "name": "ocaml-ppx-derivers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ppx-derivers" ]
     },
     {
       "name": "ocaml-ppxlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-ppxlib" ]
     },
     {
       "name": "ocaml-re",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-re" ]
     },
     {
       "name": "ocaml-react",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-react" ]
     },
     {
       "name": "ocaml-result",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-result" ]
     },
     {
       "name": "ocaml-seq",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-seq" ]
     },
     {
       "name": "ocaml-sexplib0",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-sexplib0" ]
     },
     {
       "name": "ocaml-stdio",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-stdio" ]
     },
     {
       "name": "ocaml-topkg",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-topkg" ]
     },
     {
       "name": "ocaml-uuidm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-uuidm" ]
     },
     {
       "name": "ocaml-uutf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ocaml-uutf" ]
     },
     {
       "name": "ofed-scripts",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ofed-scripts" ]
     },
     {
       "name": "oniguruma",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "oniguruma" ]
     },
     {
       "name": "opa",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opa" ]
     },
     {
       "name": "openblas",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openblas" ]
     },
     {
       "name": "opencsd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opencsd" ]
     },
     {
       "name": "OpenIPMI",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "OpenIPMI" ]
     },
     {
       "name": "openjade",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openjade" ]
     },
     {
       "name": "openldap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openldap" ]
     },
     {
       "name": "openmpi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openmpi" ]
     },
     {
       "name": "opensc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opensc" ]
     },
     {
       "name": "openscap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openscap" ]
     },
     {
       "name": "opensm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opensm" ]
     },
     {
       "name": "opensp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opensp" ]
     },
     {
       "name": "openssh",
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "openssh" ]
     },
     {
       "name": "openssl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openssl" ]
     },
     {
       "name": "openssl-pkcs11",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openssl-pkcs11" ]
     },
     {
       "name": "opentelemetry-cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "opentelemetry-cpp" ]
     },
     {
       "name": "open-vm-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "open-vm-tools" ]
     },
     {
       "name": "openvswitch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "openvswitch" ]
     },
     {
       "name": "orangefs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "orangefs" ]
     },
     {
       "name": "ostree",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ostree" ]
     },
     {
       "name": "p11-kit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "p11-kit" ]
     },
     {
       "name": "p7zip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "p7zip" ]
     },
     {
       "name": "packer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "packer" ]
     },
     {
       "name": "pam",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pam" ]
     },
     {
       "name": "pam_krb5",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pam_krb5" ]
     },
     {
       "name": "pam_wrapper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pam_wrapper" ]
     },
     {
       "name": "pango",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pango" ]
     },
     {
       "name": "parted",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "parted" ]
     },
     {
       "name": "patch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "patch" ]
     },
     {
       "name": "patchelf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "patchelf" ]
     },
     {
       "name": "patchutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "patchutils" ]
     },
     {
       "name": "patterns-ceph-containers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "patterns-ceph-containers" ]
     },
     {
       "name": "pcaudiolib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pcaudiolib" ]
     },
     {
       "name": "pciutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pciutils" ]
     },
     {
       "name": "pcre",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pcre" ]
     },
     {
       "name": "pcre2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pcre2" ]
     },
     {
       "name": "pcsc-lite",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pcsc-lite" ]
     },
     {
       "name": "pcsc-lite-ccid",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pcsc-lite-ccid" ]
     },
     {
       "name": "perftest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perftest" ]
     },
     {
       "name": "perl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl" ]
     },
     {
       "name": "perl-App-cpanminus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-App-cpanminus" ]
     },
     {
       "name": "perl-Archive-Zip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Archive-Zip" ]
     },
     {
       "name": "perl-Bit-Vector",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Bit-Vector" ]
     },
     {
       "name": "perl-Bytes-Random-Secure",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Bytes-Random-Secure" ]
     },
     {
       "name": "perl-Canary-Stability",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Canary-Stability" ]
     },
     {
       "name": "perl-Capture-Tiny",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Capture-Tiny" ]
     },
     {
       "name": "perl-Carp-Clan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Carp-Clan" ]
     },
     {
       "name": "perl-CGI",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-CGI" ]
     },
     {
       "name": "perl-common-sense",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-common-sense" ]
     },
     {
       "name": "perl-Compress-Bzip2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Compress-Bzip2" ]
     },
     {
       "name": "perl-CPAN-Changes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-CPAN-Changes" ]
     },
     {
       "name": "perl-CPAN-DistnameInfo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-CPAN-DistnameInfo" ]
     },
     {
       "name": "perl-CPAN-Meta-Check",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-CPAN-Meta-Check" ]
     },
     {
       "name": "perl-Crypt-Random-Seed",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Crypt-Random-Seed" ]
     },
     {
       "name": "perl-Crypt-SSLeay",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Crypt-SSLeay" ]
     },
     {
       "name": "perl-Data-Dump",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Data-Dump" ]
     },
     {
       "name": "perl-Date-Calc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Date-Calc" ]
     },
     {
       "name": "perl-DBD-SQLite",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-DBD-SQLite" ]
     },
     {
       "name": "perl-DBI",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-DBI" ]
     },
     {
       "name": "perl-DBIx-Simple",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-DBIx-Simple" ]
     },
     {
       "name": "perl-Devel-CheckLib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Devel-CheckLib" ]
     },
     {
       "name": "perl-Devel-StackTrace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Devel-StackTrace" ]
     },
     {
       "name": "perl-Devel-Symdump",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Devel-Symdump" ]
     },
     {
       "name": "perl-Digest-HMAC",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Digest-HMAC" ]
     },
     {
       "name": "perl-Digest-SHA1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Digest-SHA1" ]
     },
     {
       "name": "perl-Encode-Locale",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Encode-Locale" ]
     },
     {
       "name": "perl-Expect",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Expect" ]
     },
     {
       "name": "perl-Exporter-Tiny",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Exporter-Tiny" ]
     },
     {
       "name": "perl-Fedora-VSP",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Fedora-VSP" ]
     },
     {
       "name": "perl-File-HomeDir",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-File-HomeDir" ]
     },
     {
       "name": "perl-File-Listing",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-File-Listing" ]
     },
     {
       "name": "perl-File-pushd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-File-pushd" ]
     },
     {
       "name": "perl-File-Which",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-File-Which" ]
     },
     {
       "name": "perl-generators",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-generators" ]
     },
     {
       "name": "perl-HTML-Parser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTML-Parser" ]
     },
     {
       "name": "perl-HTML-Tagset",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTML-Tagset" ]
     },
     {
       "name": "perl-HTTP-Cookies",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTTP-Cookies" ]
     },
     {
       "name": "perl-HTTP-Daemon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTTP-Daemon" ]
     },
     {
       "name": "perl-HTTP-Date",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTTP-Date" ]
     },
     {
       "name": "perl-HTTP-Message",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTTP-Message" ]
     },
     {
       "name": "perl-HTTP-Negotiate",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-HTTP-Negotiate" ]
     },
     {
       "name": "perl-IO-HTML",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-IO-HTML" ]
     },
     {
       "name": "perl-IO-Socket-SSL",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-IO-Socket-SSL" ]
     },
     {
       "name": "perl-IO-stringy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-IO-stringy" ]
     },
     {
       "name": "perl-IO-Tty",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-IO-Tty" ]
     },
     {
       "name": "perl-JSON",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-JSON" ]
     },
     {
       "name": "perl-JSON-Any",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-JSON-Any" ]
     },
     {
       "name": "perl-JSON-XS",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-JSON-XS" ]
     },
     {
       "name": "perl-libintl-perl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-libintl-perl" ]
     },
     {
       "name": "perl-libwww-perl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-libwww-perl" ]
     },
     {
       "name": "perl-List-MoreUtils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-List-MoreUtils" ]
     },
     {
       "name": "perl-local-lib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-local-lib" ]
     },
     {
       "name": "perl-LWP-MediaTypes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-LWP-MediaTypes" ]
     },
     {
       "name": "perl-Math-Random-ISAAC",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Math-Random-ISAAC" ]
     },
     {
       "name": "perl-Mock-Config",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Mock-Config" ]
     },
     {
       "name": "perl-Module-Build",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-Build" ]
     },
     {
       "name": "perl-Module-CPANfile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-CPANfile" ]
     },
     {
       "name": "perl-Module-Install",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-Install" ]
     },
     {
       "name": "perl-Module-Install-AuthorTests",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-Install-AuthorTests" ]
     },
     {
       "name": "perl-Module-Install-Repository",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-Install-Repository" ]
     },
     {
       "name": "perl-Module-ScanDeps",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Module-ScanDeps" ]
     },
     {
       "name": "perl-NetAddr-IP",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-NetAddr-IP" ]
     },
     {
       "name": "perl-Net-HTTP",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Net-HTTP" ]
     },
     {
       "name": "perl-Net-SSLeay",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Net-SSLeay" ]
     },
     {
       "name": "perl-NTLM",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-NTLM" ]
     },
     {
       "name": "perl-Object-Accessor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Object-Accessor" ]
     },
     {
       "name": "perl-Parse-PMFile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Parse-PMFile" ]
     },
     {
       "name": "perl-Path-Class",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Path-Class" ]
     },
     {
       "name": "perl-Pod-Coverage",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Pod-Coverage" ]
     },
     {
       "name": "perl-Pod-Parser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Pod-Parser" ]
     },
     {
       "name": "perl-String-ShellQuote",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-String-ShellQuote" ]
     },
     {
       "name": "perl-Sys-Virt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Sys-Virt" ]
     },
     {
       "name": "perl-Test-Deep",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Deep" ]
     },
     {
       "name": "perl-Test-Fatal",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Fatal" ]
     },
     {
       "name": "perl-Test-LeakTrace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-LeakTrace" ]
     },
     {
       "name": "perl-Test-Needs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Needs" ]
     },
     {
       "name": "perl-Test-NoWarnings",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-NoWarnings" ]
     },
     {
       "name": "perl-Test-Pod",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Pod" ]
     },
     {
       "name": "perl-Test-Pod-Coverage",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Pod-Coverage" ]
     },
     {
       "name": "perl-Test-Warnings",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Test-Warnings" ]
     },
     {
       "name": "perl-Text-Template",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Text-Template" ]
     },
     {
       "name": "perl-TimeDate",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-TimeDate" ]
     },
     {
       "name": "perl-Try-Tiny",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Try-Tiny" ]
     },
     {
       "name": "perl-Types-Serialiser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-Types-Serialiser" ]
     },
     {
       "name": "perl-URI",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-URI" ]
     },
     {
       "name": "perl-WWW-Curl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-WWW-Curl" ]
     },
     {
       "name": "perl-WWW-RobotRules",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-WWW-RobotRules" ]
     },
     {
       "name": "perl-XML-LibXML",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-LibXML" ]
     },
     {
       "name": "perl-XML-NamespaceSupport",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-NamespaceSupport" ]
     },
     {
       "name": "perl-XML-Parser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-Parser" ]
     },
     {
       "name": "perl-XML-SAX",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-SAX" ]
     },
     {
       "name": "perl-XML-SAX-Base",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-SAX-Base" ]
     },
     {
       "name": "perl-XML-XPath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-XML-XPath" ]
     },
     {
       "name": "perl-YAML",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-YAML" ]
     },
     {
       "name": "perl-YAML-Tiny",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "perl-YAML-Tiny" ]
     },
     {
       "name": "pgbouncer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pgbouncer" ]
     },
     {
       "name": "php",
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "php" ]
     },
     {
       "name": "php-pear",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "php-pear" ]
     },
     {
       "name": "php-pecl-zip",
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "php-pecl-zip" ]
     },
     {
       "name": "picosat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "picosat" ]
     },
     {
       "name": "pigz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pigz" ]
     },
     {
       "name": "pinentry",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pinentry" ]
     },
     {
       "name": "pixman",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pixman" ]
     },
     {
       "name": "pkgconf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pkgconf" ]
     },
     {
       "name": "plexus-cipher",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-cipher" ]
     },
     {
       "name": "plexus-classworlds",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-classworlds" ]
     },
     {
       "name": "plexus-containers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-containers" ]
     },
     {
       "name": "plexus-interpolation",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-interpolation" ]
     },
     {
       "name": "plexus-sec-dispatcher",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-sec-dispatcher" ]
     },
     {
       "name": "plexus-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "plexus-utils" ]
     },
     {
       "name": "pmix",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pmix" ]
     },
     {
       "name": "policycoreutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "policycoreutils" ]
     },
     {
       "name": "polkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "polkit" ]
     },
     {
       "name": "popt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "popt" ]
     },
     {
       "name": "postfix",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "postfix" ]
     },
     {
       "name": "postgresql",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "postgresql" ]
     },
     {
       "name": "prebuilt-ca-certificates",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prebuilt-ca-certificates" ]
     },
     {
       "name": "prebuilt-ca-certificates-base",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prebuilt-ca-certificates-base" ]
     },
     {
       "name": "priv_wrapper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "priv_wrapper" ]
     },
     {
       "name": "procps-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "procps-ng" ]
     },
     {
       "name": "prometheus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prometheus" ]
     },
     {
       "name": "prometheus-adapter",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prometheus-adapter" ]
     },
     {
       "name": "prometheus-node-exporter",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prometheus-node-exporter" ]
     },
     {
       "name": "prometheus-process-exporter",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "prometheus-process-exporter" ]
     },
     {
       "name": "protobuf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "protobuf" ]
     },
     {
       "name": "protobuf-c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "protobuf-c" ]
     },
     {
       "name": "psmisc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "psmisc" ]
     },
     {
       "name": "pth",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pth" ]
     },
     {
       "name": "pugixml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pugixml" ]
     },
     {
       "name": "pwgen",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pwgen" ]
     },
     {
       "name": "pyasn1-modules",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pyasn1-modules" ]
     },
     {
       "name": "pycairo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pycairo" ]
     },
     {
       "name": "pyelftools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pyelftools" ]
     },
     {
       "name": "pygobject3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pygobject3" ]
     },
     {
       "name": "pyOpenSSL",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pyOpenSSL" ]
     },
     {
       "name": "PyPAM",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "PyPAM" ]
     },
     {
       "name": "pyparsing",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pyparsing" ]
     },
     {
       "name": "pyproject-rpm-macros",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pyproject-rpm-macros" ]
     },
     {
       "name": "pytest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pytest" ]
     },
     {
       "name": "python3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python3" ]
     },
     {
       "name": "python3-pytest-asyncio",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python3-pytest-asyncio" ]
     },
     {
       "name": "python-absl-py",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-absl-py" ]
     },
     {
       "name": "python-appdirs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-appdirs" ]
     },
     {
       "name": "python-asn1crypto",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-asn1crypto" ]
     },
     {
       "name": "python-astunparse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-astunparse" ]
     },
     {
       "name": "python-async-generator",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-async-generator" ]
     },
     {
       "name": "python-atomicwrites",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-atomicwrites" ]
     },
     {
       "name": "python-attrs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-attrs" ]
     },
     {
       "name": "python-bcrypt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-bcrypt" ]
     },
     {
       "name": "python-cached_property",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cached_property" ]
     },
     {
       "name": "python-cachetools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cachetools" ]
     },
     {
       "name": "python-certifi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-certifi" ]
     },
     {
       "name": "python-cffi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cffi" ]
     },
     {
       "name": "python-chardet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-chardet" ]
     },
     {
       "name": "python-charset-normalizer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-charset-normalizer" ]
     },
     {
       "name": "python-cherrypy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cherrypy" ]
     },
     {
       "name": "python-click",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-click" ]
     },
     {
       "name": "python-conda-package-handling",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-conda-package-handling" ]
     },
     {
       "name": "python-configobj",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-configobj" ]
     },
     {
       "name": "python-constantly",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-constantly" ]
     },
     {
       "name": "python-coverage",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-coverage" ]
     },
     {
       "name": "python-cpuinfo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cpuinfo" ]
     },
     {
       "name": "python-cryptography",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cryptography" ]
     },
     {
       "name": "python-cstruct",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cstruct" ]
     },
     {
       "name": "python-cytoolz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-cytoolz" ]
     },
     {
       "name": "python-daemon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-daemon" ]
     },
     {
       "name": "python-dateutil",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-dateutil" ]
     },
     {
       "name": "python-decorator",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-decorator" ]
     },
     {
       "name": "python-defusedxml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-defusedxml" ]
     },
     {
       "name": "python-distlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-distlib" ]
     },
     {
       "name": "python-distro",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-distro" ]
     },
     {
       "name": "python-docopt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-docopt" ]
     },
     {
       "name": "python-docutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-docutils" ]
     },
     {
       "name": "python-ecdsa",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ecdsa" ]
     },
     {
       "name": "python-ethtool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ethtool" ]
     },
     {
       "name": "python-execnet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-execnet" ]
     },
     {
       "name": "python-fields",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-fields" ]
     },
     {
       "name": "python-filelock",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-filelock" ]
     },
     {
       "name": "python-flit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-flit" ]
     },
     {
       "name": "python-flit-core",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-flit-core" ]
     },
     {
       "name": "python-frozendict",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-frozendict" ]
     },
     {
       "name": "python-gast",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-gast" ]
     },
     {
       "name": "python-gevent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-gevent" ]
     },
     {
       "name": "python-google-auth",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-google-auth" ]
     },
     {
       "name": "python-google-auth-oauthlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-google-auth-oauthlib" ]
     },
     {
       "name": "python-google-pasta",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-google-pasta" ]
     },
     {
       "name": "python-greenlet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-greenlet" ]
     },
     {
       "name": "python-h5py",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-h5py" ]
     },
     {
       "name": "python-html5lib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-html5lib" ]
     },
     {
       "name": "python-hyperlink",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-hyperlink" ]
     },
     {
       "name": "python-hypothesis",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-hypothesis" ]
     },
     {
       "name": "python-idna",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-idna" ]
     },
     {
       "name": "python-imagesize",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-imagesize" ]
     },
     {
       "name": "python-importlib-metadata",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-importlib-metadata" ]
     },
     {
       "name": "python-incremental",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-incremental" ]
     },
     {
       "name": "python-iniparse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-iniparse" ]
     },
     {
       "name": "python-ipaddr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ipaddr" ]
     },
     {
       "name": "python-jinja2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jinja2" ]
     },
     {
       "name": "python-jmespath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jmespath" ]
     },
     {
       "name": "python-jsonpatch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jsonpatch" ]
     },
     {
       "name": "python-jsonpointer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jsonpointer" ]
     },
     {
       "name": "python-jsonschema",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jsonschema" ]
     },
     {
       "name": "python-jwt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-jwt" ]
     },
     {
       "name": "python-kubernetes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-kubernetes" ]
     },
     {
       "name": "python-libclang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-libclang" ]
     },
     {
       "name": "python-linux-procfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-linux-procfs" ]
     },
     {
       "name": "python-lockfile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-lockfile" ]
     },
     {
       "name": "python-logutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-logutils" ]
     },
     {
       "name": "python-lxml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-lxml" ]
     },
     {
       "name": "python-m2r",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-m2r" ]
     },
     {
       "name": "python-mako",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-mako" ]
     },
     {
       "name": "python-markdown",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-markdown" ]
     },
     {
       "name": "python-markupsafe",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-markupsafe" ]
     },
     {
       "name": "python-mistune",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-mistune" ]
     },
     {
       "name": "python-mock",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-mock" ]
     },
     {
       "name": "python-more-itertools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-more-itertools" ]
     },
     {
       "name": "python-mpmath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-mpmath" ]
     },
     {
       "name": "python-msgpack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-msgpack" ]
     },
     {
       "name": "python-netaddr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-netaddr" ]
     },
     {
       "name": "python-netifaces",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-netifaces" ]
     },
     {
       "name": "python-networkx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-networkx" ]
     },
     {
       "name": "python-nocasedict",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-nocasedict" ]
     },
     {
       "name": "python-nose2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-nose2" ]
     },
     {
       "name": "python-ntplib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ntplib" ]
     },
     {
       "name": "python-oauthlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-oauthlib" ]
     },
     {
       "name": "python-opt-einsum",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-opt-einsum" ]
     },
     {
       "name": "python-packaging",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-packaging" ]
     },
     {
       "name": "python-pam",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pam" ]
     },
     {
       "name": "python-pbr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pbr" ]
     },
     {
       "name": "python-pecan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pecan" ]
     },
     {
       "name": "python-pefile",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pefile" ]
     },
     {
       "name": "python-pexpect",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pexpect" ]
     },
     {
       "name": "python-pkgconfig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pkgconfig" ]
     },
     {
       "name": "python-platformdirs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-platformdirs" ]
     },
     {
       "name": "python-pluggy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pluggy" ]
     },
     {
       "name": "python-ply",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ply" ]
     },
     {
       "name": "python-prettytable",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-prettytable" ]
     },
     {
       "name": "python-process-tests",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-process-tests" ]
     },
     {
       "name": "python-psutil",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-psutil" ]
     },
     {
       "name": "python-psycopg2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-psycopg2" ]
     },
     {
       "name": "python-ptyprocess",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ptyprocess" ]
     },
     {
       "name": "python-py",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-py" ]
     },
     {
       "name": "python-pyasn1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pyasn1" ]
     },
     {
       "name": "python-pycodestyle",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pycodestyle" ]
     },
     {
       "name": "python-pycosat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pycosat" ]
     },
     {
       "name": "python-pycparser",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pycparser" ]
     },
     {
       "name": "python-pycurl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pycurl" ]
     },
     {
       "name": "python-pygments",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pygments" ]
     },
     {
       "name": "python-pynacl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pynacl" ]
     },
     {
       "name": "python-pyrpm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pyrpm" ]
     },
     {
       "name": "python-pytest-benchmark",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-benchmark" ]
     },
     {
       "name": "python-pytest-cov",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-cov" ]
     },
     {
       "name": "python-pytest-expect",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-expect" ]
     },
     {
       "name": "python-pytest-forked",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-forked" ]
     },
     {
       "name": "python-pytest-mock",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-mock" ]
     },
     {
       "name": "python-pytest-xdist",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pytest-xdist" ]
     },
     {
       "name": "python-pyudev",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pyudev" ]
     },
     {
       "name": "python-pywbem",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-pywbem" ]
     },
     {
       "name": "python-remoto",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-remoto" ]
     },
     {
       "name": "python-repoze-lru",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-repoze-lru" ]
     },
     {
       "name": "python-requests",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-requests" ]
     },
     {
       "name": "python-requests-oauthlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-requests-oauthlib" ]
     },
     {
       "name": "python-resolvelib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-resolvelib" ]
     },
     {
       "name": "python-responses",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-responses" ]
     },
     {
       "name": "python-retrying",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-retrying" ]
     },
     {
       "name": "python-routes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-routes" ]
     },
     {
       "name": "python-rsa",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-rsa" ]
     },
     {
       "name": "python-ruamel-yaml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ruamel-yaml" ]
     },
     {
       "name": "python-ruamel-yaml-clib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-ruamel-yaml-clib" ]
     },
     {
       "name": "python-schedutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-schedutils" ]
     },
     {
       "name": "python-setuptools_scm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-setuptools_scm" ]
     },
     {
       "name": "python-simplejson",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-simplejson" ]
     },
     {
       "name": "python-six",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-six" ]
     },
     {
       "name": "python-snowballstemmer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-snowballstemmer" ]
     },
     {
       "name": "python-sphinx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinx" ]
     },
     {
       "name": "python-sphinxcontrib-applehelp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-applehelp" ]
     },
     {
       "name": "python-sphinxcontrib-devhelp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-devhelp" ]
     },
     {
       "name": "python-sphinxcontrib-htmlhelp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-htmlhelp" ]
     },
     {
       "name": "python-sphinxcontrib-jsmath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-jsmath" ]
     },
     {
       "name": "python-sphinxcontrib-qthelp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-qthelp" ]
     },
     {
       "name": "python-sphinxcontrib-serializinghtml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-serializinghtml" ]
     },
     {
       "name": "python-sphinxcontrib-websupport",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinxcontrib-websupport" ]
     },
     {
       "name": "python-sphinx_rtd_theme",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinx_rtd_theme" ]
     },
     {
       "name": "python-sphinx-theme-alabaster",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinx-theme-alabaster" ]
     },
     {
       "name": "python-sphinx-theme-py3doc-enhanced",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sphinx-theme-py3doc-enhanced" ]
     },
     {
       "name": "python-sqlalchemy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-sqlalchemy" ]
     },
     {
       "name": "python-tensorboard",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tensorboard" ]
     },
     {
       "name": "python-tensorboard-plugin-wit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tensorboard-plugin-wit" ]
     },
     {
       "name": "python-tensorflow-estimator",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tensorflow-estimator" ]
     },
     {
       "name": "python-termcolor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-termcolor" ]
     },
     {
       "name": "python-tidy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tidy" ]
     },
     {
       "name": "python-tomli",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tomli" ]
     },
     {
       "name": "python-toolz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-toolz" ]
     },
     {
       "name": "python-tox-current-env",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tox-current-env" ]
     },
     {
       "name": "python-tqdm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-tqdm" ]
     },
     {
       "name": "python-twisted",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-twisted" ]
     },
     {
       "name": "python-typing-extensions",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-typing-extensions" ]
     },
     {
       "name": "python-urllib3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-urllib3" ]
     },
     {
       "name": "python-vcversioner",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-vcversioner" ]
     },
     {
       "name": "python-virt-firmware",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-virt-firmware" ]
     },
     {
       "name": "python-virtualenv",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-virtualenv" ]
     },
     {
       "name": "python-wcwidth",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-wcwidth" ]
     },
     {
       "name": "python-webob",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-webob" ]
     },
     {
       "name": "python-websocket-client",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-websocket-client" ]
     },
     {
       "name": "python-werkzeug",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-werkzeug" ]
     },
     {
       "name": "python-wheel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-wheel" ]
     },
     {
       "name": "python-wrapt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-wrapt" ]
     },
     {
       "name": "python-yamlloader",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-yamlloader" ]
     },
     {
       "name": "python-zipp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-zipp" ]
     },
     {
       "name": "python-zope-interface",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "python-zope-interface" ]
     },
     {
       "name": "pytorch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pytorch" ]
     },
     {
       "name": "pytz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "pytz" ]
     },
     {
       "name": "PyYAML",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "PyYAML" ]
     },
     {
       "name": "qdox",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qdox" ]
     },
     {
       "name": "qemu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qemu" ]
     },
     {
       "name": "qt5-qtbase",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qt5-qtbase" ]
     },
     {
       "name": "qt5-qtdeclarative",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qt5-qtdeclarative" ]
     },
     {
       "name": "qt5-qtsvg",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qt5-qtsvg" ]
     },
     {
       "name": "qt5-qttools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qt5-qttools" ]
     },
     {
       "name": "qt5-rpm-macros",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "qt5-rpm-macros" ]
     },
     {
       "name": "quota",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "quota" ]
     },
     {
       "name": "R",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "R" ]
     },
     {
       "name": "rabbitmq-server",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rabbitmq-server" ]
     },
     {
       "name": "radvd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "radvd" ]
     },
     {
       "name": "ragel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ragel" ]
     },
     {
       "name": "rapidjson",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rapidjson" ]
     },
     {
       "name": "rdma-core",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rdma-core" ]
     },
     {
       "name": "re2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "re2" ]
     },
     {
       "name": "readline",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "readline" ]
     },
     {
       "name": "reaper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "reaper" ]
     },
     {
       "name": "redis",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "redis" ]
     },
     {
       "name": "rest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rest" ]
     },
     {
       "name": "rlwrap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rlwrap" ]
     },
     {
       "name": "rng-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rng-tools" ]
     },
     {
       "name": "rocksdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rocksdb" ]
     },
     {
       "name": "rook",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rook" ]
     },
     {
       "name": "rpcbind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpcbind" ]
     },
     {
       "name": "rpcsvc-proto",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpcsvc-proto" ]
     },
     {
       "name": "rpm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpm" ]
     },
     {
       "name": "rpmdevtools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpmdevtools" ]
     },
     {
       "name": "rpm-mpi-hooks",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpm-mpi-hooks" ]
     },
     {
       "name": "rpm-ostree",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rpm-ostree" ]
     },
     {
       "name": "rrdtool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rrdtool" ]
     },
     {
       "name": "rsync",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rsync" ]
     },
     {
       "name": "rsyslog",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rsyslog" ]
     },
     {
       "name": "rtctl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rtctl" ]
     },
     {
       "name": "rtl-sdr",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rtl-sdr" ]
     },
     {
       "name": "rt-setup",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rt-setup" ]
     },
     {
       "name": "rt-tests",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rt-tests" ]
     },
     {
       "name": "ruby",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ruby" ]
     },
     {
       "name": "rubygem-addressable",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-addressable" ]
     },
     {
       "name": "rubygem-asciidoctor",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-asciidoctor" ]
     },
     {
       "name": "rubygem-async",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-async" ]
     },
     {
       "name": "rubygem-async-http",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-async-http" ]
     },
     {
       "name": "rubygem-async-io",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-async-io" ]
     },
     {
       "name": "rubygem-async-pool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-async-pool" ]
     },
     {
       "name": "rubygem-aws-eventstream",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-eventstream" ]
     },
     {
       "name": "rubygem-aws-partitions",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-partitions" ]
     },
     {
       "name": "rubygem-aws-sdk-core",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-sdk-core" ]
     },
     {
       "name": "rubygem-aws-sdk-kms",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-sdk-kms" ]
     },
     {
       "name": "rubygem-aws-sdk-s3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-sdk-s3" ]
     },
     {
       "name": "rubygem-aws-sdk-sqs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-sdk-sqs" ]
     },
     {
       "name": "rubygem-aws-sigv4",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-aws-sigv4" ]
     },
     {
       "name": "rubygem-bigdecimal",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-bigdecimal" ]
     },
     {
       "name": "rubygem-bindata",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-bindata" ]
     },
     {
       "name": "rubygem-concurrent-ruby",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-concurrent-ruby" ]
     },
     {
       "name": "rubygem-connection_pool",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-connection_pool" ]
     },
     {
       "name": "rubygem-console",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-console" ]
     },
     {
       "name": "rubygem-cool.io",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-cool.io" ]
     },
     {
       "name": "rubygem-digest-crc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-digest-crc" ]
     },
     {
       "name": "rubygem-elasticsearch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-elasticsearch" ]
     },
     {
       "name": "rubygem-elasticsearch-api",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-elasticsearch-api" ]
     },
     {
       "name": "rubygem-elastic-transport",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-elastic-transport" ]
     },
     {
       "name": "rubygem-excon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-excon" ]
     },
     {
       "name": "rubygem-faraday",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday" ]
     },
     {
       "name": "rubygem-faraday-em_http",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-em_http" ]
     },
     {
       "name": "rubygem-faraday-em_synchrony",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-em_synchrony" ]
     },
     {
       "name": "rubygem-faraday-excon",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-excon" ]
     },
     {
       "name": "rubygem-faraday-httpclient",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-httpclient" ]
     },
     {
       "name": "rubygem-faraday-multipart",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-multipart" ]
     },
     {
       "name": "rubygem-faraday-net_http",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-net_http" ]
     },
     {
       "name": "rubygem-faraday-net_http_persistent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-net_http_persistent" ]
     },
     {
       "name": "rubygem-faraday-patron",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-patron" ]
     },
     {
       "name": "rubygem-faraday-rack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-rack" ]
     },
     {
       "name": "rubygem-faraday-retry",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-faraday-retry" ]
     },
     {
       "name": "rubygem-ffi",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-ffi" ]
     },
     {
       "name": "rubygem-fiber-local",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fiber-local" ]
     },
     {
       "name": "rubygem-fluent-config-regexp-type",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-config-regexp-type" ]
     },
     {
       "name": "rubygem-fluentd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluentd" ]
     },
     {
       "name": "rubygem-fluent-logger",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-logger" ]
     },
     {
       "name": "rubygem-fluent-plugin-elasticsearch",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-elasticsearch" ]
     },
     {
       "name": "rubygem-fluent-plugin-kafka",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-kafka" ]
     },
     {
       "name": "rubygem-fluent-plugin-prometheus",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-prometheus" ]
     },
     {
       "name": "rubygem-fluent-plugin-prometheus_pushgateway",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-prometheus_pushgateway" ]
     },
     {
       "name": "rubygem-fluent-plugin-record-modifier",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-record-modifier" ]
     },
     {
       "name": "rubygem-fluent-plugin-rewrite-tag-filter",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-rewrite-tag-filter" ]
     },
     {
       "name": "rubygem-fluent-plugin-s3",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-s3" ]
     },
     {
       "name": "rubygem-fluent-plugin-systemd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-systemd" ]
     },
     {
       "name": "rubygem-fluent-plugin-td",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-td" ]
     },
     {
       "name": "rubygem-fluent-plugin-webhdfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-webhdfs" ]
     },
     {
       "name": "rubygem-fluent-plugin-windows-exporter",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-fluent-plugin-windows-exporter" ]
     },
     {
       "name": "rubygem-hirb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-hirb" ]
     },
     {
       "name": "rubygem-hoe",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-hoe" ]
     },
     {
       "name": "rubygem-hpricot",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-hpricot" ]
     },
     {
       "name": "rubygem-httpclient",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-httpclient" ]
     },
     {
       "name": "rubygem-http_parser.rb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-http_parser.rb" ]
     },
     {
       "name": "rubygem-introspection",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-introspection" ]
     },
     {
       "name": "rubygem-io-event",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-io-event" ]
     },
     {
       "name": "rubygem-jmespath",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-jmespath" ]
     },
     {
       "name": "rubygem-ltsv",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-ltsv" ]
     },
     {
       "name": "rubygem-metaclass",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-metaclass" ]
     },
     {
       "name": "rubygem-mini_portile2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-mini_portile2" ]
     },
     {
       "name": "rubygem-minitest",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-minitest" ]
     },
     {
       "name": "rubygem-mocha",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-mocha" ]
     },
     {
       "name": "rubygem-msgpack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-msgpack" ]
     },
     {
       "name": "rubygem-multi_json",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-multi_json" ]
     },
     {
       "name": "rubygem-multipart-post",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-multipart-post" ]
     },
     {
       "name": "rubygem-mustache",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-mustache" ]
     },
     {
       "name": "rubygem-net-http-persistent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-net-http-persistent" ]
     },
     {
       "name": "rubygem-nio4r",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-nio4r" ]
     },
     {
       "name": "rubygem-nokogiri",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-nokogiri" ]
     },
     {
       "name": "rubygem-oj",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-oj" ]
     },
     {
       "name": "rubygem-parallel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-parallel" ]
     },
     {
       "name": "rubygem-power_assert",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-power_assert" ]
     },
     {
       "name": "rubygem-prometheus-client",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-prometheus-client" ]
     },
     {
       "name": "rubygem-protocol-hpack",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-protocol-hpack" ]
     },
     {
       "name": "rubygem-protocol-http",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-protocol-http" ]
     },
     {
       "name": "rubygem-protocol-http1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-protocol-http1" ]
     },
     {
       "name": "rubygem-protocol-http2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-protocol-http2" ]
     },
     {
       "name": "rubygem-public_suffix",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-public_suffix" ]
     },
     {
       "name": "rubygem-rake",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rake" ]
     },
     {
       "name": "rubygem-rake-compiler",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rake-compiler" ]
     },
     {
       "name": "rubygem-rdiscount",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rdiscount" ]
     },
     {
       "name": "rubygem-rdkafka",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rdkafka" ]
     },
     {
       "name": "rubygem-rexml",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rexml" ]
     },
     {
       "name": "rubygem-ronn",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-ronn" ]
     },
     {
       "name": "rubygem-rspec",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rspec" ]
     },
     {
       "name": "rubygem-ruby-kafka",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-ruby-kafka" ]
     },
     {
       "name": "rubygem-ruby-progressbar",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-ruby-progressbar" ]
     },
     {
       "name": "rubygem-rubyzip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-rubyzip" ]
     },
     {
       "name": "rubygem-semantic_puppet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-semantic_puppet" ]
     },
     {
       "name": "rubygem-serverengine",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-serverengine" ]
     },
     {
       "name": "rubygem-sigdump",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-sigdump" ]
     },
     {
       "name": "rubygem-strptime",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-strptime" ]
     },
     {
       "name": "rubygem-systemd-journal",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-systemd-journal" ]
     },
     {
       "name": "rubygem-td",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-td" ]
     },
     {
       "name": "rubygem-td-client",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-td-client" ]
     },
     {
       "name": "rubygem-td-logger",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-td-logger" ]
     },
     {
       "name": "rubygem-test-unit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-test-unit" ]
     },
     {
       "name": "rubygem-timers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-timers" ]
     },
     {
       "name": "rubygem-tzinfo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-tzinfo" ]
     },
     {
       "name": "rubygem-tzinfo-data",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-tzinfo-data" ]
     },
     {
       "name": "rubygem-webhdfs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-webhdfs" ]
     },
     {
       "name": "rubygem-webrick",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-webrick" ]
     },
     {
       "name": "rubygem-yajl-ruby",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-yajl-ruby" ]
     },
     {
       "name": "rubygem-zip-zip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rubygem-zip-zip" ]
     },
     {
       "name": "rust",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "rust" ]
     },
     {
       "name": "sanlock",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sanlock" ]
     },
     {
       "name": "scons",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "scons" ]
     },
     {
       "name": "scrub",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "scrub" ]
     },
     {
       "name": "sdbus-cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sdbus-cpp" ]
     },
     {
       "name": "seabios",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "seabios" ]
     },
     {
       "name": "secilc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "secilc" ]
     },
     {
       "name": "sed",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sed" ]
     },
     {
       "name": "selinux-policy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "selinux-policy" ]
     },
     {
       "name": "setools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "setools" ]
     },
     {
       "name": "sg3_utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sg3_utils" ]
     },
     {
       "name": "sgabios",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sgabios" ]
     },
     {
       "name": "sgml-common",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sgml-common" ]
     },
     {
       "name": "sgx-backwards-compatability",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sgx-backwards-compatability" ]
     },
     {
       "name": "shadow-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shadow-utils" ]
     },
     {
       "name": "shared-mime-info",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shared-mime-info" ]
     },
     {
       "name": "sharutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sharutils" ]
     },
     {
       "name": "shim",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shim" ]
     },
     {
       "name": "shim-unsigned",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shim-unsigned" ]
     },
     {
       "name": "shim-unsigned-aarch64",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shim-unsigned-aarch64" ]
     },
     {
       "name": "shim-unsigned-x64",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "shim-unsigned-x64" ]
     },
     {
       "name": "sisu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sisu" ]
     },
     {
       "name": "skopeo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "skopeo" ]
     },
     {
       "name": "slang",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "slang" ]
     },
     {
       "name": "sleuthkit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sleuthkit" ]
     },
     {
       "name": "slf4j",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "slf4j" ]
     },
     {
       "name": "smartmontools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "smartmontools" ]
     },
     {
       "name": "snappy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "snappy" ]
     },
     {
       "name": "socat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "socat" ]
     },
     {
       "name": "socket_wrapper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "socket_wrapper" ]
     },
     {
       "name": "softhsm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "softhsm" ]
     },
     {
       "name": "sos",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sos" ]
     },
     {
       "name": "span-lite",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "span-lite" ]
     },
     {
       "name": "sqlite",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sqlite" ]
     },
     {
       "name": "squashfs-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "squashfs-tools" ]
     },
     {
       "name": "sriov-network-device-plugin",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sriov-network-device-plugin" ]
     },
     {
       "name": "sscg",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sscg" ]
     },
     {
       "name": "sshpass",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sshpass" ]
     },
     {
       "name": "strace",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "strace" ]
     },
     {
       "name": "strongswan",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "strongswan" ]
     },
     {
       "name": "subversion",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "subversion" ]
     },
     {
       "name": "sudo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sudo" ]
     },
     {
       "name": "supermin",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "supermin" ]
     },
     {
       "name": "swig",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "swig" ]
     },
     {
       "name": "swupdate",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "swupdate" ]
     },
     {
       "name": "SymCrypt",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "SymCrypt" ]
     },
     {
       "name": "SymCrypt-OpenSSL",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "SymCrypt-OpenSSL" ]
     },
     {
       "name": "symlinks",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "symlinks" ]
     },
     {
       "name": "sympy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sympy" ]
     },
     {
       "name": "sysbench",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sysbench" ]
     },
     {
       "name": "syslinux",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "syslinux" ]
     },
     {
       "name": "syslog-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "syslog-ng" ]
     },
     {
       "name": "sysstat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "sysstat" ]
     },
     {
       "name": "systemd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "systemd", "systemd-bootstrap" ]
     },
     {
       "name": "systemtap",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "systemtap" ]
     },
     {
       "name": "tar",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tar" ]
     },
     {
       "name": "tboot",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tboot" ]
     },
     {
       "name": "tcl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tcl" ]
     },
     {
       "name": "tcpdump",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tcpdump" ]
     },
     {
       "name": "tcsh",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tcsh" ]
     },
     {
       "name": "tdnf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tdnf" ]
     },
     {
       "name": "telegraf",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "telegraf" ]
     },
     {
       "name": "tensorflow",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tensorflow" ]
     },
     {
       "name": "terraform",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "terraform" ]
     },
     {
       "name": "texinfo",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "texinfo" ]
     },
     {
       "name": "tidy",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tidy" ]
     },
     {
       "name": "time",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "time" ]
     },
     {
       "name": "tini",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tini" ]
     },
     {
       "name": "tinycdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tinycdb" ]
     },
     {
       "name": "tinyxml2",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tinyxml2" ]
     },
     {
       "name": "tmux",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tmux" ]
     },
     {
       "name": "tokyocabinet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tokyocabinet" ]
     },
     {
       "name": "toml11",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "toml11" ]
     },
     {
       "name": "tpm2-abrmd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tpm2-abrmd" ]
     },
     {
       "name": "tpm2-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tpm2-tools" ]
     },
     {
       "name": "tpm2-tss",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tpm2-tss" ]
     },
     {
       "name": "tracelogging",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tracelogging" ]
     },
     {
       "name": "traceroute",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "traceroute" ]
     },
     {
       "name": "tree",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tree" ]
     },
     {
       "name": "trousers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "trousers" ]
     },
     {
       "name": "ttembed",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ttembed" ]
     },
     {
       "name": "tuna",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tuna" ]
     },
     {
       "name": "tuned",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tuned" ]
     },
     {
       "name": "tzdata",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "tzdata" ]
     },
     {
       "name": "uclibc-ng",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "uclibc-ng" ]
     },
     {
       "name": "ucx",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ucx" ]
     },
     {
       "name": "uid_wrapper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "uid_wrapper" ]
     },
     {
       "name": "unbound",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "unbound" ]
     },
     {
       "name": "unixODBC",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "unixODBC" ]
     },
     {
       "name": "unzip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "unzip" ]
     },
     {
       "name": "usbip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "usbip" ]
     },
     {
       "name": "usbredir",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "usbredir" ]
     },
     {
       "name": "usbutils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "usbutils" ]
     },
     {
       "name": "userspace-rcu",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "userspace-rcu" ]
     },
     {
       "name": "usrsctp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "usrsctp" ]
     },
     {
       "name": "utf8proc",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "utf8proc" ]
     },
     {
       "name": "util-linux",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "util-linux" ]
     },
     {
       "name": "uuid",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "uuid" ]
     },
     {
       "name": "vala",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vala" ]
     },
     {
       "name": "valgrind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "valgrind" ]
     },
     {
       "name": "verity-read-only-root",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "verity-read-only-root" ]
     },
     {
       "name": "vim",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vim" ]
     },
     {
       "name": "virglrenderer",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "virglrenderer" ]
     },
     {
       "name": "virt-what",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "virt-what" ]
     },
     {
       "name": "vitess",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vitess" ]
     },
     {
       "name": "vnstat",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vnstat" ]
     },
     {
       "name": "vsftpd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vsftpd" ]
     },
     {
       "name": "vte291",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vte291" ]
     },
     {
       "name": "vulkan-headers",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vulkan-headers" ]
     },
     {
       "name": "vulkan-loader",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "vulkan-loader" ]
     },
     {
       "name": "WALinuxAgent",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "WALinuxAgent" ]
     },
     {
       "name": "wayland",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wayland" ]
     },
     {
       "name": "wayland-protocols",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wayland-protocols" ]
     },
     {
       "name": "websocketpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "websocketpp" ]
     },
     {
       "name": "wget",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wget" ]
     },
     {
       "name": "which",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "which" ]
     },
     {
       "name": "wireguard-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wireguard-tools" ]
     },
     {
       "name": "wireless-regdb",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wireless-regdb" ]
     },
     {
       "name": "words",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "words" ]
     },
     {
       "name": "wpa_supplicant",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "wpa_supplicant" ]
     },
     {
       "name": "xcb-proto",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xcb-proto" ]
     },
     {
       "name": "xcursor-themes",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xcursor-themes" ]
     },
     {
       "name": "xerces-c",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xerces-c" ]
     },
     {
       "name": "xfsprogs",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xfsprogs" ]
     },
     {
       "name": "xinetd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xinetd" ]
     },
     {
       "name": "xkeyboard-config",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xkeyboard-config" ]
     },
     {
       "name": "xml-commons-apis",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xml-commons-apis" ]
     },
     {
       "name": "xml-commons-resolver",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xml-commons-resolver" ]
     },
     {
       "name": "xmlsec1",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xmlsec1" ]
     },
     {
       "name": "xmlstarlet",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xmlstarlet" ]
     },
     {
       "name": "xmlto",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xmlto" ]
     },
     {
       "name": "xmltoman",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xmltoman" ]
     },
     {
       "name": "xmvn",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xmvn" ]
     },
     {
       "name": "xorg-x11-apps",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-apps" ]
     },
     {
       "name": "xorg-x11-drv-libinput",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-drv-libinput" ]
     },
     {
       "name": "xorg-x11-font-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-font-utils" ]
     },
     {
       "name": "xorg-x11-proto-devel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-proto-devel" ]
     },
     {
       "name": "xorg-x11-server",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-server" ]
     },
     {
       "name": "xorg-x11-server-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-server-utils" ]
     },
     {
       "name": "xorg-x11-util-macros",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-util-macros" ]
     },
     {
       "name": "xorg-x11-xauth",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-xauth" ]
     },
     {
       "name": "xorg-x11-xbitmaps",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-xbitmaps" ]
     },
     {
       "name": "xorg-x11-xinit",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-xinit" ]
     },
     {
       "name": "xorg-x11-xkb-utils",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-xkb-utils" ]
     },
     {
       "name": "xorg-x11-xtrans-devel",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xorg-x11-xtrans-devel" ]
     },
     {
       "name": "xxhash",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xxhash" ]
     },
     {
       "name": "xz",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xz" ]
     },
     {
       "name": "xz-java",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "xz-java" ]
     },
     {
       "name": "yajl",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "yajl" ]
     },
     {
       "name": "yaml-cpp",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "yaml-cpp" ]
     },
     {
       "name": "yasm",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "yasm" ]
     },
     {
       "name": "ypbind",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "ypbind" ]
     },
     {
       "name": "yp-tools",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "yp-tools" ]
     },
     {
       "name": "zchunk",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zchunk" ]
     },
     {
       "name": "zerofree",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zerofree" ]
     },
     {
       "name": "zeromq",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zeromq" ]
     },
     {
       "name": "zfs-fuse",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zfs-fuse" ]
     },
     {
       "name": "zip",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zip" ]
     },
     {
       "name": "zipper",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zipper" ]
     },
     {
       "name": "zlib",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zlib" ]
     },
     {
       "name": "zsh",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zsh" ]
     },
     {
       "name": "zstd",
+      "comment": "",
+      "enabled": true,
       "packageNames": [ "zstd" ]
     }
   ]
