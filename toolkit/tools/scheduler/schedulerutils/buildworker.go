@@ -171,6 +171,7 @@ func buildNode(request *BuildRequest, graphMutex *sync.RWMutex, agent buildagent
 
 	logger.Log.Infof("Building: %s", baseSrpmName)
 	builtFiles, logFile, err = buildSRPMFile(agent, buildAttempts, basePackageName, node.SrpmPath, node.Architecture, dependencies)
+	logger.Log.Infof("Building: %s is complete.", baseSrpmName)
 	return
 }
 

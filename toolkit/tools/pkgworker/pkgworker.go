@@ -125,6 +125,9 @@ func buildChrootDirPath(workDir, srpmFilePath string, runCheck bool) (chrootDirP
 }
 
 func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmFile, repoFile, rpmmacrosFile, outArch string, defines map[string]string, noCleanup, runCheck bool, packagesToInstall []string, useCcache bool) (builtRPMs []string, err error) {
+
+	logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [0] -- building %s.", srpmFile)
+
 	const (
 		buildHeartbeatTimeout = 30 * time.Minute
 
@@ -191,6 +194,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 
 	err = chroot.Initialize(workerTar, extraDirs, mountPoints)
 	if err != nil {
+		logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [1] -- returning %s.", srpmFile)
 		return
 	}
 	defer chroot.Close(noCleanup)
@@ -198,6 +202,7 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 	// Place extra files that will be needed to build into the chroot
 	srpmFileInChroot, err := copyFilesIntoChroot(chroot, srpmFile, repoFile, rpmmacrosFile, runCheck)
 	if err != nil {
+		logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [2] -- returning %s.", srpmFile)
 		return
 	}
 
@@ -205,12 +210,15 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 		return buildRPMFromSRPMInChroot(srpmFileInChroot, outArch, runCheck, defines, packagesToInstall, useCcache)
 	})
 	if err != nil {
+		logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [3] -- returning %s.", srpmFile)
 		return
 	}
 
 	if !runCheck {
 		builtRPMs, err = moveBuiltRPMs(chroot.RootDir(), rpmDirPath)
 	}
+
+	logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [4] -- %s.", srpmFile)
 
 	// Only if the groupSize is 1 we can archive since no other packages will
 	// re-update this cache.
@@ -221,10 +229,14 @@ func buildSRPMInChroot(chrootDir, rpmDirPath, toolchainDirPath, workerTar, srpmF
 		}
 	}
 
+	logger.Log.Infof("-- george - pkgworker.go / buildSRPMInChroot() -- [5] -- returning... %s.", srpmFile)
+
 	return
 }
 
 func buildRPMFromSRPMInChroot(srpmFile, outArch string, runCheck bool, defines map[string]string, packagesToInstall []string, useCcache bool) (err error) {
+
+	logger.Log.Infof("-- george - pkgworker.go / buildRPMFromSRPMInChroot() -- [0] entering -- %s.", srpmFile)	
 	// Convert /localrpms into a repository that a package manager can use.
 	err = rpmrepomanager.CreateRepo(chrootLocalRpmsDir)
 	if err != nil {
@@ -267,6 +279,8 @@ func buildRPMFromSRPMInChroot(srpmFile, outArch string, runCheck bool, defines m
 	} else {
 		err = rpm.BuildRPMFromSRPM(srpmFile, outArch, defines)
 	}
+
+	logger.Log.Infof("-- george - pkgworker.go / buildRPMFromSRPMInChroot() -- [1] exiting -- %s.", srpmFile)	
 
 	return
 }

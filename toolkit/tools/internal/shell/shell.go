@@ -68,6 +68,7 @@ func PermanentlyStopAllProcesses(signal unix.Signal) {
 		// Wait for the process to fully exit
 		cmd.Wait()
 	}
+	logger.Log.Info("-- george - shell.go / PermanentlyStopAllProcesses() exiting...")	
 }
 
 // Execute runs the provided command.
