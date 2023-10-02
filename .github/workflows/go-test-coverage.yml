@@ -73,3 +73,8 @@ jobs:
       with:
         name: TestCoverage
         path: toolkit/out/tools/test_coverage_report.html
+
+    - name: Ensure all tools build
+      run: |
+        pushd toolkit
+        sudo make go-tools REBUILD_TOOLS=y
