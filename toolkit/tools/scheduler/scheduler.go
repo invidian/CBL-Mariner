@@ -427,7 +427,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - we have exhausted all options. Printing unresolved dependencies.")
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
-				var stuckNodesMap map[int64]bool
+				stuckNodesMap := make(map[int64]bool)
 				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesMap)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
