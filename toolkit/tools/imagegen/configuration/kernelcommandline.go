@@ -17,11 +17,12 @@ import (
 //   - ExtraCommandLine: Arbitrary parameters which will be appended to the
 //     end of the kernel command line
 type KernelCommandLine struct {
-	CGroup           CGroup      `json:"CGroup"`
-	ImaPolicy        []ImaPolicy `json:"ImaPolicy"`
-	SELinux          SELinux     `json:"SELinux"`
-	EnableFIPS       bool        `json:"EnableFIPS"`
-	ExtraCommandLine string      `json:"ExtraCommandLine"`
+	CGroup             CGroup      `json:"CGroup"`
+	ImaPolicy          []ImaPolicy `json:"ImaPolicy"`
+	SELinux            SELinux     `json:"SELinux"`
+	EnableFIPS         bool        `json:"EnableFIPS"`
+	EnableGrubMkconfig bool        `json:"EnableGrubMkconfig"`
+	ExtraCommandLine   string      `json:"ExtraCommandLine"`
 }
 
 // GetSedDelimeter returns the delimeter which should be used with sed

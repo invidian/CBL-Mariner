@@ -735,10 +735,12 @@ func configureDiskBootloader(systemConfig configuration.SystemConfig, installChr
 		return
 	}
 
-	err = installutils.CallGrubMkconfig(installChroot)
-	if err != nil {
-		err = fmt.Errorf("failed to generate grub.cfg: %s", err)
-		return
+	if systemConfig.KernelCommandLine.EnableGrubMkconfig {
+		err = installutils.CallGrubMkconfig(installChroot)
+		if err != nil {
+			err = fmt.Errorf("failed to generate grub.cfg via grub2-mkconfig: %s", err)
+			return
+		}
 	}
 
 	return

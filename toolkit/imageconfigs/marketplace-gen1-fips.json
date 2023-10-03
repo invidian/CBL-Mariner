@@ -72,7 +72,8 @@
             },
             "KernelCommandLine": {
                 "EnableFIPS": true,
-                "ExtraCommandLine": "console=ttyS0"
+                "ExtraCommandLine": "console=ttyS0",
+                "EnableGrubMkconfig": true
             },
             "Hostname": "cbl-mariner"
         }

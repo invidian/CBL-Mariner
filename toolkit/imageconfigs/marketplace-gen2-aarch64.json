@@ -73,7 +73,8 @@
                 "default": "kernel"
             },
             "KernelCommandLine": {
-                "ExtraCommandLine": "console=tty1 console=ttyAMA0 earlycon=pl011,0xeffec000 initcall_blacklist=arm_pmu_acpi_init"
+                "ExtraCommandLine": "console=tty1 console=ttyAMA0 earlycon=pl011,0xeffec000 initcall_blacklist=arm_pmu_acpi_init",
+                "EnableGrubMkconfig": true
             },
             "Hostname": "cbl-mariner"
         }
