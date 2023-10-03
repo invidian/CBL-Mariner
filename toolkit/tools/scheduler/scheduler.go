@@ -9,6 +9,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"sync"
 	"time"
 
@@ -323,11 +324,12 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 	}
 
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
-	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %*s", indent, nodeName)
+	indentStr := strings.Repeat(" ", indent * 4)
+	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
 
 	_, exists := stuckNodesMap[stuckNode.ID()]
 	if exists {
-		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] - A CYCLE HAS BEEN DETECTED!")
+		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] %s - A CYCLE HAS BEEN DETECTED!", indentStr)
 		return
 	} else {
 		stuckNodesMap[stuckNode.ID()] = true
@@ -339,6 +341,8 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 		dependent := dependency.Node().(*pkggraph.PkgNode)
 		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesMap)
 	}
+
+	delete(stuckNodesMap, stuckNode.ID())
 }
 
 // buildAllNodes will build all nodes in a given dependency graph.
