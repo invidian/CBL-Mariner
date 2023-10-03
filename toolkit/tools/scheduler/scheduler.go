@@ -317,7 +317,7 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 }
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
-func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int) {
+func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesMap map[int64]bool) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
@@ -325,11 +325,19 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
 	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %*s", indent, nodeName)
 
+	_, exists := stuckNodesMap[stuckNode.ID()]
+	if exists {
+		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] - A CYCLE HAS BEEN DETECTED!")
+		return
+	} else {
+		stuckNodesMap[stuckNode.ID()] = true
+	}
+
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1)
+		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesMap)
 	}
 }
 
@@ -419,7 +427,8 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - we have exhausted all options. Printing unresolved dependencies.")
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
-				debugStuckNode(buildState, pkgGraph, goalNode, 0)
+				var stuckNodesMap map[int64]bool
+				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesMap)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
 			} else {
