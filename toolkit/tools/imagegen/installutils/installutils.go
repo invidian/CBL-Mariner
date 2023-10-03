@@ -963,11 +963,11 @@ func InstallGrubEnv(installRoot, assetsDir string) (err error) {
 // - isBootPartitionSeparate is a boolean value which is true if the /boot partition is separate from the root partition
 // Note: this boot partition could be different than the boot partition specified in the bootloader.
 // This boot partition specifically indicates where to find the kernel, config files, and initrd
-func InstallGrubCfg(installRoot, rootDevice, bootUUID, bootPrefix string, encryptedRoot diskutils.EncryptedRootDevice, kernelCommandLine configuration.KernelCommandLine, readOnlyRoot diskutils.VerityDevice, isBootPartitionSeparate bool) (err error) {
+func InstallGrubCfg(installRoot, rootDevice, bootUUID, bootPrefix, assetsDir string, encryptedRoot diskutils.EncryptedRootDevice, kernelCommandLine configuration.KernelCommandLine, readOnlyRoot diskutils.VerityDevice, isBootPartitionSeparate bool) (err error) {
 	const (
-		assetGrubcfgFile = "/installer/grub2/grub.cfg"
+		assetGrubcfgFile = "grub2/grub.cfg"
 		grubCfgFile      = "boot/grub2/grub.cfg"
-		assetGrubDefFile = "/installer/grub2/grub"
+		assetGrubDefFile = "grub2/grub"
 		grubDefFile      = "etc/default/grub"
 	)
 

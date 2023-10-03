@@ -352,8 +352,8 @@ cp $GRUB_PXE_MODULE_SOURCE $EFI_BOOT_DIR/$GRUB_PXE_MODULE_NAME
 %{_rpmconfigdir}/macros.d/macros.grub2
 
 %files configuration
-%{_sysconfdir}/default/grub.d
-%{_sysconfdir}/grub.d
+%dir %{_sysconfdir}/default/grub.d
+%dir %{_sysconfdir}/grub.d
 
 %changelog
 * Fri Sep 28 2023 Cameron Baird <cameronbaird@microsoft.com> - 2.06-12
