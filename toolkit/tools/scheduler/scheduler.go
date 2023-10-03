@@ -371,7 +371,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 
 	for {
 		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [2] --------------------------------------------------------------------")
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [2] for{} -- beginning of build loop/calling ConvertNodesToRequests()...")
+		// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [2] for{} -- beginning of build loop/calling ConvertNodesToRequests()...")
 		logger.Log.Debugf("Found %d unblocked nodes: %v.", len(nodesToBuild), nodesToBuild)
 
 
@@ -379,7 +379,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		newRequests := schedulerutils.ConvertNodesToRequests(pkgGraph, graphMutex, nodesToBuild, packagesToRebuild, testsToRerun, buildState, canUseCache)
 		for _, req := range newRequests {
 
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [3] processing unblocked node request:")
+			// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [3] processing unblocked node request:")
 
 			buildState.RecordBuildRequest(req)
 			// Decide which priority the build should be. Generally we want to get any remote or prebuilt nodes out of the
@@ -407,7 +407,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		}
 		nodesToBuild = nil
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [4] have all active builds finished?")
+		// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [4] have all active builds finished?")
 
 		// If there are no active builds running or results waiting to check try enabling cached packages for unresolved
 		// dynamic dependencies to unblock more nodes. Otherwise, there is nothing left that can be built.
@@ -441,6 +441,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [8.a] recording state...")
 		err = buildState.RecordBuildResult(res, allowToolchainRebuilds)
 		if err != nil {
+			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [8.b] error while recording state...setting stopBuilding = true")
 			// Failures to manipulate the graph or build state are fatal.
 			err = fmt.Errorf("error recording build result:\n%w", err)
 			stopBuilding = true
@@ -541,8 +542,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 			break
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [24] -- there are some active SRPMs still...")
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [24] -- %d currently active build(s): %v.", activeSRPMsCount, activeSRPMs)
+		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [24] -- %d currently active SRPMs build(s): %v.", activeSRPMsCount, activeSRPMs)
 
 		if res.Node.Type == pkggraph.TypeLocalBuild || res.Node.Type == pkggraph.TypeTest {
 			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [25]")
@@ -559,7 +559,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 
 		if activeSRPMsCount != 0 {
 			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.a] ------------ end of big loop. Sleeping for 10 seconds.")
-			time.Sleep(time.Second * 10)
+			time.Sleep(time.Second)
 		} else {
 			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.b] ------------ end of big loop.")
 		}
