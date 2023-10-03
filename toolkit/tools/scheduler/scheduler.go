@@ -323,7 +323,7 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 	}
 
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
-	logger.Log.Debugf("%*s", indent, nodeName)
+	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %*s", indent, nodeName)
 
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
@@ -416,10 +416,11 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [5] no active builds.")
 
 			if useCachedImplicit {
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - breaking...")
+				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - we have exhausted all options. Printing unresolved dependencies.")
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
 				debugStuckNode(buildState, pkgGraph, goalNode, 0)
+				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
 			} else {
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [7] useCachedImplicit == true - continuing...")
@@ -496,7 +497,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 					}
 				}
 
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [17] -- find unblocked nodes...")
+				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [17] -- finding unblocked nodes...")
 				nodesToBuild = schedulerutils.FindUnblockedNodesFromResult(res, pkgGraph, graphMutex, buildState)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [17.a] -- found %v unblocked nodes... <-------", len(nodesToBuild))
 			} else if stopOnFailure {
@@ -558,8 +559,8 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		}
 
 		if activeSRPMsCount != 0 {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.a] ------------ end of big loop. Sleeping for 10 seconds.")
-			time.Sleep(time.Second)
+			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.a] ------------ end of big loop.")
+			// time.Sleep(time.Second)
 		} else {
 			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.b] ------------ end of big loop.")
 		}
