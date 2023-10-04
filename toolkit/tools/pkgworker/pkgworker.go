@@ -86,6 +86,10 @@ func main() {
 		logger.Log.Warnf("-- libdb cannot be built with ccache enabled. Disabling ccache for this package.")
 		*useCcache = false
 	}
+	if strings.Contains(*basePackageName, "openssh") {
+		logger.Log.Warnf("-- libdb cannot be built with ccache enabled. Disabling ccache for this package.")
+		*useCcache = false
+	}
 
 	defines := rpm.DefaultDefinesWithDist(*runCheck, *distTag)
 	defines[rpm.DistroReleaseVersionDefine] = *distroReleaseVersion
