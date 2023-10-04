@@ -135,8 +135,6 @@ func (m *CCacheManager) SetCurrentPkgGroup(basePackageName string, arch string) 
 // setCurrentPkgGroupInternal() is called once per package.
 func (m *CCacheManager) setCurrentPkgGroupInternal(groupName string, groupEnabled bool, groupSize int, arch string) (err error) {
 
-	logger.Log.Infof("setCurrentPkgGroupInternal(%s)", groupName)
-
 	ccachePkgGroup := &CCachePkgGroup{
 		Name   : groupName,
 		Enabled: groupEnabled,
@@ -160,8 +158,6 @@ func (m *CCacheManager) setCurrentPkgGroupInternal(groupName string, groupEnable
 			return err
 		}
 		ccachePkgGroup.UpdatePaths(m.Configuration.RemoteStoreConfig, m.LocalDownloadsDir, m.LocalUploadsDir)
-	} else {
-		logger.Log.Infof("  ccache will be disabled for group (%s). See configuration file (%s) for details.", ccachePkgGroup.Name, m.ConfigFileName)
 	}
 
 	m.CurrentPkgGroup = ccachePkgGroup
@@ -338,8 +334,6 @@ func CreateManager(rootDir string, configFileName string) (m *CCacheManager, err
 // that are not part of any remote storage group.
 func (m *CCacheManager) findGroup(basePackageName string) (groupName string, groupEnabled bool, groupSize int) {
 
-	logger.Log.Infof("findGroup(%s)", basePackageName)
-
 	groupName = ""
 	groupEnabled = false
 	groupSize = 0
@@ -351,6 +345,9 @@ func (m *CCacheManager) findGroup(basePackageName string) (groupName string, gro
 				groupName = group.Name
 				groupEnabled = group.Enabled
 				groupSize = len(group.PackageNames)
+				if !groupEnabled {
+					logger.Log.Infof("  ccache is explicitly disabled for this group in the ccache configuration.")
+				}
 				break
 			}
 		}
@@ -586,6 +583,18 @@ func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
 				// Enable this continue only if we enable uploading as
 				// soon as packages are done building.
 				groupEnabled, groupSize := m.findCCacheGroupInfo(groupName)
+
+				if !groupEnabled {
+					// This should never happen unless a previous run had it
+					// enabled and the folder got created. The correct behavior
+					// is that the folder is not even created before the pkg
+					// build starts and hence by reaching this method, it
+					// should not be there.
+					//
+					logger.Log.Infof("  ccache is explicitly disabled for this group in the ccache configuration. Skipping...")
+					continue
+				}
+
 				if groupSize < 2 {
 					// This has either been processed earlier or there is
 					// nothing to process.
