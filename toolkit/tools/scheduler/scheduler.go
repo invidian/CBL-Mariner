@@ -204,8 +204,7 @@ func main() {
 
 	if *useCcache {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
-		var ccacheManager ccachemanagerpkg.CCacheManager
-		err = ccacheManager.Initialize(*ccacheDir, *ccacheConfig)
+		ccacheManager, err := ccachemanagerpkg.CreateManager(*ccacheDir, *ccacheConfig)
 		if err == nil {
 			err = ccacheManager.UploadAllPkgGroupCCaches()
 			if err != nil {
@@ -318,14 +317,14 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 }
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
-func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesMap map[int64]bool) {
+func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesMap map[int64]bool, failedNodesMap map[int64]int64) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
 
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
 	indentStr := strings.Repeat(" ", indent * 4)
-	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
+	// logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
 
 	_, exists := stuckNodesMap[stuckNode.ID()]
 	if exists {
@@ -335,11 +334,20 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 		stuckNodesMap[stuckNode.ID()] = true
 	}
 
+	if strings.Contains(nodeName, "<BuildError>") {
+		v, exists := failedNodesMap[stuckNode.ID()]
+		if exists {
+			failedNodesMap[stuckNode.ID()] = v + 1
+		} else {
+			logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [2] %s - new failed dependency node (%s)!", indentStr, nodeName)
+			failedNodesMap[stuckNode.ID()] = 1
+		}
+	}
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesMap)
+		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesMap, failedNodesMap)
 	}
 
 	delete(stuckNodesMap, stuckNode.ID())
@@ -432,7 +440,8 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
 				stuckNodesMap := make(map[int64]bool)
-				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesMap)
+				failedNodesMap := make(map[int64]int64)
+				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesMap, failedNodesMap)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
 			} else {
