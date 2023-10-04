@@ -87,10 +87,14 @@ func main() {
 		*useCcache = false
 	}
 	if strings.Contains(*basePackageName, "openssh") {
-		logger.Log.Warnf("-- libdb cannot be built with ccache enabled. Disabling ccache for this package.")
+		logger.Log.Warnf("-- openssh cannot be built with ccache enabled. Disabling ccache for this package.")
 		*useCcache = false
 	}
-
+	if strings.Contains(*basePackageName, "m2crypto") {
+		logger.Log.Warnf("-- m2crypto cannot be built with ccache enabled. Disabling ccache for this package.")
+		*useCcache = false
+	}
+	
 	defines := rpm.DefaultDefinesWithDist(*runCheck, *distTag)
 	defines[rpm.DistroReleaseVersionDefine] = *distroReleaseVersion
 	defines[rpm.DistroBuildNumberDefine] = *distroBuildNumber
