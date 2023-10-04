@@ -82,6 +82,11 @@ func main() {
 
 	chrootDir := buildChrootDirPath(*workDir, *srpmFile, *runCheck)
 
+	if *basePackageName == "libdb" {
+		logger.Log.Warnf("-- libdb cannot be built with ccache enabled. Disabling ccache for this package.")
+		*useCcache = false
+	}
+
 	defines := rpm.DefaultDefinesWithDist(*runCheck, *distTag)
 	defines[rpm.DistroReleaseVersionDefine] = *distroReleaseVersion
 	defines[rpm.DistroBuildNumberDefine] = *distroBuildNumber
