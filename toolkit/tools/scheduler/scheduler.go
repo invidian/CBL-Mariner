@@ -317,40 +317,50 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 }
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
-func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesMap map[int64]bool, failedNodesMap map[int64]int64) {
+func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesTraversalStack map[int64]bool, failedNodesMap map[int64]int64, stuckNodesVisitedMap map[int64]bool) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
 
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
 	indentStr := strings.Repeat(" ", indent * 4)
-	// logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
+	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
 
-	_, exists := stuckNodesMap[stuckNode.ID()]
+	_, exists := stuckNodesTraversalStack[stuckNode.ID()]
 	if exists {
 		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] %s - A CYCLE HAS BEEN DETECTED!", indentStr)
 		return
 	} else {
-		stuckNodesMap[stuckNode.ID()] = true
+		stuckNodesTraversalStack[stuckNode.ID()] = true
 	}
 
-	if strings.Contains(nodeName, "<BuildError>") {
-		v, exists := failedNodesMap[stuckNode.ID()]
-		if exists {
-			failedNodesMap[stuckNode.ID()] = v + 1
-		} else {
-			logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [2] %s - new failed dependency node (%s)!", indentStr, nodeName)
-			failedNodesMap[stuckNode.ID()] = 1
-		}
+	_, exists = stuckNodesVisitedMap[stuckNode.ID()]
+	if exists {
+		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [2] %s - subtree %s visited before!", indentStr, nodeName)
+		delete(stuckNodesTraversalStack, stuckNode.ID())
+		return
+	} else {
+		stuckNodesVisitedMap[stuckNode.ID()] = true
 	}
+
+	// if strings.Contains(nodeName, "<BuildError>") {
+	// 	v, exists := failedNodesMap[stuckNode.ID()]
+	// 	if exists {
+	// 		failedNodesMap[stuckNode.ID()] = v + 1
+	// 	} else {
+	// 		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [3] %s - new failed dependency node (%s)!", indentStr, nodeName)
+	// 		failedNodesMap[stuckNode.ID()] = 1
+	// 	}
+	// }
+
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesMap, failedNodesMap)
+		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
 	}
 
-	delete(stuckNodesMap, stuckNode.ID())
+	delete(stuckNodesTraversalStack, stuckNode.ID())
 }
 
 // buildAllNodes will build all nodes in a given dependency graph.
@@ -439,9 +449,10 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - we have exhausted all options. Printing unresolved dependencies.")
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
-				stuckNodesMap := make(map[int64]bool)
+				stuckNodesTraversalStack := make(map[int64]bool)
 				failedNodesMap := make(map[int64]int64)
-				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesMap, failedNodesMap)
+				stuckNodesVisitedMap := make(map[int64]bool)
+				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
 			} else {

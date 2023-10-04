@@ -50,7 +50,7 @@ type RemoteStoreConfig struct {
 
 type CCacheGroupConfig struct {
 	Name         string   `json:"name"`
-	Comment		 string   `json:"comment"`
+	Comment      string   `json:"comment"`
 	Enabled      bool     `json:"enabled"`
 	PackageNames []string `json:"packageNames"`
 }
@@ -134,6 +134,8 @@ func (m *CCacheManager) SetCurrentPkgGroup(basePackageName string, arch string) 
 
 // setCurrentPkgGroupInternal() is called once per package.
 func (m *CCacheManager) setCurrentPkgGroupInternal(groupName string, groupEnabled bool, groupSize int, arch string) (err error) {
+
+	logger.Log.Infof("setCurrentPkgGroupInternal(%s)", groupName)
 
 	ccachePkgGroup := &CCachePkgGroup{
 		Name   : groupName,
@@ -335,6 +337,8 @@ func CreateManager(rootDir string, configFileName string) (m *CCacheManager, err
 // encountered. This allows the ccachemanager to 'hide' the details of packages
 // that are not part of any remote storage group.
 func (m *CCacheManager) findGroup(basePackageName string) (groupName string, groupEnabled bool, groupSize int) {
+
+	logger.Log.Infof("findGroup(%s)", basePackageName)
 
 	groupName = ""
 	groupEnabled = false

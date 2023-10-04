@@ -5368,8 +5368,8 @@
     },
     {
       "name": "php",
-      "comment": "",
-      "enabled": true,
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "php" ]
     },
     {
