@@ -106,7 +106,6 @@ var (
 )
 
 func main() {
-
 	app.Version(exe.ToolkitVersion)
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 	logger.InitBestEffort(*logFile, *logLevel)
@@ -297,7 +296,6 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
 func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int) {
-
 	logger.Log.Infof("Dumping stuck nodes...")
 
 	traversalStack := make(map[int64]bool)
