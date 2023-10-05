@@ -4,7 +4,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 	"os/signal"
@@ -186,17 +185,7 @@ func main() {
 		logger.Log.Fatalf("Unable to initialize build agent, error: %s.", err)
 	}
 
-	logger.Log.Infof("-- george - scheduler.go / main() -- [2] about to call buildGraph()...")
-	stuckNodesLogFileName := *buildLogsDir + "/stuck-nodes.log"
-	stuckNodesLogFile, err := os.Create(stuckNodesLogFileName)
-	if err != nil {
-		logger.Log.Fatalf("Error opening file: %v", err)
-		return
-	}
-	defer stuckNodesLogFile.Close()
-
-	stuckNodesLogWriter := bufio.NewWriter(stuckNodesLogFile)
-
+	logger.Log.Infof("-- george - scheduler.go / main() -- [2] about to call buildGraph()...")	
 
 	// Setup cleanup routines to ensure no builds are left running when scheduler is exiting.
 	// Ensure no outstanding agents are running on graceful exit
@@ -206,7 +195,7 @@ func main() {
 	signal.Notify(signals, unix.SIGINT, unix.SIGTERM)
 	go cancelBuildsOnSignal(signals, agent)
 
-	err = buildGraph(*inputGraphFile, *outputGraphFile, agent, *workers, *buildAttempts, *checkAttempts, *maxCascadingRebuilds, *stopOnFailure, !*noCache, finalPackagesToBuild, packagesToRebuild, packagesToIgnore, finalTestsToRun, testsToRerun, ignoredTests, toolchainPackages, *optimizeWithCachedImplicit, *allowToolchainRebuilds, stuckNodesLogWriter)
+	err = buildGraph(*inputGraphFile, *outputGraphFile, agent, *workers, *buildAttempts, *checkAttempts, *maxCascadingRebuilds, *stopOnFailure, !*noCache, finalPackagesToBuild, packagesToRebuild, packagesToIgnore, finalTestsToRun, testsToRerun, ignoredTests, toolchainPackages, *optimizeWithCachedImplicit, *allowToolchainRebuilds)
 	if err != nil {
 		logger.Log.Fatalf("Unable to build package graph.\nFor details see the build summary section above.\nError: %s.", err)
 	}
@@ -251,7 +240,7 @@ func cancelBuildsOnSignal(signals chan os.Signal, agent buildagents.BuildAgent) 
 
 // buildGraph builds all packages in the dependency graph requested.
 // It will save the resulting graph to outputFile.
-func buildGraph(inputFile, outputFile string, agent buildagents.BuildAgent, workers, buildAttempts, checkAttempts int, maxCascadingRebuilds uint, stopOnFailure, canUseCache bool, packagesToBuild, packagesToRebuild, ignoredPackages, testsToRun, testsToRerun, ignoredTests []*pkgjson.PackageVer, toolchainPackages []string, optimizeWithCachedImplicit bool, allowToolchainRebuilds bool, stuckNodesLogWriter *bufio.Writer) (err error) {
+func buildGraph(inputFile, outputFile string, agent buildagents.BuildAgent, workers, buildAttempts, checkAttempts int, maxCascadingRebuilds uint, stopOnFailure, canUseCache bool, packagesToBuild, packagesToRebuild, ignoredPackages, testsToRun, testsToRerun, ignoredTests []*pkgjson.PackageVer, toolchainPackages []string, optimizeWithCachedImplicit bool, allowToolchainRebuilds bool) (err error) {
 	// graphMutex guards pkgGraph from concurrent reads and writes during build.
 	var graphMutex sync.RWMutex
 
@@ -277,7 +266,7 @@ func buildGraph(inputFile, outputFile string, agent buildagents.BuildAgent, work
 
 	logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [2] calling buildAllNodes()")
 	// After this call pkgGraph will be given to multiple routines and accessing it requires acquiring the mutex.
-	builtGraph, err := buildAllNodes(stopOnFailure, canUseCache, packagesToRebuild, testsToRerun, pkgGraph, &graphMutex, goalNode, channels, maxCascadingRebuilds, toolchainPackages, allowToolchainRebuilds, stuckNodesLogWriter)
+	builtGraph, err := buildAllNodes(stopOnFailure, canUseCache, packagesToRebuild, testsToRerun, pkgGraph, &graphMutex, goalNode, channels, maxCascadingRebuilds, toolchainPackages, allowToolchainRebuilds)
 
 	if builtGraph != nil {
 		logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [3] buildAllNodes() returned")
@@ -327,41 +316,19 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 	return
 }
 
-func stuckNodeLog(message string, stuckNodesLogWriter *bufio.Writer) {
-
-	// logger.Log.Infof(message)
-
-	_, err := stuckNodesLogWriter.WriteString(message + "\n")
-	if err != nil {
-		logger.Log.Fatalf("Error writing to file: %v", err)
-		return
-	}
-	err = stuckNodesLogWriter.Flush()
-	if err != nil {
-		logger.Log.Fatalf("Error flushing writer: %v", err)
-		return
-	}
-}
-
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
-func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesTraversalStack map[int64]bool, failedNodesMap map[int64]int64, stuckNodesVisitedMap map[int64]bool, stuckNodesLogWriter *bufio.Writer, visitedNodesCount *int64) {
+func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesTraversalStack map[int64]bool, failedNodesMap map[int64]int64, stuckNodesVisitedMap map[int64]bool) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
 
-	*visitedNodesCount = *visitedNodesCount + 1
-	if *visitedNodesCount % 50 == 0 {
-		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] Visited %d stuck nodes...", *visitedNodesCount)
-	}
-
 	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
 	indentStr := strings.Repeat(" ", indent * 4)
-
-	stuckNodeLog(fmt.Sprintf("-- george - scheduler.go / debugStuckNode() - [1] %s%s", indentStr, nodeName), stuckNodesLogWriter)
+	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
 
 	_, exists := stuckNodesTraversalStack[stuckNode.ID()]
 	if exists {
-		stuckNodeLog(fmt.Sprintf("-- george - scheduler.go / debugStuckNode() - [2] %s - A CYCLE HAS BEEN DETECTED!", indentStr), stuckNodesLogWriter)
+		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] %s - A CYCLE HAS BEEN DETECTED!", indentStr)
 		return
 	} else {
 		stuckNodesTraversalStack[stuckNode.ID()] = true
@@ -369,7 +336,7 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 
 	_, exists = stuckNodesVisitedMap[stuckNode.ID()]
 	if exists {
-		stuckNodeLog(fmt.Sprintf("-- george - scheduler.go / debugStuckNode() - [3] %s - subtree %s visited before!", indentStr, nodeName), stuckNodesLogWriter)
+		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [2] %s - subtree %s visited before!", indentStr, nodeName)
 		delete(stuckNodesTraversalStack, stuckNode.ID())
 		return
 	} else {
@@ -381,7 +348,7 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 	// 	if exists {
 	// 		failedNodesMap[stuckNode.ID()] = v + 1
 	// 	} else {
-	// 		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [4] %s - new failed dependency node (%s)!", indentStr, nodeName)
+	// 		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [3] %s - new failed dependency node (%s)!", indentStr, nodeName)
 	// 		failedNodesMap[stuckNode.ID()] = 1
 	// 	}
 	// }
@@ -390,7 +357,7 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap, stuckNodesLogWriter, visitedNodesCount)
+		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
 	}
 
 	delete(stuckNodesTraversalStack, stuckNode.ID())
@@ -405,7 +372,7 @@ func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggra
 // - Attempts to satisfy any unresolved dynamic dependencies with new implicit provides from the build result.
 // - Attempts to subgraph the graph to only contain the requested packages if possible.
 // - Repeat.
-func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRerun []*pkgjson.PackageVer, pkgGraph *pkggraph.PkgGraph, graphMutex *sync.RWMutex, goalNode *pkggraph.PkgNode, channels *schedulerChannels, maxCascadingRebuilds uint, reservedFiles []string, allowToolchainRebuilds bool, stuckNodesLogWriter *bufio.Writer) (builtGraph *pkggraph.PkgGraph, err error) {
+func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRerun []*pkgjson.PackageVer, pkgGraph *pkggraph.PkgGraph, graphMutex *sync.RWMutex, goalNode *pkggraph.PkgNode, channels *schedulerChannels, maxCascadingRebuilds uint, reservedFiles []string, allowToolchainRebuilds bool) (builtGraph *pkggraph.PkgGraph, err error) {
 	var (
 		// stopBuilding tracks if the build has entered a failed state and this routine should stop as soon as possible.
 		stopBuilding bool
@@ -485,9 +452,7 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				stuckNodesTraversalStack := make(map[int64]bool)
 				failedNodesMap := make(map[int64]int64)
 				stuckNodesVisitedMap := make(map[int64]bool)
-				var visitedNodesCount int64
-				visitedNodesCount = 0
-				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap, stuckNodesLogWriter, &visitedNodesCount)
+				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
 				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
 				break
 			} else {
