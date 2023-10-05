@@ -120,7 +120,7 @@ make INSTALL_MOD_PATH=%{buildroot} modules_install
 # This configuration contains additional boot parameters required in our
 # Linux-Dom0-based images. 
 mkdir -p %{buildroot}%{_sysconfdir}/default/grub.d
-install -m 755 %{SOURCE3} %{buildroot}%{_sysconfdir}/default/grub.d/50_mariner_mshv.cfg
+install -m 750 %{SOURCE3} %{buildroot}%{_sysconfdir}/default/grub.d/50_mariner_mshv.cfg
 
 %ifarch x86_64
 install -vm 600 arch/x86/boot/bzImage %{buildroot}/boot/vmlinuz-%{uname_r}

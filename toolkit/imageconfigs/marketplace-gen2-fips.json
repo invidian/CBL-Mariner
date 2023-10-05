@@ -40,6 +40,7 @@
         {
             "Name": "Standard",
             "BootType": "efi",
+            "EnableGrubMkconfig": true,
             "PartitionSettings": [
                 {
                     "ID": "efi",
@@ -75,8 +76,7 @@
             },
             "KernelCommandLine": {
                 "EnableFIPS": true,
-                "ExtraCommandLine": "console=ttyS0",
-                "EnableGrubMkconfig": true
+                "ExtraCommandLine": "console=ttyS0"
             },
             "Hostname": "cbl-mariner"
         }

@@ -172,9 +172,9 @@ func validatePackages(config configuration.Config) (err error) {
 				return fmt.Errorf("%s: [SELinux] selected, but '%s' package is not included in the package lists", validateError, selinuxPkgName)
 			}
 		}
-		if systemConfig.KernelCommandLine.EnableGrubMkconfig {
+		if systemConfig.EnableGrubMkconfig {
 			if !foundGrub2Package {
-				return fmt.Errorf("%s: [KernelCommandLine.EnableGrubMkconfig] selected, but '%s' package is not included in the package lists", validateError, grub2PkgName)
+				return fmt.Errorf("%s: [EnableGrubMkconfig] selected, but '%s' package is not included in the package lists", validateError, grub2PkgName)
 			}
 		}
 	}

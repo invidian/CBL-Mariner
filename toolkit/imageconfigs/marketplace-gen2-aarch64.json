@@ -40,6 +40,7 @@
         {
             "Name": "Standard",
             "BootType": "efi",
+            "EnableGrubMkconfig": true,
             "PartitionSettings": [
                 {
                     "ID": "efi",
@@ -73,8 +74,7 @@
                 "default": "kernel"
             },
             "KernelCommandLine": {
-                "ExtraCommandLine": "console=tty1 console=ttyAMA0 earlycon=pl011,0xeffec000 initcall_blacklist=arm_pmu_acpi_init",
-                "EnableGrubMkconfig": true
+                "ExtraCommandLine": "console=tty1 console=ttyAMA0 earlycon=pl011,0xeffec000 initcall_blacklist=arm_pmu_acpi_init"
             },
             "Hostname": "cbl-mariner"
         }

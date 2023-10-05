@@ -21,7 +21,6 @@ type KernelCommandLine struct {
 	ImaPolicy          []ImaPolicy `json:"ImaPolicy"`
 	SELinux            SELinux     `json:"SELinux"`
 	EnableFIPS         bool        `json:"EnableFIPS"`
-	EnableGrubMkconfig bool        `json:"EnableGrubMkconfig"`
 	ExtraCommandLine   string      `json:"ExtraCommandLine"`
 }
 

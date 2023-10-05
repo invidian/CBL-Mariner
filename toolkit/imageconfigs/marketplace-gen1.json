@@ -38,6 +38,7 @@
         {
             "Name": "Standard",
             "BootType": "legacy",
+            "EnableGrubMkconfig": true,
             "PartitionSettings": [
                 {
                     "ID": "reserved",
@@ -70,8 +71,7 @@
                 "default": "kernel"
             },
             "KernelCommandLine": {
-                "ExtraCommandLine": "console=ttyS0",
-                "EnableGrubMkconfig": true
+                "ExtraCommandLine": "console=ttyS0"
             },
             "Hostname": "cbl-mariner"
         }
