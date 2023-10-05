@@ -5380,8 +5380,8 @@
     },
     {
       "name": "php-pecl-zip",
-      "comment": "",
-      "enabled": true,
+      "comment": "Disabling ccache for pkg because it breaks the build when enabled.",
+      "enabled": false,
       "packageNames": [ "php-pecl-zip" ]
     },
     {
