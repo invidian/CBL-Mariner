@@ -384,7 +384,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		// Each node that is ready to build must be converted into a build request and submitted to the worker pool.
 		newRequests := schedulerutils.ConvertNodesToRequests(pkgGraph, graphMutex, nodesToBuild, packagesToRebuild, testsToRerun, buildState, canUseCache)
 		for _, req := range newRequests {
-
 			buildState.RecordBuildRequest(req)
 			// Decide which priority the build should be. Generally we want to get any remote or prebuilt nodes out of the
 			// way as quickly as possible since they may help us optimize the graph early.
@@ -414,7 +413,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		// If there are no active builds running or results waiting to check try enabling cached packages for unresolved
 		// dynamic dependencies to unblock more nodes. Otherwise, there is nothing left that can be built.
 		if len(buildState.ActiveBuilds()) == 0 && len(channels.Results) == 0 {
-
 			if useCachedImplicit {
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
@@ -424,7 +422,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 				logger.Log.Warn("Enabling cached packages to satisfy unresolved dynamic dependencies.")
 				useCachedImplicit = true
 				nodesToBuild = schedulerutils.LeafNodes(pkgGraph, graphMutex, goalNode, buildState, useCachedImplicit)
-
 				continue
 			}
 		}
@@ -504,7 +501,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 			stopBuilding = true
 		}
 
-
 		activeSRPMs := buildState.ActiveSRPMs()
 		activeSRPMsCount := len(activeSRPMs)
 		if stopBuilding && activeSRPMsCount == 0 {
@@ -524,7 +520,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 
 	// Let the workers know they are done
 	doneBuild(channels, buildState)
-
 	// Give the workers time to finish so they don't mess up the summary we want to print.
 	// Some nodes may still be busy with long running builds we don't care about anymore, so we don't
 	// want to actually block here.
@@ -536,7 +531,6 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 	if !allowToolchainRebuilds && (len(buildState.ConflictingRPMs()) > 0 || len(buildState.ConflictingSRPMs()) > 0) {
 		err = fmt.Errorf("toolchain packages rebuilt. See build summary for details. Use 'ALLOW_TOOLCHAIN_REBUILDS=y' to suppress this error if rebuilds were expected")
 	}
-
 	return
 }
 
