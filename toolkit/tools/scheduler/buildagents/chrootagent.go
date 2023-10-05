@@ -41,9 +41,6 @@ func (c *ChrootAgent) Initialize(config *BuildAgentConfig) (err error) {
 func (c *ChrootAgent) BuildPackage(basePackageName, inputFile, logName, outArch string, runCheck bool, dependencies []string) (builtFiles []string, logFile string, err error) {
 	// On success, pkgworker will print a comma-seperated list of all RPMs built to stdout.
 	// This will be the last stdout line written.
-
-	logger.Log.Infof("-- george - chrootagent.go / BuildPackage() -- [0] -- building %s.", inputFile)
-
 	const delimiter = ","
 
 	logFile = filepath.Join(c.config.LogDir, logName)
@@ -64,8 +61,6 @@ func (c *ChrootAgent) BuildPackage(basePackageName, inputFile, logName, outArch 
 	if err == nil && lastStdoutLine != "" {
 		builtFiles = strings.Split(lastStdoutLine, delimiter)
 	}
-
-	logger.Log.Infof("-- george - chrootagent.go / BuildPackage() -- [1] -- done building %s.", inputFile)
 
 	return
 }

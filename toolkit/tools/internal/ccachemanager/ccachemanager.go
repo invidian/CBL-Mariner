@@ -151,7 +151,7 @@ func (m *CCacheManager) setCurrentPkgGroupInternal(groupName string, groupEnable
 	// download function because there is a case where the group is configured
 	// to enable ccache, but does not download.
 	if ccachePkgGroup.Enabled {
-		logger.Log.Infof("  ccache pkg folder   : (%s)", ccachePkgGroup.CCacheDir)
+		logger.Log.Infof("  ccache pkg folder : (%s)", ccachePkgGroup.CCacheDir)
 		err = ensureDirExists(ccachePkgGroup.CCacheDir)
 		if err != nil {
 			logger.Log.Warnf("Cannot create ccache download folder. Error: %v", err)

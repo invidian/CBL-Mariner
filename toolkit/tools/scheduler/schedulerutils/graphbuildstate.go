@@ -171,13 +171,11 @@ func (g *GraphBuildState) ConflictingSRPMs() (srpms []string) {
 
 // RecordBuildRequest records a build request in the graph build state.
 func (g *GraphBuildState) RecordBuildRequest(req *BuildRequest) {
-	logger.Log.Infof("Recording build REQUEST: %s", req.Node.FriendlyName())
 	g.activeBuilds[req.Node.ID()] = req
 }
 
 // RemoveBuildRequest removes a build request from the graph build state.
 func (g *GraphBuildState) RemoveBuildRequest(req *BuildRequest) {
-	logger.Log.Infof("Removing build REQUEST: %s", req.Node.FriendlyName())
 	delete(g.activeBuilds, req.Node.ID())
 }
 
@@ -190,8 +188,6 @@ func (g *GraphBuildState) isConflictWithToolchain(fileToCheck string) (hadConfli
 // - It will record the result as a failure if applicable.
 // - It will record all ancillary nodes of the result.
 func (g *GraphBuildState) RecordBuildResult(res *BuildResult, allowToolchainRebuilds bool) (err error) {
-	logger.Log.Infof("Recording build RESULT: %s", res.Node.FriendlyName())
-
 	delete(g.activeBuilds, res.Node.ID())
 
 	if res.Err != nil {

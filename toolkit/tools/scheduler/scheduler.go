@@ -110,7 +110,6 @@ func main() {
 	app.Version(exe.ToolkitVersion)
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 	logger.InitBestEffort(*logFile, *logLevel)
-	logger.Log.Infof("-- george - scheduler.go / main() -- [0] entered...")	
 
 	prof, err := profile.StartProfiling(profFlags)
 	if err != nil {
@@ -178,14 +177,10 @@ func main() {
 		logger.Log.Fatalf("Unable to select build agent, error: %s.", err)
 	}
 
-	logger.Log.Infof("-- george - scheduler.go / main() -- [1] initializaing agent...")	
-
 	err = agent.Initialize(buildAgentConfig)
 	if err != nil {
 		logger.Log.Fatalf("Unable to initialize build agent, error: %s.", err)
 	}
-
-	logger.Log.Infof("-- george - scheduler.go / main() -- [2] about to call buildGraph()...")	
 
 	// Setup cleanup routines to ensure no builds are left running when scheduler is exiting.
 	// Ensure no outstanding agents are running on graceful exit
@@ -200,8 +195,6 @@ func main() {
 		logger.Log.Fatalf("Unable to build package graph.\nFor details see the build summary section above.\nError: %s.", err)
 	}
 
-	logger.Log.Infof("-- george - scheduler.go / main() -- [3] finished buildGraph()...checking ccache...")	
-
 	if *useCcache {
 		logger.Log.Infof("  ccache is enabled. processing created artifacts under (%s)...", *ccacheDir)
 		ccacheManager, err := ccachemanagerpkg.CreateManager(*ccacheDir, *ccacheConfig)
@@ -214,8 +207,6 @@ func main() {
 			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
 		}
 	}
-
-	logger.Log.Infof("-- george - scheduler.go / main() -- [4] exiting...")	
 }
 
 // cancelOutstandingBuilds stops any builds that are currently running.
@@ -244,45 +235,33 @@ func buildGraph(inputFile, outputFile string, agent buildagents.BuildAgent, work
 	// graphMutex guards pkgGraph from concurrent reads and writes during build.
 	var graphMutex sync.RWMutex
 
-	logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [0] entered...")
-
 	// If optimizeWithCachedImplicit is true, we can use the cached implicit dependencies to aggressively prune the graph during the first pass. We will still
 	// try to avoid using the cached implicit dependencies until we have no other choice during the build, but since the graph is pruned, we will
 	// avoid building packages that are not needed. Obviously we can only do this if the cache is enabled.
 	allowEarlyImplicitOptimization := (canUseCache && optimizeWithCachedImplicit)
 	_, pkgGraph, goalNode, err := schedulerutils.InitializeGraphFromFile(inputFile, packagesToBuild, testsToRun, allowEarlyImplicitOptimization)
 	if err != nil {
-		logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [1] InitializeGraphFromFile() failed. exiting...")
 		return
 	}
 
 	// Setup and start the worker pool and scheduler routine.
 	numberOfNodes := pkgGraph.Nodes().Len()
 
-	logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [2] calling startWorkerPool()")
-
 	channels := startWorkerPool(agent, workers, buildAttempts, checkAttempts, numberOfNodes, &graphMutex, ignoredPackages, ignoredTests)
 	logger.Log.Infof("Building %d nodes with %d workers", numberOfNodes, workers)
 
-	logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [2] calling buildAllNodes()")
 	// After this call pkgGraph will be given to multiple routines and accessing it requires acquiring the mutex.
 	builtGraph, err := buildAllNodes(stopOnFailure, canUseCache, packagesToRebuild, testsToRerun, pkgGraph, &graphMutex, goalNode, channels, maxCascadingRebuilds, toolchainPackages, allowToolchainRebuilds)
 
 	if builtGraph != nil {
-		logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [3] buildAllNodes() returned")
 		graphMutex.RLock()
 		defer graphMutex.RUnlock()
 
-		logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [4] writing dotgraph file...")
 		saveErr := pkggraph.WriteDOTGraphFile(builtGraph, outputFile)
 		if saveErr != nil {
-			logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [5] error saving...")
 			logger.Log.Errorf("Failed to save built graph, error: %s", saveErr)
 		}
-		logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [6]")
 	}
-
-	logger.Log.Infof("-- george - scheduler.go / buildGraph() -- [7] exiting")
 
 	return
 }
@@ -317,50 +296,54 @@ func startWorkerPool(agent buildagents.BuildAgent, workers, buildAttempts, check
 }
 
 // debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
-func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, stuckNodesTraversalStack map[int64]bool, failedNodesMap map[int64]int64, stuckNodesVisitedMap map[int64]bool) {
+func debugStuckNode(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int) {
+
+	logger.Log.Infof("Dumping stuck nodes...")
+
+	traversalStack := make(map[int64]bool)
+	visitedSet := make(map[int64]bool)
+
+	debugStuckNodeInternal(buildState, pkgGraph, stuckNode, indent, traversalStack, visitedSet)
+}
+
+// debugStuckNode is a debugging function that will print out the stuck node and all nodes that are blocking it.
+func debugStuckNodeInternal(buildState *schedulerutils.GraphBuildState, pkgGraph *pkggraph.PkgGraph, stuckNode *pkggraph.PkgNode, indent int, traversalStack map[int64]bool, visitedSet map[int64]bool) {
 	if buildState.IsNodeAvailable(stuckNode) {
 		return
 	}
 
-	nodeName := fmt.Sprintf("(%s)", stuckNode.FriendlyName())
 	indentStr := strings.Repeat(" ", indent * 4)
-	logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [0] %s%s", indentStr, nodeName)
+	logger.Log.Infof("%s(%s)", indentStr, stuckNode.FriendlyName())
 
-	_, exists := stuckNodesTraversalStack[stuckNode.ID()]
+	_, exists := traversalStack[stuckNode.ID()]
 	if exists {
-		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [1] %s - A CYCLE HAS BEEN DETECTED!", indentStr)
+		// This should never happen since cyclic dependencies should have been
+		// detected earlier in the build and resolved.
+		logger.Log.Infof("%sA CYCLE HAS BEEN DETECTED FOR (%s)!", indentStr, stuckNode.FriendlyName())
 		return
 	} else {
-		stuckNodesTraversalStack[stuckNode.ID()] = true
+		traversalStack[stuckNode.ID()] = true
 	}
 
-	_, exists = stuckNodesVisitedMap[stuckNode.ID()]
+	_, exists = visitedSet[stuckNode.ID()]
 	if exists {
-		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [2] %s - subtree %s visited before!", indentStr, nodeName)
-		delete(stuckNodesTraversalStack, stuckNode.ID())
+		logger.Log.Infof("%sSubtree (%s) already visited.", indentStr, stuckNode.FriendlyName())
+		// rewind the stack.
+		delete(traversalStack, stuckNode.ID())
 		return
 	} else {
-		stuckNodesVisitedMap[stuckNode.ID()] = true
+		visitedSet[stuckNode.ID()] = true
 	}
-
-	// if strings.Contains(nodeName, "<BuildError>") {
-	// 	v, exists := failedNodesMap[stuckNode.ID()]
-	// 	if exists {
-	// 		failedNodesMap[stuckNode.ID()] = v + 1
-	// 	} else {
-	// 		logger.Log.Infof("-- george - scheduler.go / debugStuckNode() - [3] %s - new failed dependency node (%s)!", indentStr, nodeName)
-	// 		failedNodesMap[stuckNode.ID()] = 1
-	// 	}
-	// }
 
 	// Iterate over all the nodes that are blocking the stuck node.
 	dependency := pkgGraph.From(stuckNode.ID())
 	for dependency.Next() {
 		dependent := dependency.Node().(*pkggraph.PkgNode)
-		debugStuckNode(buildState, pkgGraph, dependent, indent+1, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
+		debugStuckNodeInternal(buildState, pkgGraph, dependent, indent+1, traversalStack, visitedSet)
 	}
 
-	delete(stuckNodesTraversalStack, stuckNode.ID())
+	// rewind the stack.
+	delete(traversalStack, stuckNode.ID())
 }
 
 // buildAllNodes will build all nodes in a given dependency graph.
@@ -389,27 +372,18 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		isGraphOptimized  bool
 	)
 
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [0] entered...")
-
 	// Start the build at the leaf nodes.
 	// The build will bubble up through the graph as it processes nodes.
 	buildState := schedulerutils.NewGraphBuildState(reservedFiles, maxCascadingRebuilds)
 	buildRunsTests := len(pkgGraph.AllTestNodes()) > 0
 	nodesToBuild := schedulerutils.LeafNodes(pkgGraph, graphMutex, goalNode, buildState, useCachedImplicit)
 
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [1] about to start build loop...")
-
 	for {
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [2] --------------------------------------------------------------------")
-		// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [2] for{} -- beginning of build loop/calling ConvertNodesToRequests()...")
 		logger.Log.Debugf("Found %d unblocked nodes: %v.", len(nodesToBuild), nodesToBuild)
-
 
 		// Each node that is ready to build must be converted into a build request and submitted to the worker pool.
 		newRequests := schedulerutils.ConvertNodesToRequests(pkgGraph, graphMutex, nodesToBuild, packagesToRebuild, testsToRerun, buildState, canUseCache)
 		for _, req := range newRequests {
-
-			// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [3] processing unblocked node request:")
 
 			buildState.RecordBuildRequest(req)
 			// Decide which priority the build should be. Generally we want to get any remote or prebuilt nodes out of the
@@ -437,59 +411,38 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 		}
 		nodesToBuild = nil
 
-		// logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [4] have all active builds finished?")
-
 		// If there are no active builds running or results waiting to check try enabling cached packages for unresolved
 		// dynamic dependencies to unblock more nodes. Otherwise, there is nothing left that can be built.
 		if len(buildState.ActiveBuilds()) == 0 && len(channels.Results) == 0 {
 
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [5] no active builds.")
-
 			if useCachedImplicit {
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6] useCachedImplicit == true - we have exhausted all options. Printing unresolved dependencies.")
 				err = fmt.Errorf("could not build all packages")
 				// Temporarily print debug information about the stuck node.
-				stuckNodesTraversalStack := make(map[int64]bool)
-				failedNodesMap := make(map[int64]int64)
-				stuckNodesVisitedMap := make(map[int64]bool)
-				debugStuckNode(buildState, pkgGraph, goalNode, 0, stuckNodesTraversalStack, failedNodesMap, stuckNodesVisitedMap)
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [6.a] breaking...")
+				debugStuckNode(buildState, pkgGraph, goalNode, 0)
 				break
 			} else {
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [7] useCachedImplicit == true - continuing...")
 				logger.Log.Warn("Enabling cached packages to satisfy unresolved dynamic dependencies.")
 				useCachedImplicit = true
 				nodesToBuild = schedulerutils.LeafNodes(pkgGraph, graphMutex, goalNode, buildState, useCachedImplicit)
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [7.a] -- found %v unblocked nodes... <-------", len(nodesToBuild))
 
 				continue
 			}
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [8] there are some active builds...")
-
 		// Process the the next build result
 		res := <-channels.Results
 
 		schedulerutils.PrintBuildResult(res)
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [8.a] recording state...")
 		err = buildState.RecordBuildResult(res, allowToolchainRebuilds)
 		if err != nil {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [8.b] error while recording state...setting stopBuilding = true")
 			// Failures to manipulate the graph or build state are fatal.
 			err = fmt.Errorf("error recording build result:\n%w", err)
 			stopBuilding = true
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [9] checking if stopBuild is set...")
-
 		if !stopBuilding {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [10] stopBuild == false...")
-
 			if res.Err == nil {
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [11]")
 				if res.Node.Type == pkggraph.TypeLocalBuild && res.WasDelta {
-					logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [12]")
 					logger.Log.Tracef("This is a delta result, update the graph with the new delta files for '%v'.", res.Node)
 					// We will need to update the graph with paths to any delta files that were actually rebuilt.
 					err = setAssociatedDeltaPaths(res, pkgGraph, graphMutex)
@@ -501,13 +454,9 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 					}
 				}
 
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [13]")
-
 				// If the graph has already been optimized and is now solvable without any additional information
 				// then skip processing any new implicit provides.
 				if !stopBuilding && !isGraphOptimized {
-					logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [14]")
-
 					var (
 						didOptimize bool
 						newGraph    *pkggraph.PkgGraph
@@ -515,12 +464,10 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 					)
 					didOptimize, newGraph, newGoalNode, err = updateGraphWithImplicitProvides(res, pkgGraph, graphMutex, useCachedImplicit)
 					if err != nil {
-						logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [15]")
 						// Failures to manipulate the graph are fatal.
 						// There is no guarantee the graph is still a directed acyclic graph and is solvable.
 						stopBuilding = true
 					} else if didOptimize {
-						logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [16]")
 						isGraphOptimized = true
 						// Replace the graph and goal node pointers.
 						// Any outstanding builds of nodes that are no longer in the graph will gracefully handle this.
@@ -530,23 +477,16 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 					}
 				}
 
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [17] -- finding unblocked nodes...")
 				nodesToBuild = schedulerutils.FindUnblockedNodesFromResult(res, pkgGraph, graphMutex, buildState)
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [17.a] -- found %v unblocked nodes... <-------", len(nodesToBuild))
 			} else if stopOnFailure {
 				stopBuilding = true
 				err = res.Err
 			}
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [18] -- checking if we should stop building because of an error...")
-
 		// stopBuilding will be set to true here only if the build has failed. We also set it to true if the goal node is available
 		// but only after this check is made. In that case we will call doneBuild() instead.
 		if stopBuilding {
-
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [19]")
-
 			// If the build has failed, stop all outstanding builds.
 			stopBuild(channels, buildState)
 			err = fmt.Errorf("fatal error building package graph:\n%w", err)
@@ -555,72 +495,47 @@ func buildAllNodes(stopOnFailure, canUseCache bool, packagesToRebuild, testsToRe
 			return
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [20] -- checking if we have reached goalNode....")
-
 		// If the goal node is available, mark the build as stopping.
 		// There may still be outstanding builds if the graph was recently subgraphed
 		// due to an unresolved implicit provide being satisfied and nodes that are no
 		// longer in the graph are building.
 		if buildState.IsNodeAvailable(goalNode) {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [21] -- goalNode has been reached")
-			logger.Log.Infof("All packages built - setting stopBuilding = true")
+			logger.Log.Infof("All packages built")
 			stopBuilding = true
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [22] -- checking ActiveSRPMs...")
 
 		activeSRPMs := buildState.ActiveSRPMs()
 		activeSRPMsCount := len(activeSRPMs)
 		if stopBuilding && activeSRPMsCount == 0 {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [23] -- stopBuilding is true and activeSRPMsCount=0, breaking... ----->")
 			break
 		}
 
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [24] -- %d currently active SRPMs build(s): %v.", activeSRPMsCount, activeSRPMs)
-
 		if res.Node.Type == pkggraph.TypeLocalBuild || res.Node.Type == pkggraph.TypeTest {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [25]")
 			logger.Log.Infof("%d currently active build(s): %v.", activeSRPMsCount, activeSRPMs)
 
 			if buildRunsTests {
-				logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [26] -- running tests...")
-
 				activeTests := buildState.ActiveTests()
 
 				logger.Log.Infof("%d currently active test(s): %v.", len(activeTests), activeTests)
 			}
 		}
-
-		if activeSRPMsCount != 0 {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.a] ------------ end of big loop.")
-			// time.Sleep(time.Second)
-		} else {
-			logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [27.b] ------------ end of big loop.")
-		}
 	}
-
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [28] -- out of the big loop. Letting workers know we are done.")
 
 	// Let the workers know they are done
 	doneBuild(channels, buildState)
-
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [29] -- we'll sleep to give time workers to finish what they are doing.")
 
 	// Give the workers time to finish so they don't mess up the summary we want to print.
 	// Some nodes may still be busy with long running builds we don't care about anymore, so we don't
 	// want to actually block here.
 	time.Sleep(time.Second)
 
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [30] -- about to print build summary.")
-
 	builtGraph = pkgGraph
 	schedulerutils.PrintBuildSummary(builtGraph, graphMutex, buildState, allowToolchainRebuilds)
 	schedulerutils.RecordBuildSummary(builtGraph, graphMutex, buildState, *outputCSVFile)
 	if !allowToolchainRebuilds && (len(buildState.ConflictingRPMs()) > 0 || len(buildState.ConflictingSRPMs()) > 0) {
-		logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [31]")
 		err = fmt.Errorf("toolchain packages rebuilt. See build summary for details. Use 'ALLOW_TOOLCHAIN_REBUILDS=y' to suppress this error if rebuilds were expected")
 	}
-	logger.Log.Infof("-- george - scheduler.go / buildAllNodes() -- [32] -- exiting...")
 
 	return
 }
