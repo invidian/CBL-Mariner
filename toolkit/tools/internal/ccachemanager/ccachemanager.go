@@ -21,9 +21,6 @@ import (
 )
 
 const (
-	// Any package that is not defined to belong to a group will be added to
-	// this group.
-	CommonGroupName = "common"
 	// This is the value that the download source folder can be set to in the
 	// config to indicate the desire to download the latest.
 	LatestTagMarker = "latest"
@@ -142,7 +139,7 @@ func (m *CCacheManager) setCurrentPkgGroupInternal(groupName string, groupEnable
 		Arch   : arch,
 	}
 
-	ccachePkgGroup.CCacheDir, err = m.getPkgCCacheDir(ccachePkgGroup.Name, ccachePkgGroup.Arch)
+	ccachePkgGroup.CCacheDir, err = m.buildPkgCCacheDir(ccachePkgGroup.Name, ccachePkgGroup.Arch)
 	if err != nil {
 		return errors.New(fmt.Sprintf("Failed to construct the ccache directory name. Error (%v)", err))
 	}
@@ -333,10 +330,16 @@ func CreateManager(rootDir string, configFileName string) (m *CCacheManager, err
 // encountered. This allows the ccachemanager to 'hide' the details of packages
 // that are not part of any remote storage group.
 func (m *CCacheManager) findGroup(basePackageName string) (groupName string, groupEnabled bool, groupSize int) {
-
-	groupName = ""
-	groupEnabled = false
-	groupSize = 0
+	//
+	// We assume that:
+	// - all packages want ccache enabled for them.
+	// - each package belongs to its own group.
+	// Then, we iterate to see if those assumptions do not apply for a certain
+	// package and overwrite them with the actual configuration.
+	//
+	groupName = basePackageName
+	groupEnabled = true
+	groupSize = 1
 
 	for _, group := range m.Configuration.Groups {
 		for _, packageName := range group.PackageNames {
@@ -356,20 +359,19 @@ func (m *CCacheManager) findGroup(basePackageName string) (groupName string, gro
 		}
 	}
 
-	if groupName == "" {
-		logger.Log.Infof("  did not find ccache group for (%s) - assigning to group \"%s\".", basePackageName, CommonGroupName)
-		groupName = CommonGroupName
-		groupEnabled = true
-		groupSize = 0
-	}
-
 	return groupName, groupEnabled, groupSize
 }
 
 func (m *CCacheManager) findCCacheGroupInfo(groupName string) (groupEnabled bool, groupSize int) {
-
-	groupEnabled = false
-	groupSize = 0
+	//
+	// We assume that:
+	// - all packages want ccache enabled for them.
+	// - each package belongs to its own group.
+	// Then, we iterate to see if those assumptions do not apply for a certain
+	// package and overwrite them with the actual configuration.
+	//
+	groupEnabled = true
+	groupSize = 1
 
 	for _, group := range m.Configuration.Groups {
 		if groupName == group.Name {
@@ -381,7 +383,7 @@ func (m *CCacheManager) findCCacheGroupInfo(groupName string) (groupEnabled bool
 	return groupEnabled, groupSize
 }
 
-func (m *CCacheManager) getPkgCCacheDir(pkgCCacheGroupName string, pkgArchitecture string) (string, error) {
+func (m *CCacheManager) buildPkgCCacheDir(pkgCCacheGroupName string, pkgArchitecture string) (string, error) {
 	if pkgArchitecture == "" {
 		return "", errors.New("CCache package pkgArchitecture cannot be empty.")
 	}
@@ -394,11 +396,6 @@ func (m *CCacheManager) getPkgCCacheDir(pkgCCacheGroupName string, pkgArchitectu
 func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 
 	logger.Log.Infof("** processing download of ccache artifacts...")
-
-	if m.CurrentPkgGroup.Name == CommonGroupName {
-		logger.Log.Infof("  %s group - skipping download...", CommonGroupName)
-		return nil
-	}
 
 	remoteStoreConfig := m.Configuration.RemoteStoreConfig
 	if !remoteStoreConfig.DownloadEnabled {
@@ -468,11 +465,6 @@ func (m *CCacheManager) DownloadPkgGroupCCache() (err error) {
 func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 
 	logger.Log.Infof("** processing upload of ccache artifacts...")
-
-	if m.CurrentPkgGroup.Name == CommonGroupName {
-		logger.Log.Infof("  %s group - skipping upload...", CommonGroupName)
-		return nil
-	}
 
 	// Check if ccache has actually generated any content.
 	// If it has, it would have created a specific folder structure - so,
@@ -562,7 +554,7 @@ func (m *CCacheManager) UploadPkgGroupCCache() (err error) {
 // We use this directory structure to encode the per package group information
 // at build time, so we can use them now.
 //
-func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
+func (m *CCacheManager) UploadMultiPkgGroupCCaches() (err error) {
 
 	architectures, err := getChildFolders(m.RootCCacheDir)
 	errorsOccured := false
@@ -571,15 +563,12 @@ func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
 	} 
 
 	for _, architecture := range architectures {
-		logger.Log.Infof("  found ccache architecture (%s)...", architecture)
 		groupNames, err := getChildFolders(filepath.Join(m.RootCCacheDir, architecture))
 		if err != nil {
 			logger.Log.Warnf("failed to enumerate child folders under (%s)...", m.RootCCacheDir)
 			errorsOccured = true
 		} else {
 			for _, groupName := range groupNames {
-				logger.Log.Infof("  found group (%s)...", groupName)
-
 				// Enable this continue only if we enable uploading as
 				// soon as packages are done building.
 				groupEnabled, groupSize := m.findCCacheGroupInfo(groupName)
@@ -598,11 +587,10 @@ func (m *CCacheManager) UploadAllPkgGroupCCaches() (err error) {
 				if groupSize < 2 {
 					// This has either been processed earlier or there is
 					// nothing to process.
-					logger.Log.Infof("  group size is (%d). It has already been processed. Skipping...", groupSize)
 					continue
 				}
 
-				groupCCacheDir, err := m.getPkgCCacheDir(groupName, architecture)
+				groupCCacheDir, err := m.buildPkgCCacheDir(groupName, architecture)
 				if err != nil {
 					logger.Log.Warnf("Failed to get ccache dir for architecture (%s) and group name (%s)...", architecture, groupName)
 					errorsOccured = true
