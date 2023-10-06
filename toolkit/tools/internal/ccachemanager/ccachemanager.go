@@ -340,6 +340,7 @@ func (m *CCacheManager) findGroup(basePackageName string) (groupName string, gro
 	groupName = basePackageName
 	groupEnabled = true
 	groupSize = 1
+	found := false
 
 	for _, group := range m.Configuration.Groups {
 		for _, packageName := range group.PackageNames {
@@ -351,10 +352,11 @@ func (m *CCacheManager) findGroup(basePackageName string) (groupName string, gro
 				if !groupEnabled {
 					logger.Log.Infof("  ccache is explicitly disabled for this group in the ccache configuration.")
 				}
+				found = true
 				break
 			}
 		}
-		if groupName != "" {
+		if found {
 			break
 		}
 	}
