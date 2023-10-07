@@ -200,10 +200,10 @@ func main() {
 		if err == nil {
 			err = ccacheManager.UploadMultiPkgGroupCCaches()
 			if err != nil {
-				logger.Log.Warnf("Failed to archive CCache artifacts. Error: %s.", err)
+				logger.Log.Warnf("Failed to archive CCache artifacts. Error: %v.", err)
 			}
 		} else {
-			logger.Log.Warnf("Failed to initialize the ccache manager. Error (%v)", err)
+			logger.Log.Warnf("Failed to initialize the ccache manager. Error: %v", err)
 		}
 	}
 }
