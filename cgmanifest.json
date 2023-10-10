@@ -29157,7 +29157,7 @@
         "type": "other",
         "other": {
           "name": "unzip",
-          "version": "6.0",
+          "version": "6",
           "downloadUrl": "https://downloads.sourceforge.net/infozip/unzip60.tar.gz"
         }
       }

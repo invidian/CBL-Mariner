@@ -1,28 +1,18 @@
 Summary:        Unzip-6.0
 Name:           unzip
-Version:        6.0
-Release:        20%{?dist}
+Version:        6
+Release:        1%{?dist}
 License:        BSD
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
 Group:          System Environment/Utilities
 URL:            https://infozip.sourceforge.net/UnZip.html
 Source0:        https://downloads.sourceforge.net/infozip/unzip60.tar.gz
-Patch0:         CVE-2014-9636.patch
-Patch1:         CVE-2015-1315.patch
-Patch2:         CVE-2015-7696.patch
-Patch3:         CVE-2016-9844.patch
-Patch4:         CVE-2014-9913.patch
 Patch5:         unzip_cfactor_overflow-CVE-2018-18384.patch
-Patch6:         CVE-2014-8139.patch
-Patch7:         CVE-2014-8140.patch
-Patch8:         CVE-2014-8141.patch
 Patch9:         unzip-zipbomb-part1-CVE-2019-13232.patch
 Patch10:        unzip-zipbomb-part2.patch
 Patch11:        unzip-zipbomb-part3.patch
 Patch12:        unzip-zipbomb-manpage.patch
-Patch13:        CVE-2015-7697.patch
-Patch14:        CVE-2018-1000035.patch
 
 %description
 The UnZip package contains ZIP extraction utilities. These are useful
@@ -57,6 +47,9 @@ ln -sf unzip %{buildroot}%{_bindir}/zipinfo
 %{_bindir}/*
 
 %changelog
+* Tue Oct 10 2023 CBL-Mariner Servicing Account <cblmargh@microsoft.com> - 6-1
+- Auto-upgrade to 6 - Azure Linux 3.0 - package upgrades
+
 * Thu Oct 06 2022 Olivia Crain <oliviacrain@microsoft.com> - 6.0-20
 - Compile with large file support, zip64 support
 - Remove i*86 configuration- Mariner doesn't build for those architectures
