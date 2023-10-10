@@ -88,4 +88,4 @@ jobs:
       run: |
         pushd toolkit
         sudo make clean
-        sudo -E make go-tools REBUILD_TOOLS=y
+        sudo env "PATH=$PATH" make go-tools REBUILD_TOOLS=y

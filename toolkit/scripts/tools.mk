@@ -29,6 +29,8 @@ endif
 endif
 
 $(warning Go version '$(go_current_version)')
+$(warning $(shell echo $$PATH))
+$(warning $(shell echo $$GOPATH))
 
 # List of go utilities in tools/ directory
 go_tool_list = \
