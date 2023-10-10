@@ -83,3 +83,9 @@ jobs:
       run: |
         pushd toolkit
         sudo make go-tools REBUILD_TOOLS=y
+
+    - name: Ensure all tools build v2
+      run: |
+        pushd toolkit
+        sudo make clean
+        sudo -E make go-tools REBUILD_TOOLS=y

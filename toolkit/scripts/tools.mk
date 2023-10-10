@@ -28,6 +28,8 @@ $(error Go version '$(go_current_version)' is less than minimum required version
 endif
 endif
 
+$(warning Go version '$(go_current_version)')
+
 # List of go utilities in tools/ directory
 go_tool_list = \
 	boilerplate \
